@@ -17,7 +17,7 @@
 #  updated_at   :datetime         not null
 #
 class Business < ApplicationRecord
-    validates :name, presence: true, uniqueness: true
-    validates :address, :city, :state, :zip_code, 
-    validates :phone_number, uniqueness:true
+    # validates :name, presence: true, uniqueness: true
+    # validates :address, :city, :state, :zip_code, 
+    # validates :phone_number, uniqueness:true
 end
