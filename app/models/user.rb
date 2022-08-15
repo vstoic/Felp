@@ -20,4 +20,35 @@ class User < ApplicationRecord
     has_many :reviews,
     foreign_key: :user_id,
     class_name: Review
+    
+    #finds user if username and password is correct
+    def self.find_by_credentials(email, password)
+        user = user.find_by(email: email)
+        return nil unless user
+        user.is_password?(password) ? user : nil 
+    end
+
+    #uses bcrypt to verify password
+    def is_password?(password)
+        @password = password 
+        self.password_digest = Bcrypt::Password.create(password)
+    end
+
+    #generates initial session token and runs after initalization/validations
+    def ensure_session_token 
+        self.session_token ||= SecureRandom.urlsafe_base64
+    end
+
+    #sets password to 
+    def password=(password)
+        @password = password
+        self.password_digest = Bcrypt::Password.create(password)
+    end
+
+    def reset_session_token!
+        self.session_token = SecureRandom.urlsafe_base64
+        self.save!
+        self.session_token
+    end
+
 end
