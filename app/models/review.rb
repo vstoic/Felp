@@ -11,12 +11,12 @@
 #  updated_at    :datetime         not null
 #
 class Review < ApplicationRecord
-    # validates :review_body, :rating, presence: true 
+    validates :review_body, :rating, presence: true 
 
-    # belongs_to :reviewer,
-    # foreign_key: :user_id, 
-    # class_name: :User
+    belongs_to :reviewer,
+    foreign_key: :user_id,
+    class_name: :User
 
-    # has_one :buisness,
-    # class_name: :Business
+    has_one :buisness,
+    class_name: :Business
 end
