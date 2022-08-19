@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import dropdown from './dropdown';
 
 class Nav extends React.Component {
     constructor(props) {
@@ -17,7 +18,9 @@ class Nav extends React.Component {
         document.getElementById("myDropdown").classList.toggle("show");
     }
 
-    notInSession() {
+   
+
+    LoggedOut() {
         return (
             <nav className='no-session-nav'>
                 <div className='splash-logo'>
@@ -31,10 +34,10 @@ class Nav extends React.Component {
         )
     }
 
-    inSession() {
+    loggedIn() {
         return (
             <div className='in-session-nav'>
-                <div className='splash-logo'>
+                {/* <div className='splash-logo'>
                     <h1>Felp Nav</h1>
                 </div>
                 <div className='dropdown'>
@@ -49,7 +52,25 @@ class Nav extends React.Component {
                         </div>
                         <button className='nav-logout' onClick={this.props.logout}>Log Out</button>
                     </div>
+                </div> */}
+
+                
+
+                <div class="navbar">
+                    <a href="#home">logo</a>
+                    <a href="#news">search bar</a>
+                    <div class="dropdown">
+                        <button class="dropbtn" onClick={() => this.handleClick()} >Dropdown
+                            <i class="fa fa-caret-down"></i>
+                        </button>
+                        <div class="dropdown-content" id="myDropdown">
+                            <p >Profile</p>
+                            <p >Reviews</p>
+                            <button className='nav-logout' onClick={this.props.logout}>Log Out</button>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         )
     }
@@ -57,7 +78,7 @@ class Nav extends React.Component {
     render() {
         return (
             <div>
-                {this.props.currentUser ? this.inSession() : this.notInSession()}
+                {this.props.currentUser ? this.loggedIn() : this.LoggedOut()}
             </div>
         )
     }
