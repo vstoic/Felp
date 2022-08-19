@@ -56,6 +56,8 @@ class Login extends React.Component {
                         <br />
                         <input className="login-submit" type="submit" value={this.props.formType} />
                     </div>
+
+                    <p id="signup-redirect">New to Felp? <Link to="/signup">Sign Up</Link>.</p>
                 </form>
             </div>
         );

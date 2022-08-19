@@ -1,40 +1,38 @@
 import React from 'react';
 import GreetingContainer from "../greeting/greeting_container";
 import { Link } from 'react-router-dom';
-// import NavBar from '../nav_bar/nav_bar'
-// import About from '../about/about'
-// import SearchBox from '../search_box/search_box';
+import Nav from '../nav/nav'
 
 class Splash extends React.Component {
     constructor(props) {
         super(props)
+    this.clearErrors = this.clearErrors.bind(this)
+  }
+
+    clearErrors(e) {
+        this.props.clearErrors()
+    }
+
+    componentDidMount() {
     }
 
     render() {
         return (
             <div> 
-                <header>
-                    <h1></h1>
-                    <GreetingContainer/>
-                </header>
-                <div className="splash-main-container">
-                    <div className="splash-main-top">
-                        <div className="nav">
-                            {/* <NavBar formType={this.props.formType} user={this.props.user} logout={this.props.logout} /> */}
-                            {/* <SearchBox formType={this.props.formType} searchBusinesses={this.props.searchBusinesses} /> */}
-                        </div>
-                        <div className="logo-container">
-                            {/* <Link to="/"><img className="splash-logo" src="" /></Link> */}
-                        </div>
+                <nav className='splash-nav'>
+                    <div>
+                        {/* <button className="splash-link"><Link to="/signup">Sign up</Link></button>
+                        <button className="splash-link"><Link to="/login">Log in</Link></button>
+                        <button className="logout" onClick={this.props.logout}>Log Out</button> */}
+                        <Nav formType={this.props.formType} currentUser={this.props.currentUser} logout={this.props.logout} />
                     </div>
-                </div>
-                <div className="popular-searches">
-                    {/* <PopularSearches searchBusinesses={this.props.searchBusinesses} /> */}
-                </div>
+                </nav>
 
-                <div className="splash-about">
-                    {/* <About /> */}
-                </div>
+                <main className="splash-main">
+                </main> 
+
+                <footer className='splash-footer'>
+                </footer>
             </div> 
         )
     }
