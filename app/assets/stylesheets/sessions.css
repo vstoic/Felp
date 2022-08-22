@@ -1,0 +1,278 @@
+.login-nav {
+    width: 100%;
+    height: 55px;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(180deg, #f1f1f1 50%, #ffffff 100% );
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-logo {
+    width: 90px;
+    height: auto;
+}
+
+.login-form {
+    height: 100vh;
+    background-color: transparent;
+}
+
+.login-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    gap: 0px 220px;
+    line-height: 40px;
+    height: 90vh;
+}
+
+.login-form-box{
+    /* margin: auto; */
+    /* padding: 0 80px; */
+    max-width: 100%;
+    text-align: center;
+    /* vertical-align: center; */
+}
+
+.login-form-box h1{
+    font-family: Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: 340;
+    margin-bottom: 10px;
+}
+
+.login-form-box h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+}
+
+.login-form-box h3 {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    /* margin-top: 5px; */
+    margin-bottom: 5px;
+}
+
+.hr1 {
+    border: 0;
+    border-top: 1px solid #CCC;
+}
+
+.demo-button-login {
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+    height: 45px;
+    color: white;
+    background-color: #1877f2;
+    border-radius: 4px;
+    border-color: #999;
+    font-size: 14px;
+        font-weight: 600;
+}
+
+.login-email {
+    font-family: Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+    height: 30px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 12px;
+}
+
+.login-password {
+    font-family: Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+    height: 30px;
+    background-color: white;
+    border: 2px;
+    border-radius: 4px;
+    border: 1px solid #999;    
+    font-size: 12px;
+}
+
+.login-submit {
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    background: #d32323;
+    border: 1px solid #d32323;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+        font-weight: 600;
+}
+
+.signup-redirect {
+    justify-content: flex-end;
+    text-align: right;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    color: rgb(122, 122, 122);
+}
+
+
+
+
+/* --------------------- */
+/* signup */
+/* --------------------- */
+
+.signup-nav {
+    width: 100%;
+    height: 55px;
+    background-color: #f1f1f1;
+    background-image: linear-gradient(180deg, #f1f1f1 50%, #ffffff 100%);
+    display: flex;
+    vertical-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup-logo {
+    width: 90px;
+    height: auto;
+}
+
+.signup-form {
+    height: 100vh;
+    background-color: transparent;
+}
+
+.signup-form-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    gap: 0px 220px;
+    line-height: 40px;
+    height: 85vh;
+}
+
+.signup-form-box {
+    /* margin: auto; */
+    /* padding: 0 80px; */
+    max-width: 100%;
+    text-align: center;
+    /* vertical-align: center; */
+}
+
+.signup-form-box h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: 340;
+    margin-bottom: 10px;
+}
+
+.signup-form-box h2 {
+    font-family: Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 5px;
+    /* margin-bottom: 5px; */
+}
+
+.signup-form-box h3 {
+    font-family: Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: 200;
+    /* margin-top: 5px; */
+    margin-bottom: 5px;
+}
+
+.hr1 {
+    border: 0;
+    border-top: 1px solid #CCC;
+}
+
+.demo-button-signup {
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    /* margin-top: 5px; */
+    margin-bottom: 5px;
+    width: 100%;
+    height: 45px;
+    color: white;
+    background-color: #1877f2;
+    border-radius: 4px;
+    border-color: #999;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.signup-username {
+    font-family: Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+    height: 30px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 12px;
+}
+
+.signup-email {
+    font-family: Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+    height: 30px;
+    background-color: white;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 12px;
+}
+
+.signup-password {
+    font-family: Helvetica, sans-serif;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 98%;
+    height: 30px;
+    background-color: white;
+    border: 2px;
+    border-radius: 4px;
+    border: 1px solid #999;
+    font-size: 12px;
+}
+
+.signup-submit {
+    font-family: Helvetica, sans-serif;
+    cursor: pointer;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    color: #fff;
+    background: #d32323;
+    border: 1px solid #d32323;
+    width: 100%;
+    height: 50px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.login-redirect {
+    justify-content: flex-end;
+    text-align: right;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    color: rgb(122, 122, 122);
+}

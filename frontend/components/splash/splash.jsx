@@ -19,17 +19,17 @@ class Splash extends React.Component {
     render() {
         return (
             <div> 
+                
                 <nav className='splash-nav'>
-                    <div>
-                        {/* <button className="splash-link"><Link to="/signup">Sign up</Link></button>
-                        <button className="splash-link"><Link to="/login">Log in</Link></button>
-                        <button className="logout" onClick={this.props.logout}>Log Out</button> */}
+                    <div> 
                         <Nav formType={this.props.formType} currentUser={this.props.currentUser} logout={this.props.logout} />
                     </div>
                 </nav>
-
-                <main className="splash-main">
-                </main> 
+                
+                <div className="splash-image">
+                    <img  src="https://i.postimg.cc/t70MBSqy/o.jpg" />
+                </div>
+                
 
                 <footer className='splash-footer'>
                 </footer>

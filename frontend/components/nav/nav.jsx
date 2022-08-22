@@ -24,52 +24,40 @@ class Nav extends React.Component {
         return (
             <nav className='no-session-nav'>
                 <div className='splash-logo'>
-                    <h1>Felp Nav</h1>
+                    <Link to="/"><img className="logo" 
+                        src="https://i.postimg.cc/1RD4Mg5c/felp-logo.png" />
+                    </Link>
                 </div>
-                <ul>
-                    <button className="splash-link"><Link to="/signup">Sign up</Link></button>
-                    <button className="splash-link"><Link to="/login">Log in</Link></button>
-                </ul>
+                <div className='logged-out-buttons'>
+
+                    <Link className="splash-button-login" to='/login'>Log In</Link>
+
+                    <Link className="splash-button-signup" to='/signup'>Sign Up</Link>
+
+                </div>
             </nav>
         )
     }
 
+    
     loggedIn() {
         return (
             <div className='in-session-nav'>
-                {/* <div className='splash-logo'>
-                    <h1>Felp Nav</h1>
-                </div>
-                <div className='dropdown'>
-                    <div className="dropdown-click">
-                        <button onClick={() => this.handleClick()} className='dropdownbutton'>
-                            
+                <Link to="/"><img className="logo" 
+                    src="https://i.postimg.cc/1RD4Mg5c/felp-logo.png" /></Link>
+                    <div className='searchbar'></div>
+                    <div className="dropdown">
+                        <button className="dropbtn" onClick={() => 
+                            this.handleClick()} > o
                         </button>
-                    </div>
-                    <div className='dropdowncontent'>
-                        <div className='userprofile'>
-
-                        </div>
-                        <button className='nav-logout' onClick={this.props.logout}>Log Out</button>
-                    </div>
-                </div> */}
-
-                
-
-                <div class="navbar">
-                    <a href="#home">logo</a>
-                    <a href="#news">search bar</a>
-                    <div class="dropdown">
-                        <button class="dropbtn" onClick={() => this.handleClick()} >Dropdown
-                            <i class="fa fa-caret-down"></i>
-                        </button>
-                        <div class="dropdown-content" id="myDropdown">
+                        <div className="dropdown-content" id="myDropdown">
                             <p >Profile</p>
                             <p >Reviews</p>
-                            <button className='nav-logout' onClick={this.props.logout}>Log Out</button>
+                            <button className='nav-logout' 
+                                onClick={this.props.logout}>Log Out</button>
                         </div>
                     </div>
-                </div>
+
 
             </div>
         )

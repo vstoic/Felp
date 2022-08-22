@@ -1,0 +1,16 @@
+.splash-image {
+    z-index: -1;
+    position: relative;
+    /* background-color: #cccccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splash-nav {
+    z-index: 1;
+}
+
+/* vw, vh  */
+/* display flex  */
+/* position ab fixed  */
