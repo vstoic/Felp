@@ -35,6 +35,8 @@ class Nav extends React.Component {
                     <Link className="splash-button-signup" to='/signup'>Sign Up</Link>
 
                 </div>
+
+                
             </nav>
         )
     }
@@ -45,20 +47,20 @@ class Nav extends React.Component {
             <div className='in-session-nav'>
                 <Link to="/"><img className="logo" 
                     src="https://i.postimg.cc/1RD4Mg5c/felp-logo.png" /></Link>
-                    <div className='searchbar'></div>
-                    <div className="dropdown">
-                        <button className="dropbtn" onClick={() => 
-                            this.handleClick()} > o
-                        </button>
-                        <div className="dropdown-content" id="myDropdown">
-                            <p >Profile</p>
-                            <p >Reviews</p>
-                            <button className='nav-logout' 
-                                onClick={this.props.logout}>Log Out</button>
-                        </div>
+                <div className='searchbar'>search</div>
+                <div className="dropdown">
+                    <button className="dropbtn" onClick={() => 
+                        this.handleClick()} > D
+                    </button>
+                    <div className="dropdown-content" id="myDropdown">
+                        <p >Profile</p>
+                        <p >Reviews</p>
+                        <button className='nav-logout' 
+                            onClick={this.props.logout}>Log Out</button>
                     </div>
-
-
+                </div>
+                
+                         
             </div>
         )
     }

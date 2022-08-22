@@ -18,18 +18,16 @@ class Splash extends React.Component {
 
     render() {
         return (
-            <div> 
-                
-                <nav className='splash-nav'>
-                    <div> 
-                        <Nav formType={this.props.formType} currentUser={this.props.currentUser} logout={this.props.logout} />
-                    </div>
-                </nav>
-                
-                <div className="splash-image">
-                    <img  src="https://i.postimg.cc/t70MBSqy/o.jpg" />
+            <div className='splash-main'> 
+                <div className='splash-nav'>
+                    <Nav formType={this.props.formType} 
+                    currentUser={this.props.currentUser} 
+                    logout={this.props.logout} />
                 </div>
+                <img className="splash-background" src="https://i.postimg.cc/t70MBSqy/o.jpg" />
+
                 
+                <body></body>
 
                 <footer className='splash-footer'>
                 </footer>
