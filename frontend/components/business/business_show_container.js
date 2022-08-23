@@ -1,7 +1,9 @@
 import { connect } from 'react-redux';
-import { receiveUser, logout, receiveErrors } from '../../actions/session_actions';
+import { logout } from '../../actions/session_actions';
+import { fetchBusiness } from "../../actions/business_actions";
 import { withRouter } from 'react-router-dom';
 import BusinessShow from './business_show';
+
 
 const mapStateToProps = (state, ownProps) => ({
     business: state.entities.businesses[ownProps.match.params.businessId],
@@ -11,11 +13,9 @@ const mapStateToProps = (state, ownProps) => ({
 
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
+    fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(BusinessShow));
 
-// needs fetchBusiness and search Business
-
 // business reducer
-//what does withRouter do?

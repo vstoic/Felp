@@ -11,6 +11,7 @@ class Login extends React.Component {
         };
         this.handleDemo = this.handleDemo.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.clearErrors = this.clearErrors.bind(this);
     }
 
     componentWillUnmount() {
@@ -29,6 +30,22 @@ class Login extends React.Component {
         this.props.login(user)
         .then(() => this.props.history.push('/'));
     }
+
+    clearErrors(e) {
+        this.props.clearErrors()
+    }
+
+    // renderErrors() {
+    //     return (
+    //         <ul>
+    //             {this.props.errors.map((error, i) => (
+    //                 <li key={`error-${i}`}>
+    //                     {error}
+    //                 </li>
+    //             ))}
+    //         </ul>
+    //     );
+    // }
 
     handleDemo(e) {
         e.preventDefault();
@@ -66,6 +83,7 @@ class Login extends React.Component {
     }
 
     render() {
+    
         return (
         <div className='login-page'>
             <div className='login-nav'>
@@ -118,9 +136,15 @@ class Login extends React.Component {
                     <img src="https://i.postimg.cc/MHgtrPsb/signup-illustration.png" />
                     </div>
                 </div>
+                    {/* <div className='errors-container'>
+                        <ul id="errors">
+                            {errors}
+                        </ul>
+                    </div> */}
             </div>
         </div>
         );
+        
     }
 }
 

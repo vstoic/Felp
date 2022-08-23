@@ -11,7 +11,6 @@ class BusinessIndex extends React.Component {
     render() {
         return (
             <div>
-
                 <div className='splash-nav'>
                     <Nav formType={this.props.formType}
                         currentUser={this.props.currentUser}
