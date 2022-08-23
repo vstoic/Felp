@@ -2,7 +2,7 @@ import React from "react";
 import Nav from '../nav/nav'
 
 
-class Business extends React.Component {
+class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
 
@@ -24,4 +24,4 @@ class Business extends React.Component {
     }
 };
 
-export default Business;
+export default BusinessIndex;

@@ -1,5 +1,5 @@
 import { RECEIVE_USERS, RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER 
-} from "../actions/session_action";
+} from "../actions/session_actions";
 
 const nullUser = Object.freeze({
     id: null

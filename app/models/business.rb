@@ -21,6 +21,6 @@ class Business < ApplicationRecord
     validates :address, :city, :state, :zip_code, :cost, :open, :close, presence: true
 
     has_many :reviews,
-    foreign_key: :businesses_id
+    foreign_key: :businesses_id,
     class_name: :Business
 end
