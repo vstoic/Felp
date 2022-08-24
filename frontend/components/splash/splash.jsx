@@ -42,9 +42,9 @@ class Splash extends React.Component {
                             </div>
                         </Link>
                         <Link to='/businesses/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <img className='business-splash-photo' src='https://fastly.4sqi.net/img/general/600x600/69864456_BIpn7lgbRIO1A6ZLCZfb2B73R_i18QpytrXn2Bo1XwQ.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>The Uncommons</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
@@ -52,9 +52,9 @@ class Splash extends React.Component {
                             </div>
                         </Link>
                         <Link to='/businesses/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <img className='business-splash-photo' src='https://s3-media0.fl.yelpcdn.com/bphoto/iuJ_WYJkyM_eTu5KLZGESQ/o.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>Starbucks</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
@@ -62,9 +62,9 @@ class Splash extends React.Component {
                             </div>
                         </Link>
                         <Link to='/businesses/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <img className='business-splash-photo' src='https://www.jaimeemorse.com/wp-content/uploads/2021/02/JaimeeMorse-KellerWilliamsOffice-94.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>Keller Williams</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
