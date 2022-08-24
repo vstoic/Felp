@@ -20,11 +20,20 @@
 }
 
 .logo {
-    width: 100px;
+    width: 135px;
     height: auto;
     margin-left: 10px;
     margin-right: 10px;
 }
+
+.logo:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    transform: scale(1.1);
+    transition: all .2s ease-in
+}
+
 .nav-middle {
     display: flex;
     align-items: center;
@@ -35,9 +44,9 @@
 }
 .search-input {
     background-color: white;
-    width: 280px;
+    width: 300px;
     min-width: 250px;
-    height: 14px;
+    height: 24px;
     padding: 10px;
     border-radius: 4px 0 0 4px ;
     border: 1px solid #ebebeb;
@@ -48,8 +57,8 @@
 }
 
 .search-button {
-    padding-top: 8.5px;
-    padding-bottom: 11.5px;
+    padding-top: 13.5px;
+    padding-bottom: 17px;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 200;
@@ -62,7 +71,24 @@
     
 }
 
+.search-button:hover {
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+    transition: all .55s ease-in
+}
 
+.personal-link {
+    height: 40px;
+    width: auto;
+}
+.personal-link:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    transition: all .4s ease-in
+  
+}
 
 .dropdown .dropbtn {
     cursor: pointer;
@@ -91,15 +117,13 @@
 }
 
 .dropdown-content {
-        display: none;
-        position: absolute;
-        z-index: 100;
-        background-color: #fff;
-        border-radius: 4px;
-        box-shadow: 0 0 18px #00000026;
-        padding: 16px;
-
-        
+    display: none;
+    position: absolute;
+    z-index: 100;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 0 18px #00000026;
+    padding: 16px;
 }
 
 .logged-out-buttons {
@@ -113,6 +137,7 @@
     /* margin-left: 16px; */
     /* white-space: nowrap; */
 }
+
 
 
 
@@ -131,10 +156,10 @@
     box-shadow: none;
     cursor: pointer;
     height: 24px;
-    padding-bottom: 6.8px;
+    padding-bottom: 5.8px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 6.8px;
+    padding-top: 11.8px;
     border: 1.5px solid rgb(222, 222, 222);
 }
 
@@ -152,13 +177,25 @@
     box-shadow: none;
     cursor: pointer;
     height: 24px;
-    padding-bottom: 6.8px;
+    padding-bottom: 5.8px;
     padding-left: 30px;
     padding-right: 30px;
-    padding-top: 6.8px;
+    padding-top: 11.8px;
     border: 1.5px solid rgb(222, 222, 222);
 }
 
+
+.splash-button-login:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.444);
+    transition: all 1s ease-in
+}
+
+.splash-button-signup:hover {
+    cursor: pointer;
+    background-color: rgba(224, 7, 7, 0.611);
+    transition: all .4s ease-in
+}
 
 .show {
     display: block;

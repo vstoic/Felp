@@ -25,12 +25,12 @@ class Nav extends React.Component {
                 {this.props.currentUser ?
                     <div className='in-session-nav'>
                         <Link to="/"><img className="logo"
-                            src="https://i.postimg.cc/1RD4Mg5c/felp-logo.png" /></Link>
+                            src="https://i.postimg.cc/brmQWKyZ/felp-logo.png" /></Link>
                         <div className='nav-middle'>
-                            <form to="/">
+                            {/* <form to="/">
                                 <input type="text" placeholder="Feature Coming Soon~" className="search-input" />
                                 <button className='search-button'>🔍</button>
-                            </form>
+                            </form> */}
                         </div>
                         <div className='nav-right'>
                             <div className="dropdown">
@@ -51,16 +51,20 @@ class Nav extends React.Component {
                     <nav className='no-session-nav'>
                         <div className='splash-logo'>
                             <Link to="/"><img className="logo"
-                                src="https://i.postimg.cc/1RD4Mg5c/felp-logo.png" />
+                                src="https://i.postimg.cc/brmQWKyZ/felp-logo.png" />
                             </Link>
                         </div>
                         <div className='nav-middle'>
-                            <form to="/">
+                            {/* <form to="/">
                                 <input type="text" placeholder="Feature Coming Soon~" className="search-input" />
                                 <button className='search-button'>🔍</button>
-                            </form>
+                            </form> */}
                         </div>
                         <div className='logged-out-buttons'>
+                            <a href="https://www.linkedin.com/in/victorcheng3/" target="_blank" rel="noopener noreferrer"><img className="personal-link"
+                                src="https://i.postimg.cc/jjHFWSqP/thin-white-linkedin.png" /></a>
+                            <a href="https://github.com/vstoic" target="_blank" rel="noopener noreferrer"><img className="personal-link"
+                                src="https://i.postimg.cc/BbLbgyV5/github-white.png" /></a>
                             <Link className="splash-button-login" to='/login'>Log In</Link>
                             <Link className="splash-button-signup" to='/signup'>Sign Up</Link>
                         </div>

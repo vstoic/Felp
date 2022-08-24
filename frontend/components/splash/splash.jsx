@@ -24,12 +24,12 @@ class Splash extends React.Component {
                         currentUser={this.props.currentUser} 
                         logout={this.props.logout} />
                     </div>
-                    <img className="splash-background" src="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />
+                    <img className="splash-background" src="https://images5.alphacoders.com/100/1001016.jpg" alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />
                     <footer className='splash-footer'>
                     </footer>
                 </div> 
+                    <h1 className='business-splash-container-title'>Favorites</h1>
                 <div className='business-filler'>    
-                    {/* <h1 className='business-splash-title'>Our Favorites</h1> */}
                     <div className='business-container'>
                     {/* <div className='business-splash-container'> */}
                         <Link to='/business/1' className='splash-business-container'>
@@ -72,7 +72,7 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/business/1' className='splash-business-container'>
+                        {/* <Link to='/business/1' className='splash-business-container'>
                             <img className='business-splash-photo'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>TEST</p>
@@ -111,7 +111,7 @@ class Splash extends React.Component {
                                     <p className='splash-review-count'>Reviews</p>
                                 </div>
                             </div>
-                        </Link>
+                        </Link> */}
                         {/* </div> */}
                     </div>
                 </div>
