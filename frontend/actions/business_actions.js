@@ -1,5 +1,4 @@
 import * as BusinessUtil from '../util/business_util'
-
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES'
 export const RECEIVE_BUSINESS_ERRORS = "RECEIVE_BUSINESS_ERRORS";

@@ -5,9 +5,7 @@ import Nav from '../nav/nav'
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props)
-
     }
-
     render() {
         return(
             <div>
@@ -17,9 +15,7 @@ class BusinessShow extends React.Component {
                         logout={this.props.logout}/>
                 </div>
             </div>
-
         )
-
     }
 };
 

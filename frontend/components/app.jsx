@@ -10,7 +10,6 @@ import BusinessIndexContainer from "./business/business_index_container";
 
 
 const App = () => (
-
     <div>
         <Switch> 
             <AuthRoute path="/login" component={LoginFormContainer} />

@@ -24,94 +24,96 @@ class Splash extends React.Component {
                         currentUser={this.props.currentUser} 
                         logout={this.props.logout} />
                     </div>
-                    <img className="splash-background" src="https://i.postimg.cc/t70MBSqy/o.jpg" />
+                    <img className="splash-background" src="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />
                     <footer className='splash-footer'>
                     </footer>
                 </div> 
-                    
-                <div className='filler'>
+                <div className='business-filler'>    
+                    {/* <h1 className='business-splash-title'>Our Favorites</h1> */}
+                    <div className='business-container'>
                     {/* <div className='business-splash-container'> */}
-                        <Link to='/businesses/1' className='splash-business-container'>
+                        <Link to='/business/1' className='splash-business-container'>
                         <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>Chong Qing Lao Zao</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
+                                    <p className='splash-review-count'>342 Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
+                        <Link to='/business/1' className='splash-business-container'>
                         <img className='business-splash-photo' src='https://fastly.4sqi.net/img/general/600x600/69864456_BIpn7lgbRIO1A6ZLCZfb2B73R_i18QpytrXn2Bo1XwQ.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>The Uncommons</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
+                                    <p className='splash-review-count'>82 Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
+                        <Link to='/business/1' className='splash-business-container'>
                         <img className='business-splash-photo' src='https://s3-media0.fl.yelpcdn.com/bphoto/iuJ_WYJkyM_eTu5KLZGESQ/o.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>Starbucks</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
+                                    <p className='splash-review-count'> 42 Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
+                        <Link to='/business/1' className='splash-business-container'>
                         <img className='business-splash-photo' src='https://www.jaimeemorse.com/wp-content/uploads/2021/02/JaimeeMorse-KellerWilliamsOffice-94.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>Keller Williams</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
+                                    <p className='splash-review-count'>22 Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <Link to='/business/1' className='splash-business-container'>
+                            <img className='business-splash-photo'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>TEST</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <Link to='/business/1' className='splash-business-container'>
+                            <img className='business-splash-photo'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>TEST</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <Link to='/business/1' className='splash-business-container'>
+                            <img className='business-splash-photo'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>TEST</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/businesses/1' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                        <Link to='/business/1' className='splash-business-container'>
+                            <img className='business-splash-photo'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>TEST</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>Reviews</p>
                                 </div>
                             </div>
                         </Link>
-                    {/* </div> */}
+                        {/* </div> */}
+                    </div>
                 </div>
             </div>
         )
