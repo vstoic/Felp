@@ -18,6 +18,51 @@
     height: auto;
 }
 
+.bg-text {
+    cursor: default;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    vertical-align: center;
+    padding: 12px 0;
+    margin-top: 40px;
+}
+
+.bg-text-1 {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: -0.4px;
+    /* margin-left: 200px; */
+    margin-top: 200px;
+    filter: drop-shadow(0 0 0.05rem rgb(226, 226, 226));
+}
+
+.bg-text-2 {
+    text-align: center;
+    color: white;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 350;
+    letter-spacing: -0.4px;
+    filter: drop-shadow(0 0 0.05rem rgb(226, 226, 226));
+    /* margin-left: 200px; */
+    /* margin-top: 10px;
+    margin-left: 295px; */
+}
+
+.bg-text-1:hover {
+    text-shadow: 0 0 100px rgba(255, 255, 255, 0.538), 0 0 2px #fff2d28f;
+}
+
+.bg-text-2:hover {
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.538), 0 0 2px #fff2d28f;
+} 
+
+
 
 /* --------business css -----------*/
 
@@ -110,8 +155,5 @@
 
 
 
-/* vw, vh  */
-/* display flex  */
-/* position ab fixed  */
 
 

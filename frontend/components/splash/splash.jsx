@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../nav/nav'
+import Carousel, { CarouselItem } from '../Carousel/carousel';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -24,11 +25,13 @@ class Splash extends React.Component {
                         currentUser={this.props.currentUser} 
                         logout={this.props.logout} />
                     </div>
-                    <img className="splash-background" src="https://images5.alphacoders.com/100/1001016.jpg" alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />
-                    <footer className='splash-footer'>
-                    </footer>
+                    <img className="splash-background" src="https://images5.alphacoders.com/100/1001016.jpg" alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />   
+                    <div className='bg-text'>
+                        <h1 className='bg-text-1'>Fake People. Fake Reviews.</h1>
+                        <h2 className='bg-text-2'> Seek the best places to eat, shop, drink and do, well, whatever.</h2>
+                    </div>
                 </div> 
-                    <h1 className='business-splash-container-title'>Favorites</h1>
+                    <h1 className='business-splash-container-title'>Staff Favorites</h1>
                 <div className='business-filler'>    
                     <div className='business-container'>
                     {/* <div className='business-splash-container'> */}
@@ -72,48 +75,8 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-                        {/* <Link to='/business/1' className='splash-business-container'>
-                            <img className='business-splash-photo'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>TEST</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to='/business/1' className='splash-business-container'>
-                            <img className='business-splash-photo'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>TEST</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to='/business/1' className='splash-business-container'>
-                            <img className='business-splash-photo'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>TEST</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to='/business/1' className='splash-business-container'>
-                            <img className='business-splash-photo'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>TEST</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>Reviews</p>
-                                </div>
-                            </div>
-                        </Link> */}
-                        {/* </div> */}
                     </div>
+                    <footer className='splash-footer'></footer>
                 </div>
             </div>
         )

@@ -50,8 +50,8 @@ class Login extends React.Component {
     handleDemo(e) {
         e.preventDefault();
         const demo = {
-            email: "abc123@gmail.com",
-            password: "abc123"
+            email: "Demo@demo.com",
+            password: "demopassword"
         }
         const speed = 110;
 
@@ -74,7 +74,6 @@ class Login extends React.Component {
                         this.setState({ password: temp });
                     } else {
                         clearInterval(inputPassword);
-                        debugger
                         this.props.login(demo).then(() => this.props.history.push('/'));
                     }
                 }, speed);

@@ -33,17 +33,28 @@ class Nav extends React.Component {
                             </form> */}
                         </div>
                         <div className='nav-right'>
+                            <a href="https://www.linkedin.com/in/victorcheng3/" target="_blank" rel="noopener noreferrer"><img className="personal-link"
+                                src="https://i.postimg.cc/jjHFWSqP/thin-white-linkedin.png" /></a>
+                            <a href="https://github.com/vstoic" target="_blank" rel="noopener noreferrer"><img className="personal-link"
+                                src="https://i.postimg.cc/BbLbgyV5/github-white.png" /></a>
                             <div className="dropdown">
+
+
+
+
                                 <button className="dropbtn" onClick={() =>
                                     this.handleClick()} > D
                                 </button>
-                                <div className="dropdown-content" id="myDropdown">
-                                    <p >Profile</p>
-                                    <p >Reviews</p>
-                                    <button className='nav-logout' onClick={this.props.logout}>
-                                        Log Out
-                                    </button>
-                                </div>
+
+
+
+                            </div>
+                            <div className="dropdown-content" id="myDropdown">
+                                <p >Profile</p>
+                                <p >Reviews</p>
+                                <button className='nav-logout' onClick={this.props.logout}>
+                                    Log Out
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -60,7 +71,7 @@ class Nav extends React.Component {
                                 <button className='search-button'>🔍</button>
                             </form> */}
                         </div>
-                        <div className='logged-out-buttons'>
+                        <div className='nav-right'>
                             <a href="https://www.linkedin.com/in/victorcheng3/" target="_blank" rel="noopener noreferrer"><img className="personal-link"
                                 src="https://i.postimg.cc/jjHFWSqP/thin-white-linkedin.png" /></a>
                             <a href="https://github.com/vstoic" target="_blank" rel="noopener noreferrer"><img className="personal-link"
