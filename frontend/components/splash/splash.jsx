@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Nav from '../nav/nav'
-import Carousel, { CarouselItem } from '../Carousel/carousel';
 
 class Splash extends React.Component {
     constructor(props) {
@@ -31,7 +30,7 @@ class Splash extends React.Component {
                         <h2 className='bg-text-2'> Seek the best places to eat, shop, drink and do, well, whatever.</h2>
                     </div>
                 </div> 
-                    <h1 className='business-splash-container-title'>Staff Favorites</h1>
+                <h1 className='business-splash-container-title'>Staff Favorites</h1>
                 <div className='business-filler'>    
                     <div className='business-container'>
                     {/* <div className='business-splash-container'> */}

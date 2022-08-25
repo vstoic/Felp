@@ -38,16 +38,9 @@ class Nav extends React.Component {
                             <a href="https://github.com/vstoic" target="_blank" rel="noopener noreferrer"><img className="personal-link"
                                 src="https://i.postimg.cc/BbLbgyV5/github-white.png" /></a>
                             <div className="dropdown">
-
-
-
-
                                 <button className="dropbtn" onClick={() =>
                                     this.handleClick()} > D
                                 </button>
-
-
-
                             </div>
                             <div className="dropdown-content" id="myDropdown">
                                 <p >Profile</p>
