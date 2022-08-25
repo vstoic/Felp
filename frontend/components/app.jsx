@@ -12,11 +12,11 @@ import BusinessIndexContainer from "./business/business_index_container";
 const App = () => (
     <div>
         <Switch> 
-            <Route path='/business' component={BusinessIndexContainer} />   
             <Route path='/business/:businessId' component={BusinessShowContainer} />
+            <Route path='/business' component={BusinessIndexContainer} />   
             <AuthRoute path="/login" component={LoginFormContainer} />
             <AuthRoute path="/signup" component={SignupFormContainer} />
-            <Route exact path="/" component={SplashContainer} />
+            <Route path="/" component={SplashContainer} />
         </Switch>
     </div>
 );

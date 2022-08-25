@@ -21,7 +21,7 @@ class Nav extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='Navs'>
                 {this.props.currentUser ?
                     <div className='in-session-nav'>
                         <Link to="/"><img className="logo"
@@ -38,9 +38,10 @@ class Nav extends React.Component {
                             <a href="https://github.com/vstoic" target="_blank" rel="noopener noreferrer"><img className="personal-link"
                                 src="https://i.postimg.cc/BbLbgyV5/github-white.png" /></a>
                             <div className="dropdown">
-                                <button className="dropbtn" onClick={() =>
-                                    this.handleClick()} > D
-                                </button>
+                                <img className="dropbtn" onClick={() =>
+                                    this.handleClick()} src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/3/31/1427823466140/1fe69f2c-59d6-4e07-ab3a-8b60dbe35db2-1020x1020.jpeg?width=700&quality=85&auto=format&fit=max&s=488d904c14758c38d8010de62c742e4b">
+
+                                    </img>
                             </div>
                             <div className="dropdown-content" id="myDropdown">
                                 <p >Profile</p>
@@ -81,3 +82,6 @@ class Nav extends React.Component {
 }
 
 export default Nav;
+
+
+

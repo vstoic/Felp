@@ -17,7 +17,7 @@ class Splash extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className='whitespace'>
                 <div className='splash-main'> 
                     <div className='splash-nav'>
                         <Nav formType={this.props.formType} 
@@ -33,7 +33,6 @@ class Splash extends React.Component {
                 <h1 className='business-splash-container-title'>Staff Favorites</h1>
                 <div className='business-filler'>    
                     <div className='business-container'>
-                    {/* <div className='business-splash-container'> */}
                         <Link to='/business/1' className='splash-business-container'>
                         <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
                             <div className='business-splash-info'>
