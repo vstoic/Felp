@@ -1,11 +1,16 @@
 .main-show-page-container {
-background-color: rgb(30, 30, 30);
+/* background-color: rgb(30, 30, 30); */
+background-color: black;
+    z-index: 1 ;
     width: 100vw;
     height: 100vh;
 }
 
 .sp-nav {
-    background-color: rgb(30, 30, 30);
+    z-index: 5;
+    /* background-color: rgb(30, 30, 30); */
+    background-color: black;
     width: 100vw;
     height: 100vh;
 }
+
