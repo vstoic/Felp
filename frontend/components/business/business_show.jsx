@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from '../nav/nav'
 
+
 class BusinessShow extends React.Component {
     constructor(props) {
         super(props)
@@ -8,6 +9,7 @@ class BusinessShow extends React.Component {
 
     componentDidMount() {
         this.props.fetchBusiness(this.props.match.params.businessId);
+        
     };
 
     componentDidUpdate(prevProps) {
@@ -54,6 +56,14 @@ class BusinessShow extends React.Component {
                 </div>
 
                 <div className="sp-image-container">
+                    {/* <img src="" alt="" />
+                    <img src="" alt="" />
+                    <img src="" alt="" />
+                    <img src="" alt="" /> */}
+                </div>
+
+                <div className="business-sp-info">
+                    {/* <h1 className="sp-title">{this.props.business.name}</h1> */}
                 </div>
 
                 <div className="sp-body">

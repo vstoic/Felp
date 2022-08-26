@@ -34,9 +34,9 @@ class Splash extends React.Component {
                 <div className='business-filler'>    
                     <div className='business-container'>
                         <Link to='/business/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://i.postimg.cc/q72Dk2X0/o-3.jpg'></img>
+                            <img className='business-splash-photo' src='https://s3-media0.fl.yelpcdn.com/bphoto/97rTZhO_KH51AMDZ50Gpqg/o.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Chong Qing Lao Zao</p>
+                                <p className='business-splash-title'>Very Fresh Noodles</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'>342 Reviews</p>
@@ -44,19 +44,19 @@ class Splash extends React.Component {
                             </div>
                         </Link>
                         <Link to='/business/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://fastly.4sqi.net/img/general/600x600/69864456_BIpn7lgbRIO1A6ZLCZfb2B73R_i18QpytrXn2Bo1XwQ.jpg'></img>
+                            <img className='business-splash-photo' src='https://i.postimg.cc/SsGSSGy3/rubys.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>The Uncommons</p>
+                                <p className='business-splash-title'>Rubirosa</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
-                                    <p className='splash-review-count'>82 Reviews</p>
+                                    <p className='splash-review-count'>92 Reviews</p>
                                 </div>
                             </div>
                         </Link>
                         <Link to='/business/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://s3-media0.fl.yelpcdn.com/bphoto/iuJ_WYJkyM_eTu5KLZGESQ/o.jpg'></img>
+                            <img className='business-splash-photo' src='https://i.postimg.cc/hj8LKNQn/sd-c.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Starbucks</p>
+                                <p className='business-splash-title'>Southdown Coffee</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
                                     <p className='splash-review-count'> 42 Reviews</p>
@@ -64,12 +64,12 @@ class Splash extends React.Component {
                             </div>
                         </Link>
                         <Link to='/business/1' className='splash-business-container'>
-                        <img className='business-splash-photo' src='https://www.jaimeemorse.com/wp-content/uploads/2021/02/JaimeeMorse-KellerWilliamsOffice-94.jpg'></img>
+                            <img className='business-splash-photo' src='https://i.postimg.cc/zv0TgWkP/our-collection.jpg'></img>
                             <div className='business-splash-info'>
-                                <p className='business-splash-title'>Keller Williams</p>
+                                <p className='business-splash-title'>The Uncommons</p>
                                 <div className='hot-new-info-rating-container-2'>
                                     <p className='splash-review'></p>
-                                    <p className='splash-review-count'>22 Reviews</p>
+                                    <p className='splash-review-count'>82 Reviews</p>
                                 </div>
                             </div>
                         </Link>

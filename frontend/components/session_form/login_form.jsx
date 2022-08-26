@@ -87,13 +87,13 @@ class Login extends React.Component {
         <div className='login-page'>
             <div className='login-nav'>
                     <Link to="/"><img className="login-logo"
-                        src="https://i.postimg.cc/1RD4Mg5c/felp-logo.png" />
+                        src="https://i.postimg.cc/brmQWKyZ/felp-logo.png" />
                     </Link>
             </div> 
             <div className='login-form'>
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <div>
+                        <div className='session-text'>
                             <h1>Log in to Felp</h1>
                             <h2 className="signup-redirect-main">New to Felp? <Link to="/signup">Sign Up</Link>.</h2>
                             <h3>By logging in, you agree that felp is just a clone </h3>
@@ -131,8 +131,8 @@ class Login extends React.Component {
 
                         <p className="signup-redirect">New to Felp? <Link to="/signup">Sign Up</Link>.</p>
                     </form>
-                        <div className="login-image" >
-                    <img src="https://i.postimg.cc/MHgtrPsb/signup-illustration.png" />
+                        <div >
+                            <img src="https://i.postimg.cc/MHgtrPsb/signup-illustration.png" className="login-image" />
                     </div>
                 </div>
                     {/* <div className='errors-container'>

@@ -1,8 +1,12 @@
+.login-page {
+        background-color: rgb(30, 30, 30);
+}
+
 .login-nav {
     width: 100%;
-    height: 55px;
-    background-color: #f1f1f1;
-    background-image: linear-gradient(180deg, #f1f1f1 50%, #ffffff 100% );
+    height: 75px;
+    background-color: rgb(50, 50, 50);
+    background-image: linear-gradient(180deg, rgb(33, 33, 33) 50%, rgb(30, 30, 30) 100% );
     display: flex;
     vertical-align: center;
     align-items: center;
@@ -35,6 +39,9 @@
     max-width: 100%;
     text-align: center;
     /* vertical-align: center; */
+}
+.session-text {
+    color: #ffffff;
 }
 
 .login-form-box h1{
@@ -73,9 +80,10 @@
     width: 100%;
     height: 45px;
     color: white;
-    background-color: #1877f2;
+    /* background-color: #1877f2; */
+    background-color: #4f4f4f;
     border-radius: 4px;
-    border-color: #999;
+    border-color: rgb(131, 131, 131);
     font-size: 14px;
         font-weight: 600;
 }
@@ -125,10 +133,19 @@
     font-family: Helvetica, sans-serif;
     font-size: 12px;
     font-weight: 200;
-    color: rgb(122, 122, 122);
+    color: rgb(193, 193, 193);
 }
 
-
+.login-image:hover {
+    cursor: pointer;
+    /* -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2); */
+    -webkit-transform: rotateZ(5deg);
+    -ms-transform: rotateZ(5deg);
+    transform: rotateZ(5deg);
+    transition: all .5s ease-in
+}
 
 
 /* --------------------- */

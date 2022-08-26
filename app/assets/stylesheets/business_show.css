@@ -11,3 +11,8 @@
     box-sizing: border-box;
 }
 
+.business-sp-info {
+    display: flex;
+    background-color: black;
+    color: white;
+}

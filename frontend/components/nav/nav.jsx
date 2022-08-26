@@ -21,7 +21,7 @@ class Nav extends React.Component {
 
     render() {
         return (
-            <div className='Navs'>
+            <div className='navs'>
                 {this.props.currentUser ?
                     <div className='in-session-nav'>
                         <Link to="/"><img className="logo"
