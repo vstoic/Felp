@@ -1,24 +1,26 @@
-# README
+# Welcome to Felp
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+“Imitation is the sincerest form of flattery that mediocrity can pay to greatness.” (Oscar Wilde) Everywhere I go, everywhere I eat, anything I do, 
+I have looked up on yelp. 
 
-Things you may want to cover:
+## Key Feature, Functionality & MVPs:
+- [x] Live Site Setup via Heroku
+![Felp Splash Gif](app/assets/images/SplashPage.gif)
+- [x] User Auth / Account Creation & Demo User
+- [] Business Profile Page
+- [] Rating and Reviews
+- [] Search Bar & Filters
+- [] Map Api
+- [] Users Images
 
-* Ruby version
+## Technology
+* Ruby on Rails
+* React/Redux
+* PostgreSQL
+* HTML and CSS
 
-* System dependencies
+## Bonus Feature:
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
