@@ -5,7 +5,7 @@ I have looked up on yelp.
 
 ## Key Feature, Functionality & MVPs:
 - [x] Live Site Setup via Heroku
-![Felp Splash Gif](app/assets/images/SplashPage.gif)
+<!-- ![Felp Splash Gif](app/assets/images/SplashPage.gif) -->
 - [x] User Auth / Account Creation & Demo User
 - [] Business Profile Page
 - [] Rating and Reviews
