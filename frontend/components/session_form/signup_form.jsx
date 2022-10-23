@@ -12,6 +12,7 @@ class Signup extends React.Component {
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.renderErrors = this.renderErrors.bind(this);
     }
 
     componentWillUnmount() {
@@ -30,6 +31,17 @@ class Signup extends React.Component {
         this.props.signup(user);
     }
 
+    renderErrors() {
+        return (
+            <ul className='signup-errors'>
+                {this.props.errors.map((error, i) => (
+                    <div key={`error-${i}`}>
+                        {error}
+                    </div>
+                ))}
+            </ul>
+        );
+    }
 
     render() {
         const errors = this.props.errors;
@@ -48,10 +60,8 @@ class Signup extends React.Component {
                                 <h2>Connect with great local businesses</h2>
                                 <h3>By continuing, you agree that felp is just a clone </h3>
                             </div>
-            
                                 <hr className="hr1"></hr>
                                 <div className="signup-input">
-                                    <br />
                                     <label>
                                         <input type="text"
                                         placeholder='  Username'
@@ -79,8 +89,8 @@ class Signup extends React.Component {
                                         />
                                     </label>
                                     <br />
-                                    <button className="signup-submit" type="submit" value={this.props.formType}>Log In</button>
-                                    
+                                    <button className="signup-submit" type="submit" value={this.props.formType}>Sign Up</button>
+                                    {this.renderErrors()}
                                 </div>
 
                                 <p className="login-redirect">Already on Felp? <Link to="/login">Log In</Link>.</p>

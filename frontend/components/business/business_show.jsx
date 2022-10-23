@@ -56,10 +56,7 @@ class BusinessShow extends React.Component {
                 </div>
 
                 <div className="sp-image-container">
-                    {/* <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" />
-                    <img src="" alt="" /> */}
+                    
                 </div>
 
                 <div className="business-sp-info">

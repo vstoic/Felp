@@ -35,17 +35,17 @@ class Login extends React.Component {
         this.props.clearErrors()
     }
 
-    // renderErrors() {
-    //     return (
-    //         <ul>
-    //             {this.props.errors.map((error, i) => (
-    //                 <li key={`error-${i}`}>
-    //                     {error}
-    //                 </li>
-    //             ))}
-    //         </ul>
-    //     );
-    // }
+    renderErrors() {
+        return (
+            <ul className='login-errors'>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        );
+    }
 
     handleDemo(e) {
         e.preventDefault();
@@ -53,7 +53,7 @@ class Login extends React.Component {
             email: "Demo@demo.com",
             password: "demopassword"
         }
-        const speed = 110;
+        const speed = 150;
 
         if (this.state.email !== demo.email) {
             const inputEmail = setInterval(() => {
@@ -98,12 +98,6 @@ class Login extends React.Component {
                             <h2 className="signup-redirect-main">New to Felp? <Link to="/signup">Sign Up</Link>.</h2>
                             <h3>By logging in, you agree that felp is just a clone </h3>
                         </div>
-                        
-                        <button
-                            className="demo-button-login"
-                            onClick={this.handleDemo}>
-                            Continue as Demo User
-                        </button>
 
                         <hr className="hr1"></hr>
 
@@ -127,6 +121,13 @@ class Login extends React.Component {
                             </label>
                             <br />
                                 <button className="login-submit" type="submit" value={this.props.formType}>Log In</button>
+                            <br />
+                            <button
+                                className="demo-button-login"
+                                onClick={this.handleDemo}>
+                                Continue as Demo User
+                            </button>
+                            {this.renderErrors()}
                         </div>
 
                         <p className="signup-redirect">New to Felp? <Link to="/signup">Sign Up</Link>.</p>

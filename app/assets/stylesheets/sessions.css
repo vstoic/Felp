@@ -147,7 +147,14 @@
     transition: all .5s ease-in
 }
 
-
+.login-errors {
+    justify-content: flex-end;
+        text-align: right;
+        font-family: Helvetica, sans-serif;
+        font-size: 12px;
+        font-weight: 600;
+        color: rgb(186, 1, 1);
+}
 /* --------------------- */
 /* signup */
 /* --------------------- */
@@ -292,4 +299,13 @@
     font-size: 12px;
     font-weight: 200;
     color: rgb(122, 122, 122);
+}
+
+.signup-errors {
+    justify-content: flex-end;
+    text-align: right;
+    font-family: Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    color: rgb(186, 0, 0);
 }
