@@ -1,7 +1,6 @@
 # Welcome to Felp
 
-“Imitation is the sincerest form of flattery that mediocrity can pay to greatness.” (Oscar Wilde) Everywhere I go, everywhere I eat, anything I do, 
-I have looked up on yelp. 
+“Imitation is the sincerest form of flattery that mediocrity can pay to greatness.” (Oscar Wilde) :)
 
 ## Key Feature, Functionality & MVPs:
 - [x] Live Site Setup via Heroku
