@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from '../nav/nav'
 import { Link } from 'react-router-dom';
-
+import BusinessShowIndex from "./business_index_item";
 
 class BusinessIndex extends React.Component {
     constructor(props) {
@@ -23,11 +23,14 @@ class BusinessIndex extends React.Component {
                 </div>
                 <div className="businesses-index-container">
                     <div className="businesses-index">
-
-                        
-                        {/* <p>test1</p>
-                        <p>test3</p>
-                        <p>test2</p> */}
+                        {this.props.businesses.map(business => {
+                            return (
+                                <BusinessShowIndex
+                                    key={business.id}
+                                    business={business}
+                                />
+                            )
+                        })}
                     </div>
                 </div>
             </div>
