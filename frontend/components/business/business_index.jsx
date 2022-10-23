@@ -13,6 +13,7 @@ class BusinessIndex extends React.Component {
     }
 
     render() {
+        console.log(this.props.businesses)
         return (
             <div>
                 <div className='splash-nav'>
@@ -20,8 +21,15 @@ class BusinessIndex extends React.Component {
                         currentUser={this.props.currentUser}
                         logout={this.props.logout} />
                 </div>
-                <p>this is the business index page</p>
+                <div className="businesses-index-container">
+                    <div className="businesses-index">
 
+                        
+                        {/* <p>test1</p>
+                        <p>test3</p>
+                        <p>test2</p> */}
+                    </div>
+                </div>
             </div>
 
         )
