@@ -44,8 +44,6 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-
-
                         <Link to='/business/1' className='splash-business-container'>
                             <img className='business-splash-photo' src='https://i.postimg.cc/SsGSSGy3/rubys.jpg'></img>
                             <div className='business-splash-info'>

@@ -16,22 +16,24 @@ class BusinessIndex extends React.Component {
     render() {
         // console.log(this.props.businesses)
         return (
-            <div>
-                <div className='splash-nav'>
-                    <Nav formType={this.props.formType}
-                        currentUser={this.props.currentUser}
-                        logout={this.props.logout} />
-                </div>
-                <div className="businesses-index-container">
-                    <div className="businesses-index">
-                        {this.props.businesses.map(business => {
-                            return (
-                                <BusinessShowIndex
+            <div className="whitespace">
+                <div className="index-main">
+                    <div className='splash-nav'>
+                        <Nav formType={this.props.formType}
+                            currentUser={this.props.currentUser}
+                            logout={this.props.logout}/>
+                    </div>
+                    <div className="businesses-index-container">
+                        <div className="businesses-index">
+                            {this.props.businesses.map(business => {
+                                return (
+                                    <BusinessShowIndex
                                     key={business.id}
                                     business={business}
-                                />
-                            )
-                        })}
+                                    />
+                                    )
+                                })}
+                        </div>
                     </div>
                 </div>
             </div>
