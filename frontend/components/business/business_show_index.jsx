@@ -9,15 +9,11 @@ class BusinessShowIndex extends React.Component {
 
     }
 
-    componentDidMount() {
-    }
-
     render() {
-        console.log(this.props.businesses)
         return (
             <div className="business-show">
-                <p>{this.props.business.name}</p>
-                <p>{this.props.business.address}</p>
+                <p>{this.state.business.name}</p>
+                <p>{this.state.business.address}</p>
             </div>
 
         )

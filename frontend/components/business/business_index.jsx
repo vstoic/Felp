@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from '../nav/nav'
 import { Link } from 'react-router-dom';
-import BusinessShowIndex from "./business_index_item";
+import BusinessShowIndex from "./business_show_index_container";
 
 class BusinessIndex extends React.Component {
     constructor(props) {
@@ -10,10 +10,11 @@ class BusinessIndex extends React.Component {
     }
 
     componentDidMount() {
+        this.props.fetchBusinesses()
     }
 
     render() {
-        console.log(this.props.businesses)
+        // console.log(this.props.businesses)
         return (
             <div>
                 <div className='splash-nav'>

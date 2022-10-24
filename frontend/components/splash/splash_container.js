@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Splash from './splash';
 import { logout, receiveCurrentUser, clearErrors } from '../../actions/session_actions';
-import { fetchBusinesses } from '../../actions/business_actions';
+import { fetchBusinesses, fetchBusiness } from '../../actions/business_actions';
 
 const mapStateToProps = (state) => ({
     formType: "splash",
@@ -14,7 +14,8 @@ const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
     receiveCurrentUser: (user) => dispatch(receiveCurrentUser(user)),
     clearErrors: () => dispatch(clearErrors()),
-    fetchBusinesses: () => dispatch(fetchBusinesses())
+    fetchBusinesses: () => dispatch(fetchBusinesses()),
+    fetchBusiness: (businessId) => dispatch(fetchBusiness(businessId))
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Splash)
