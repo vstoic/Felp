@@ -5,11 +5,12 @@ const BusinessesReducer = (oldState = {}, action) => {
     const nextState = Object.assign({}, oldState);
     switch (action.type) {
         case RECEIVE_BUSINESS:
-            nextState[action.business.business.id] = action.business.business;
+            nextState[action.business.id] = action.business;
             return nextState;
         case RECEIVE_BUSINESSES:
             // return action.businesses;
-            return Object.assign({}, action.businesses.businesses);
+            return Object.assign({}, action.businesses);
+            // console.log(action.businesses)
         default:
             return oldState;
     }
