@@ -1,29 +1,26 @@
 import React from "react";
 import { Link } from 'react-router-dom';
 
-
 class BusinessShowIndex extends React.Component {
     constructor(props) {
         super(props)
         this.state = { business: this.props.business }
 
     }
-
     render() {
+        console.log(this.state)
         return (
-            <div className="business-show-index">
+            <div className="business-show">
                 <p>{this.state.business.name}</p>
                 <p>{this.state.business.address}{this.state.business.city}{this.state.business.state}{this.state.business.zip_code}</p>
-                <div>Phone Number: {this.state.business.phone_number}</div>
+                <p>Phone Number: {this.state.business.phone_number}</p>
                 <p>Website: {this.state.business.website}</p>
                 <p>Open: {this.state.business.open}</p>
                 <p>Close: {this.state.business.close}</p>
-                <div>Cost: {this.state.business.cost}</div>
+                <p>Cost: {this.state.business.cost}</p>
                 <hr className="hr1"></hr>
             </div>
-
         )
-
     }
 };
 
