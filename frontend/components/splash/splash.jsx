@@ -31,6 +31,7 @@ class Splash extends React.Component {
                         <h2 className='bg-text-2'> Seek the best places to eat, shop, drink and do, well, whatever.</h2>
                     </div>
                 </div> 
+                <h1 className='business-index-link'><Link to='/business'>All Businesses</Link></h1>
                 <h1 className='business-splash-container-title'>Staff Favorites</h1>
                 <div className='business-filler'>    
                     <div className='business-container'>
@@ -74,10 +75,9 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-                    </div>
-                    <br />
-                    <Link to='/business'>All Businesses</Link>
+                    </div>                    
                     <footer className='splash-footer'></footer>
+                    
                 </div>
             </div>
         )

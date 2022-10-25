@@ -11,6 +11,7 @@ class BusinessShowIndex extends React.Component {
         console.log(this.state)
         return (
             <div className="business-show">
+                {/* <img src="" alt="" /> */}
                 <p>{this.state.business.name}</p>
                 <p>{this.state.business.address}{this.state.business.city}{this.state.business.state}{this.state.business.zip_code}</p>
                 <p>Phone Number: {this.state.business.phone_number}</p>

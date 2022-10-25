@@ -88,6 +88,31 @@
 
 
 /* --------business css -----------*/
+.business-index-link {
+    margin-top: -15px;
+    // margin-bottom: 5px;
+    padding: 60px 25px 40px 25px;
+    width: 100%;
+    box-sizing: border-box;
+    height: 50px;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    // font-family: Lato;
+    font-size: 36px;
+    font-weight: 800;
+    // letter-spacing: -0.4px;
+    // color: rgba(45, 46, 47, 1);
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // border-top: 1.5px solid rgb(154, 154, 154);
+    text-decoration: none;
+    :visited {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+    }
+}
 
 .business-splash-container-title {
     margin-top: -15px;
@@ -107,7 +132,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-        border-top: 1.5px solid rgb(154, 154, 154);
+        // border-top: 1.5px solid rgb(154, 154, 154);
 }
 
 .business-splash-container-title:hover {
