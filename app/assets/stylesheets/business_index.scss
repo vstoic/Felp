@@ -32,6 +32,14 @@
     // letter-spacing: -0.4px;
 }
 
+    .business-index-photo{
+       display: flex;
+       height: 80px;
+       width: auto;
+       justify-content: center;
+       align-items: center;
+    }
+
 .index-right {
     display: flex;
     // flex-direction: column;
@@ -51,3 +59,4 @@
         font-weight: 100;
         // letter-spacing: -0.4px;
     }
+

@@ -3,7 +3,7 @@
 json.set! business.id do
     # json.extract! business, :id, :name, :address, :city, :zip_code, :phone_number, :website, :open, :close, :cost
     json.partial! 'business', business: business
-    # json.photourl url_for(business.photos)
+    json.photo_urls business.photos.map { |photo| url_for(photo) }
     end
 end
 
