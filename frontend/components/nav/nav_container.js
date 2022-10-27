@@ -5,7 +5,6 @@ import Nav from './nav'
 const mapStateToProps = (state) => ({
     currentUser: state.entities.users[state.session.id],
 })
-
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
 })

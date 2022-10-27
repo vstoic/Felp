@@ -14,23 +14,19 @@ class Signup extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.renderErrors = this.renderErrors.bind(this);
     }
-
     componentWillUnmount() {
         this.props.clearErrors();
     }
-
     update(field) {
         return (e) => {
             this.setState({ [field]: e.target.value });
         }
     }
-
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.signup(user);
     }
-
     renderErrors() {
         return (
             <ul className='signup-errors'>
@@ -42,7 +38,6 @@ class Signup extends React.Component {
             </ul>
         );
     }
-
     render() {
         const errors = this.props.errors;
         return (
@@ -92,11 +87,8 @@ class Signup extends React.Component {
                                     <button className="signup-submit" type="submit" value={this.props.formType}>Sign Up</button>
                                     {this.renderErrors()}
                                 </div>
-
                                 <p className="login-redirect">Already on Felp? <Link to="/login">Log In</Link>.</p>
-
-                            </form>
-                                
+                            </form> 
                                 <img className="login-image" src="https://i.postimg.cc/MHgtrPsb/signup-illustration.png" />
                         
                         </div>

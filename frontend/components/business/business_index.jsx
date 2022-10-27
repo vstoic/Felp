@@ -6,14 +6,11 @@ import BusinessShowIndex from "./business_show_index_container";
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
-
     }
-
     componentDidMount() {
         window.scrollTo(0, 0);
         this.props.fetchBusinesses();
     }
-
     render() {
         // console.log(this.props.businesses)
         return (

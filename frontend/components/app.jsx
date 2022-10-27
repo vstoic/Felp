@@ -7,8 +7,6 @@ import SplashContainer from './splash/splash_container';
 import BusinessShowContainer from "./business/business_show_container";
 import BusinessIndexContainer from "./business/business_index_container";
 
-
-
 const App = () => (
     <div>
         <Switch> 

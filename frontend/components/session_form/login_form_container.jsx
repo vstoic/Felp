@@ -11,7 +11,6 @@ import Login from './login_form';
 //         // navLink: <Link to="/signup">sign up instead</Link>,
 //     };
 // };
-
 const mapStateToProps = ({ errors }) => {
     return {
         errors: errors.session,
@@ -19,7 +18,6 @@ const mapStateToProps = ({ errors }) => {
         navLink: <Link to="/signup">sign up instead</Link>,
     };
 };
-
 const mapDispatchToProps = dispatch => ({
     login: (user) => dispatch(login(user)),
     clearErrors: () => dispatch(clearErrors())

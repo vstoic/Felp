@@ -13,12 +13,9 @@ class Nav extends React.Component {
             this.type = "review_pages"
         }
     }
-
     handleClick() {
         document.getElementById("myDropdown").classList.toggle("show");
     }
-
-
     render() {
         return (
             <div className='navs'>
@@ -78,7 +75,6 @@ class Nav extends React.Component {
             </div>
         )
     }
-
 }
 
 export default Nav;

@@ -12,12 +12,10 @@ const mapStateToProps = ({ errors }) => {
                 navLink: <Link to="/login">log in instead</Link>,
         };
 };
-
 const mapDispatchToProps = dispatch => ({
         signup: user => dispatch(signup(user)),
         clearErrors: () => dispatch(clearErrors()),
         login: (user) => dispatch(login(user))
-
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

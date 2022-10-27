@@ -13,28 +13,23 @@ class Login extends React.Component {
         this.handleSubmit = this.handleSubmit.bind(this);
         this.clearErrors = this.clearErrors.bind(this);
     }
-
     componentWillUnmount() {
         this.props.clearErrors();
     }
-
     update(field) {
         return (e) => {
             this.setState({ [field]: e.target.value });
         }
     }
-
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.login(user)
         .then(() => this.props.history.push('/'));
     }
-
     clearErrors(e) {
         this.props.clearErrors()
     }
-
     renderErrors() {
         return (
             <ul className='login-errors'>
@@ -46,7 +41,6 @@ class Login extends React.Component {
             </ul>
         );
     }
-
     handleDemo(e) {
         e.preventDefault();
         const demo = {
@@ -54,7 +48,6 @@ class Login extends React.Component {
             password: "demopassword"
         }
         const speed = 150;
-
         if (this.state.email !== demo.email) {
             const inputEmail = setInterval(() => {
                 if (this.state.email !== demo.email) {
@@ -80,9 +73,7 @@ class Login extends React.Component {
             }
         }
     }
-
     render() {
-    
         return (
         <div className='login-page'>
             <div className='login-nav'>
@@ -98,9 +89,7 @@ class Login extends React.Component {
                             <h2 className="signup-redirect-main">New to Felp? <Link to="/signup">Sign Up</Link>.</h2>
                             <h3>By logging in, you agree that felp is just a clone </h3>
                         </div>
-
                         <hr className="hr1"></hr>
-
                         <div className="login-input">
                             <label>
                                 <input type="email"
@@ -129,7 +118,6 @@ class Login extends React.Component {
                             </button>
                             {this.renderErrors()}
                         </div>
-
                         <p className="signup-redirect">New to Felp? <Link to="/signup">Sign Up</Link>.</p>
                     </form>
                         <div >

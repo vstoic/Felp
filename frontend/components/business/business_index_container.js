@@ -10,7 +10,6 @@ const mapStateToProps = (state) => ({
     errors: Object.values(state.errors),
     formType: "other_pages"
 })
-
 const mapDispatchToProps = dispatch => ({
     fetchBusinesses: () => dispatch(fetchBusinesses()),
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),

@@ -7,15 +7,12 @@ class Splash extends React.Component {
         super(props)
         this.clearErrors = this.clearErrors.bind(this)
     }
-
     clearErrors(e) {
         this.props.clearErrors()
     }
-
     componentDidMount() {
         this.props.fetchBusinesses()
     }
-
     render() {
         return (
             <div className='whitespace'>
@@ -77,7 +74,6 @@ class Splash extends React.Component {
                         </Link>
                     </div>                    
                     <footer className='splash-footer'></footer>
-                    
                 </div>
             </div>
         )
