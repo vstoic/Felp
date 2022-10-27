@@ -11,15 +11,16 @@ class BusinessShowIndex extends React.Component {
         console.log(this.state)
         return (
             <div className="business-show">
-                <div ><img className="business-index-photo" src={this.state.business.photo_urls[0]} alt="" /></div>
+                <img className="business-index-photo" src={this.state.business.photo_urls[0]} alt="" />
                 <p>{this.state.business.name}</p>
-                <p>{this.state.business.address}{this.state.business.city}{this.state.business.state}{this.state.business.zip_code}</p>
-                <p>Phone Number: {this.state.business.phone_number}</p>
-                <p>Website: {this.state.business.website}</p>
-                <p>Open: {this.state.business.open}</p>
-                <p>Close: {this.state.business.close}</p>
+                ★★★★★
+                <p>{this.state.business.city}</p>
                 <p>Cost: {this.state.business.cost}</p>
-                <hr className="hr1"></hr>
+                {/* <p>{this.state.business.address}{this.state.business.city}{this.state.business.state}{this.state.business.zip_code}</p> */}
+                {/* <p>Phone Number: {this.state.business.phone_number}</p> */}
+                {/* <p>Website: {this.state.business.website}</p> */}
+                <p>Hours: {this.state.business.open} - {this.state.business.close}</p>
+                {/* <hr className="hr1"></hr> */}
             </div>
         )
     }
