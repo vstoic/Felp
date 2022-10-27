@@ -11,11 +11,15 @@
 # User.destroy_all
 Business.destroy_all
 
-business1 = Business.create!(name: "ChongQing Lao Zao", address: "37-041 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00PM", close: "11:00PM", cost: "$$$")
-business2 = Business.create!(name: "ChongQing Lao Zao1", address: "37-042 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00PM", close: "11:00PM", cost: "$$$")
-business3 = Business.create!(name: "ChongQing Lao Zao2", address: "37-043 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00PM", close: "11:00PM", cost: "$$$")
-business4 = Business.create!(name: "ChongQing Lao Zao3", address: "37-044 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00PM", close: "11:00PM", cost: "$$$")
-business5 = Business.create!(name: "ChongQing Lao Zao4", address: "37-045 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00PM", close: "11:00PM", cost: "$$$")
-business6 = Business.create!(name: "ChongQing Lao Zao5", address: "37-046 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00PM", close: "11:00PM", cost: "$$$")
+business1 = Business.create!(name: "ChongQing Lao Zao", address: "37-041 Prince St", city: "Flushing", state: "NY", zip_code: "11354", phone_number: "(917) 563-7171", website: "https://www.chongqinglaozao.com/", open: "12:00 PM", close: "11:00 PM", cost: "$$$")
+business1.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/hotpot-1.jpeg'), filename: 'CQLZ1.jpeg')
 
-business1.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/hotpot-1.jpeg'), filename: 'hotpot-1.jpeg')
+business2 = Business.create!(name: "The Uncommons", address: "230 Thompson St", city: "New York", state: "NY", zip_code: "10012", phone_number: "(646) 543-9215", website: "http://uncommonsnyc.com", open: "11:00 AM", close: "11:00 PM", cost: "$")
+business2.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/uncommons1.jpeg'), filename: 'uncommons1.jpeg')
+
+business3 = Business.create!(name: "Rubirosa", address: "235 Mulberry St", city: "New York", state: "NY", zip_code: "10012", phone_number: "(212) 965-0500", website: "http://rubirosanyc.com", open: "11:00 AM", close: "10:00PM", cost: "$$")
+business3.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/rubys.jpeg'), filename: 'rubys1.jpeg')
+
+business4 = Business.create!(name: "Southdown Coffee", address: "149 Glen St", city: "Glen Cove", state: "NY", zip_code: "11542", phone_number: "N/A", website: "https://www.southdowncoffee.com", open: "7:00 AM", close: "6:00PM", cost: "$")
+business4.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/sd+c.jpeg'), filename: 'southdowns1.jpeg')
+
