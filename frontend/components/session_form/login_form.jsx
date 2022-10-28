@@ -47,7 +47,7 @@ class Login extends React.Component {
             email: "Demo@demo.com",
             password: "demopassword"
         }
-        const speed = 150;
+        const speed = 25;
         if (this.state.email !== demo.email) {
             const inputEmail = setInterval(() => {
                 if (this.state.email !== demo.email) {
