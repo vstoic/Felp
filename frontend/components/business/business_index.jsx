@@ -2,6 +2,7 @@ import React from "react";
 import Nav from '../nav/nav'
 import { Link } from 'react-router-dom';
 import BusinessShowIndex from "./business_show_index_container";
+import Map from "../map/map_container";
 
 class BusinessIndex extends React.Component {
     constructor(props) {
@@ -38,7 +39,7 @@ class BusinessIndex extends React.Component {
                     </div>
                     <div className="index-right">
                         <div className="google-map">
-                            this is the map for business index page
+                            {/* <Map/> */}
                         </div>
                     </div>
                 </div>

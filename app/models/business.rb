@@ -8,13 +8,15 @@
 #  city         :string           not null
 #  state        :string           not null
 #  zip_code     :string           not null
-#  phone_number :integer
+#  phone_number :string
 #  website      :string
-#  cost         :integer          not null
+#  cost         :string           not null
 #  open         :string           not null
 #  close        :string           not null
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  lat          :decimal(, )
+#  lng          :decimal(, )
 #
 class Business < ApplicationRecord
     validates :name, presence: true, uniqueness: true
