@@ -13,5 +13,4 @@ const BusinessErrorsReducer = (oldState = {}, action) => {
             return oldState;
     }
 }
-
 export default BusinessErrorsReducer

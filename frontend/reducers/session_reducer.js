@@ -1,10 +1,8 @@
 import { RECEIVE_USERS, RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER 
 } from "../actions/session_actions";
 
-const nullUser = Object.freeze({
-    id: null
+const nullUser = Object.freeze({id: null
 });
-
 const SessionReducer = (oldState = nullUser, action) => {
     Object.freeze(oldState);
     // const nextState = Object.assign({}, oldState);

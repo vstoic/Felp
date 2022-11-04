@@ -6,5 +6,4 @@ const entitiesReducer  = combineReducers({
     users: UsersReducer,
     businesses: BusinessesReducer
 });
-
 export default entitiesReducer;
