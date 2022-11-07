@@ -1,22 +1,27 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
+    const mapOptions = {
+        center: { lat: 40.76068220846901, lng: -73.83302248127391 },
+        zoom: 13
+    };
 
 class Map extends React.Component {
     constructor(props) {
         super(props)
     }
     componentDidMount() {
-        const mapOptions = {
-            center: { lat: 37.7758, lng: -122.435 },
-            zoom: 13
-        };
-        this.map = new google.maps.Map(this.mapNode, mapOptions);
+        const map = this.refs.map;
+        this.map = new google.maps.Map(map, mapOptions);
+    //     this.MarkerManager = new MarkerManager(this.map);
     }
     render() {
         return (
-            <div ref={map => this.mapNode = map}></div>
+            <div className="map-container" ref="map" >
+                Map
+            </div>
         )
     }
 };
 
-export default Map;
+export default withRouter(Map);
