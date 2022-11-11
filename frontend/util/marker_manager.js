@@ -6,20 +6,27 @@ class MarkerManager {
     }
     updateMarkers(businesses){
         console.log("this is updateMarkers");
-        const businessesObj = {};
-        businesses.forEach(business => businessesObj[business.id] = business);
-        
-        businesses
-            .filter(business => !this.markers[business.id])
+        Object.keys(this.markers).forEach(key => {
+            this.markers[key].setMap(null)
+            delete this.markers[key]})
+        // Object.keys(businesses).forEach(business => {
+        //     if (!this.markers[business.id]) {
+        //         let markerIndex = businesses.indexOf(business) + 1
+        //         this.createMarkerFromBusiness(business, markerIndex);
+        //     };
+        // });
     }
-    createMarkerFromBusiness(business) {
-    const position = new google.maps.LatLng(business.lat, business.lng);
-    const marker = new google.maps.Marker({ 
-        position, 
+    createMarkerFromBusiness(business, index) {
+    let position = {lat: business.lat, lng: business.lng}
+    let marker = new google.maps.Marker({ 
+        position: position, 
+        label: {text: index.toString(), color: "red"},
         map: this.map, 
         businessId: business.id 
         });
-    }
 
+    this.markers[business.id] = marker;
+    this.markers[business.id].setMap(this.map);
+    }
 }
 export default MarkerManager;

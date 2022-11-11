@@ -27,11 +27,10 @@ class Business < ApplicationRecord
     class_name: :Business
 
     has_many_attached :photos
-end
-
-def self.in_bounds(bounds)
-    self.where("lat < ?", bounds[:northEast][:lat])
-        .where("lat > ?", bounds[:southWest][:lat])
-        .where("lng > ?", bounds[:southWest][:lng])
-        .where("lng < ?", bounds[:northEast][:lng])
+    def self.in_bounds(bounds)
+        self.where("lat < ?", bounds[:northEast][:lat])
+            .where("lat > ?", bounds[:southWest][:lat])
+            .where("lng > ?", bounds[:southWest][:lng])
+            .where("lng < ?", bounds[:northEast][:lng])
+    end
 end
