@@ -1,3 +1,4 @@
+
 class MarkerManager {
     constructor(map, handleClick) {
         this.map = map;
@@ -20,7 +21,8 @@ class MarkerManager {
     const position = new google.maps.LatLng(business.lat, business.lng);
     const marker = new google.maps.Marker({ 
         position, 
-        label: {text: index.toString(), color: "red"},
+        label: {text: index.toString(), color: "white"},
+        // labelstyle: {color: "white"},  (this is not working)
         map: this.map 
         });
     this.markers[business.id] = marker;
