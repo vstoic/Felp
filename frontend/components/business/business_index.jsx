@@ -39,7 +39,7 @@ class BusinessIndex extends React.Component {
                     </div>
                     <div className="index-right">
                         <div className="google-map">
-                            <Map business={this.props.businesses}/>
+                            <Map businesses={this.props.businesses}/>
                         </div>
                     </div>
                 </div>

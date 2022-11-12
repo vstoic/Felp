@@ -7,7 +7,7 @@ class BusinessShowIndex extends React.Component {
         this.state = { business: this.props.business }
     }
     render() {
-        console.log(this.state)
+        // console.log(this.state)
         return (
             <div className="business-show">
                 <img className="business-index-photo" src={this.state.business.photo_urls[0]} alt=""/>

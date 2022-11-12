@@ -10,11 +10,14 @@ import MarkerManager from "../../util/marker_manager";
 class Map extends React.Component {
     constructor(props) {
         super(props)
+        // this.state = { business: this.props.businesses }
     }
     componentDidMount() {
+        // console.log(this.state)
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);
-        this.MarkerManager = new MarkerManager(this.map);
+        this.MarkerManager = new MarkerManager(this.props.businesses);
+
     }
     componentDidUpdate() {
         this.MarkerManager.updateMarkers(this.props.businesses);
@@ -28,4 +31,4 @@ class Map extends React.Component {
     }
 };
 
-export default withRouter(Map);
+export default Map;
