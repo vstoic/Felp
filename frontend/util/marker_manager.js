@@ -24,7 +24,6 @@ class MarkerManager {
         map: this.map, 
         businessId: business.id 
         });
-
     this.markers[business.id] = marker;
     this.markers[business.id].setMap(this.map);
     }
