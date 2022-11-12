@@ -17,12 +17,11 @@ class MarkerManager {
         };
     }
     createMarkerFromBusiness(business, index) {
-    let newPosition = {lat: business.lat, lng: business.lng}
-    console.log(newPosition);
-    let marker = new google.maps.Marker({ 
-        position: newPosition, 
+    const position = new google.maps.LatLng(business.lat, business.lng);
+    const marker = new google.maps.Marker({ 
+        position, 
         label: {text: index.toString(), color: "red"},
-        map: this.map, 
+        map: this.map 
         });
     this.markers[business.id] = marker;
     this.markers[business.id].setMap(this.map);

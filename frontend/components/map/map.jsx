@@ -16,7 +16,9 @@ class Map extends React.Component {
         // console.log(this.state)
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);
-        this.MarkerManager = new MarkerManager(this.props.businesses);
+        this.MarkerManager = new MarkerManager(this.map);
+        this.MarkerManager.updateMarkers(this.props.businesses);
+        // this.MarkerManager = new MarkerManager(this.props.businesses);
 
     }
     componentDidUpdate() {
