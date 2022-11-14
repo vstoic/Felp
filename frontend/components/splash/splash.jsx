@@ -14,6 +14,7 @@ class Splash extends React.Component {
         this.props.fetchBusinesses()
     }
     render() {
+        // console.log(this.props)
         return (
             <div className='whitespace'>
                 <div className='splash-main'> 

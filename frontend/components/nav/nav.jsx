@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dropdown from './dropdown';
+import Search from '../search/search';
+import Search_container from '../search/search_container';
 
 class Nav extends React.Component {
     constructor(props) {
@@ -57,6 +59,8 @@ class Nav extends React.Component {
                             </Link>
                         </div>
                         <div className='nav-middle'>
+                            <Search_container location={this.props.location}/>
+                            {/* search goes here */}
                             {/* <form to="/">
                                 <input type="text" placeholder="Feature Coming Soon~" className="search-input" />
                                 <button className='search-button'>🔍</button>

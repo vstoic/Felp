@@ -50,9 +50,10 @@
     background-color: white;
     width: 300px;
     min-width: 250px;
-    height: 24px;
+    height: 22px;
     padding: 10px;
-    border-radius: 4px 0 0 4px ;
+    /* border-radius: 4px 0 0 4px ; */
+    border-radius: 5px;
     border: 1px solid #ebebeb;
     font-family: Helvetica, sans-serif;
     font-size: 12px;
@@ -61,8 +62,8 @@
 }
 
 .search-button {
-    padding-top: 13.5px;
-    padding-bottom: 17px;
+    padding-top: 12.5px;
+    padding-bottom: 16px;
     font-family: Helvetica, sans-serif;
     font-size: 16px;
     font-weight: 200;
@@ -71,7 +72,8 @@
     background-color: rgb(247, 247, 247);
     border: none;
     width: 58px;
-    border-radius: 0 4px 4px 0;
+    /* border-radius: 0 4px 4px 0; */
+    border-radius: 5px;
     
 }
 
