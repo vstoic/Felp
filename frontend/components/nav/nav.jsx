@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import dropdown from './dropdown';
-import Search from '../search/search';
 import Search_container from '../search/search_container';
 
 class Nav extends React.Component {
@@ -26,6 +25,7 @@ class Nav extends React.Component {
                         <Link to="/"><img className="logo"
                             src="https://i.postimg.cc/brmQWKyZ/felp-logo.png" /></Link>
                         <div className='nav-middle'>
+                            <Search_container location={this.props.location} />
                             {/* <form to="/">
                                 <input type="text" placeholder="Feature Coming Soon~" className="search-input" />
                                 <button className='search-button'>🔍</button>
