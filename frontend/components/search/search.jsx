@@ -35,7 +35,7 @@ class Search extends React.Component {
         };   
     };
     render() {
-        console.log(this.state.results)
+        // console.log(this.state.results)
         return (
             <div className="search-main-container">
                 <input type="text" placeholder="Search Felp" 

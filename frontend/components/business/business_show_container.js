@@ -7,12 +7,11 @@ import BusinessShow from './business_show';
 
 const mapStateToProps = (state, ownProps) => ({
     business: state.entities.businesses[ownProps.match.params.businessId],
-    formType: "other_pages",
-    currentUser: state.entities.users[state.session.id]
+    currentUser: state.entities.users[state.session.id],
+    formType: "other_pages"
 })
 
 const mapDispatchToProps = dispatch => ({
-    logout: () => dispatch(logout()),
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
 })
 

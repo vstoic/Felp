@@ -8,6 +8,7 @@ class BusinessShow extends React.Component {
     }
     componentDidMount() {
         window.scrollTo(0, 0);
+        // console.log(this.props)
         this.props.fetchBusiness(this.props.match.params.businessId);
     };
     componentDidUpdate(prevProps) {
@@ -16,6 +17,7 @@ class BusinessShow extends React.Component {
         }
     }
     render() {
+        console.log(this.props)
         return(
             <div className="-main-show-page-container">
                 <div className='sp-nav'>
@@ -23,17 +25,9 @@ class BusinessShow extends React.Component {
                         currentUser={this.props.currentUser}
                         logout={this.props.logout}/>
                 </div>
-                <div className="sp-image-container">
-                </div>
-                <div className="business-sp-info">
-                    {/* <h1 className="sp-title">{this.props.business.name}</h1> */}
-                </div>
-                <div className="sp-body">
-                    <div className="sp-body-left">
-                    </div>
-                    <div className="sp-body-right">
-                    </div>
-                </div>
+              
+                {/* <div className="business-title">{this.props.business}</div> */}
+
             </div>
         )
     }
