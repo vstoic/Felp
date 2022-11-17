@@ -1,6 +1,6 @@
 import React from "react";
 import Nav from '../nav/nav'
-
+import Carousel from "../carousel/carousel";
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -45,7 +45,8 @@ class BusinessShow extends React.Component {
                 </div>
                 <div className="business-show-container">
                     <div className="sp-middle">
-                        <img className="business-index-photo" src={this.props.business.photo_urls[0]} alt="" />
+                        <Carousel photos={this.props.business.photo_urls}/>
+                        {/* <img className="business-index-photo" src={this.props.business.photo_urls[0]} alt="" /> */}
                         <p className="business-index-name">{this.props.business.name}</p>
                         <p className="business-index-stars">★★★★★</p>
                         <p className="business-index-cost">Cost: {this.props.business.cost}</p>
