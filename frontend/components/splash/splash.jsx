@@ -33,7 +33,7 @@ class Splash extends React.Component {
                 <h1 className='business-splash-container-title'>Staff Favorites</h1>
                 <div className='business-filler'>    
                     <div className='business-container'>
-                        <Link to='/business/1' className='splash-business-container'>
+                        <Link to='/business/88' className='splash-business-container'>
                             <img className='business-splash-photo' src='https://s3-media0.fl.yelpcdn.com/bphoto/97rTZhO_KH51AMDZ50Gpqg/o.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>Very Fresh Noodles</p>
@@ -43,7 +43,7 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/business/1' className='splash-business-container'>
+                        <Link to='/business/89' className='splash-business-container'>
                             <img className='business-splash-photo' src='https://i.postimg.cc/SsGSSGy3/rubys.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>Rubirosa</p>
@@ -53,7 +53,7 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/business/1' className='splash-business-container'>
+                        <Link to='/business/88' className='splash-business-container'>
                             <img className='business-splash-photo' src='https://i.postimg.cc/hj8LKNQn/sd-c.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>Southdown Coffee</p>
@@ -63,7 +63,7 @@ class Splash extends React.Component {
                                 </div>
                             </div>
                         </Link>
-                        <Link to='/business/1' className='splash-business-container'>
+                        <Link to='/business/88' className='splash-business-container'>
                             <img className='business-splash-photo' src='https://i.postimg.cc/zv0TgWkP/our-collection.jpg'></img>
                             <div className='business-splash-info'>
                                 <p className='business-splash-title'>The Uncommons</p>
