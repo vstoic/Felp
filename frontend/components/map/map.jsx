@@ -4,7 +4,7 @@ import MarkerManager from "../../util/marker_manager";
 
     const mapOptions = {
         center: { lat: 40.76068220846901, lng: -73.83302248127391 },
-        zoom: 13
+        zoom: 20
     };
 
 class Map extends React.Component {

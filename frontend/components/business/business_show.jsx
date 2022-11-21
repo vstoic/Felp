@@ -1,6 +1,7 @@
 import React from "react";
 import Nav from '../nav/nav'
 import Carousel from "../carousel/carousel";
+import Map from "../map/map";
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class BusinessShow extends React.Component {
     // is why is this.props updating 3 times?
 
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         if (!this.props.business) return null;
         if (this.state.Loading === true) {
             return  <p>Loading...</p> 
@@ -60,7 +61,7 @@ class BusinessShow extends React.Component {
                             <p>Phone Number: {this.props.business.phone_number}</p>
                             <p>Website: {this.props.business.website}</p>
                             <p>{this.props.business.address}, {this.props.business.city}, {this.props.business.zip_code}</p>
-                            <div>G Map</div>
+                            <Map businesses={[this.props.business]}/>
                         </div>
 
                     </div>
