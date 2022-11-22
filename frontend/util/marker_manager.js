@@ -22,7 +22,6 @@ class MarkerManager {
             this.markers[key].setMap(null)
             delete this.markers[key]})
 
-
         for (let [each, business] of Object.entries(businesses)) {
             if (!this.markers[business.id]) {
                 const markerIdx = parseInt(each) + 1;
@@ -46,7 +45,7 @@ class MarkerManager {
         position, 
         label: {text: index.toString(), color: "white"},
         // labelstyle: {color: "white"},  (this is not working)
-        map: this.map 
+        map: this.map
         });
     this.markers[business.id] = marker;
     this.markers[business.id].setMap(this.map);

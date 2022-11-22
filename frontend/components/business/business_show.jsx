@@ -50,12 +50,12 @@ class BusinessShow extends React.Component {
                         {/* <img className="business-index-photo" src={this.props.business.photo_urls[0]} alt="" /> */}
                         <p className="business-index-name">{this.props.business.name}</p>
                         <p className="business-index-stars">★★★★★</p>
-                        <p className="business-index-cost">Cost: {this.props.business.cost}</p>
-                        <p className="business-index-hours">Hours: {this.props.business.open} - {this.props.business.close}</p>
+                        <p className="business-index-cost">{this.props.business.cost}</p>
+                        <p className="business-index-hours">Open: {this.props.business.open} - {this.props.business.close}</p>
                     </div>
                     <div className="sp-column-spliter">
                         <div className="sp-left">
-                            <p>reviews</p>
+                            <div className="business-show-reviews">reviews</div>
                         </div>
                         <div className="sp-right">
                             <p>Phone Number: {this.props.business.phone_number}</p>
@@ -63,7 +63,6 @@ class BusinessShow extends React.Component {
                             <p>{this.props.business.address}, {this.props.business.city}, {this.props.business.zip_code}</p>
                             <div className="google-map">
                                 <Map businesses={this.props.business}/>
-                            
                             </div>
                         </div>
                     </div>
