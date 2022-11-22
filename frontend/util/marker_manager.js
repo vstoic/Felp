@@ -4,12 +4,25 @@ class MarkerManager {
         this.map = map;
         this.handleClick = handleClick;
         this.markers = {};
+
+        this.updateMarkers = this.updateMarkers.bind(this);
+        this.updateMarker = this.updateMarker.bind(this);
     }
+    handleMarkers(businesses) {
+        if (Object.keys(businesses).length === 1) {
+            this.updateMarker(businesses);
+        } else if (Object.keys(businesses).length >= 1) {
+            this.updateMarkers(businesses)
+        }
+    };
+
     updateMarkers(businesses){
-        // console.log(businesses);
+        console.log(businesses);
         Object.keys(this.markers).forEach(key => {
             this.markers[key].setMap(null)
             delete this.markers[key]})
+
+
         for (let [each, business] of Object.entries(businesses)) {
             if (!this.markers[business.id]) {
                 const markerIdx = parseInt(each) + 1;
@@ -17,6 +30,16 @@ class MarkerManager {
             };
         };
     }
+
+    updateMarker(business){
+        console.log(business);
+        Object.keys(this.markers).forEach(key => {
+            this.markers[key].setMap(null)
+            delete this.markers[key]})
+        const markerIdx = 1;
+        this.createMarkerFromBusiness(business, markerIdx);
+    }
+
     createMarkerFromBusiness(business, index) {
     const position = new google.maps.LatLng(business.lat, business.lng);
     const marker = new google.maps.Marker({ 
@@ -29,4 +52,6 @@ class MarkerManager {
     this.markers[business.id].setMap(this.map);
     }
 }
+
+
 export default MarkerManager;
