@@ -15,6 +15,9 @@ class MarkerManager {
             this.updateMarkers(businesses)
         }
     };
+    
+    //added a handleMarkers to split the update markers function, 
+    //not sure if its working properly for business show page
 
     updateMarkers(businesses){
         console.log(businesses);

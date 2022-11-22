@@ -61,7 +61,7 @@ class BusinessShow extends React.Component {
                             <p>Phone Number: {this.props.business.phone_number}</p>
                             <p>Website: {this.props.business.website}</p>
                             <p>{this.props.business.address}, {this.props.business.city}, {this.props.business.zip_code}</p>
-                            <div className="google-map">
+                            <div className="bs-google-map">
                                 <Map businesses={this.props.business}/>
                             </div>
                         </div>

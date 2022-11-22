@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     /* box-sizing: border-box; */
     background-color: rgb(30, 30, 30);
     color: white;
@@ -53,17 +53,32 @@
     .sp-left{
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: grey;
+        height: 100%;
+        width: 60vw;
+
     }
         .business-show-reviews {
-            background-color: grey;
             color: white;
-            width: 100%;
-            height: 100%;
+            font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         }
 
     .sp-right {
         display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25vw;
+        height: 100%;
+        padding: 10px;
+        background-color: grey;
         flex-direction: column;
         font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
+        .bs-google-map {
+            justify-content: center;
+            width: 25vw;
+            height: 400px;
+        }
 
