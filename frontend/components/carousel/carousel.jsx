@@ -32,9 +32,9 @@ class Carousel extends React.Component {
         return (
             <div className="carousel-container">
                 <div className="carousel">
-                    <button className="next-img" onClick={() => this.nextPhoto()}>❯</button>
+                    <button className="prev-img" onClick={() => this.previousPhoto()}>❮</button>
                     <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex]} alt="" />
-                    <button className="next-img" onClick={() => this.previousPhoto()}>❮</button>
+                    <button className="next-img" onClick={() => this.nextPhoto()}>❯</button>
                 </div>
             </div>
         );

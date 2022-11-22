@@ -48,19 +48,25 @@ class BusinessShow extends React.Component {
                     <div className="sp-middle">
                         <Carousel photos={this.props.business.photo_urls}/>
                         {/* <img className="business-index-photo" src={this.props.business.photo_urls[0]} alt="" /> */}
-                        <p className="business-index-name">{this.props.business.name}</p>
-                        <p className="business-index-stars">★★★★★</p>
-                        <p className="business-index-cost">{this.props.business.cost}</p>
-                        <p className="business-index-hours">Open: {this.props.business.open} - {this.props.business.close}</p>
+                        <h1 className="business-index-name">{this.props.business.name}</h1>
+                        <h2 className="business-index-stars">★★★★★</h2>
+                        <h4 className="business-index-cost">{this.props.business.cost}</h4>
+                        <h4 className="business-index-hours">Open: {this.props.business.open} - {this.props.business.close}</h4>
                     </div>
                     <div className="sp-column-spliter">
                         <div className="sp-left">
                             <div className="business-show-reviews">reviews</div>
                         </div>
                         <div className="sp-right">
-                            <p>Phone Number: {this.props.business.phone_number}</p>
-                            <p>Website: {this.props.business.website}</p>
-                            <p>{this.props.business.address}, {this.props.business.city}, {this.props.business.zip_code}</p>
+                            <div className="sp-right-row">
+                                <p>Phone Number: {this.props.business.phone_number}</p>
+                            </div>
+                            <div className="sp-right-row">
+                                <p>Website: {this.props.business.website}</p>
+                            </div>
+                            <div className="sp-right-row">
+                                <p>{this.props.business.address}, {this.props.business.city}, {this.props.business.zip_code}</p>
+                            </div>
                             <div className="bs-google-map">
                                 <Map businesses={this.props.business}/>
                             </div>

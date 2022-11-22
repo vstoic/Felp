@@ -36,7 +36,7 @@
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
     .sp-middle{
-        background-color: grey;
+        /* background-color: grey; */
         display: flex;
         flex-direction: column;
         justify-content: space-between;
