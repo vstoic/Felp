@@ -9,18 +9,18 @@ class MarkerManager {
         this.updateMarker = this.updateMarker.bind(this);
     }
     handleMarkers(businesses) {
-        if (Object.keys(businesses).length === 1) {
+        console.log("0" in businesses);
+        if ("0" in businesses) {
+            this.updateMarkers(businesses);
+        } else {
             this.updateMarker(businesses);
-        } else if (Object.keys(businesses).length >= 1) {
-            this.updateMarkers(businesses)
-        }
+        };
     };
     
-    //added a handleMarkers to split the update markers function, 
-    //not sure if its working properly for business show page
+    //added a handleMarkers to split the update markers function
+    //index page uses a nested object w/ businesses, show page uses a single object with a business
 
     updateMarkers(businesses){
-        console.log(businesses);
         Object.keys(this.markers).forEach(key => {
             this.markers[key].setMap(null)
             delete this.markers[key]})
@@ -44,6 +44,7 @@ class MarkerManager {
 
     createMarkerFromBusiness(business, index) {
     const position = new google.maps.LatLng(business.lat, business.lng);
+    console.log(position)
     const marker = new google.maps.Marker({ 
         position, 
         label: {text: index.toString(), color: "white"},

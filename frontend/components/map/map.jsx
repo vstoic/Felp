@@ -10,10 +10,11 @@ import MarkerManager from "../../util/marker_manager";
 class Map extends React.Component {
     constructor(props) {
         super(props)
+        // console.log(this.props)
         // this.state = { business: this.props.businesses }
     }
     componentDidMount() {
-        console.log(this.props)
+        // console.log(this.props)
         const map = this.refs.map;
         this.map = new google.maps.Map(map, mapOptions);
         this.MarkerManager = new MarkerManager(this.map);
