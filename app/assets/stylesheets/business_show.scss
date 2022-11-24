@@ -55,7 +55,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: grey;
+        // background-color: grey;
+        border: 1px solid white;
         height: 100%;
         width: 60vw;
 
@@ -72,7 +73,7 @@
         width: 25vw;
         height: 100%;
         padding: 10px;
-        background-color: grey;
+        // background-color: grey;
         flex-direction: column;
         font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }

@@ -5,7 +5,8 @@ class Carousel extends React.Component {
         super(props)
         this.state = {
             currentPhotoIndex: 0,
-            photos: this.props.photos
+            photos: this.props.photos,
+            arrLength: this.props.photos.length - 1
         }
         this.nextPhoto = this.nextPhoto.bind(this);
         this.previousPhoto = this.previousPhoto.bind(this);
@@ -33,7 +34,11 @@ class Carousel extends React.Component {
             <div className="carousel-container">
                 <div className="carousel">
                     <button className="prev-img" onClick={() => this.previousPhoto()}>❮</button>
-                    <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex]} alt="" />
+                        <div className="carousel-image-container">
+                            {/* <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex]} alt="" /> */}
+                            <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex + 1]} alt="" />
+                            {/* <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex + 2]} alt="" /> */}
+                        </div>
                     <button className="next-img" onClick={() => this.nextPhoto()}>❯</button>
                 </div>
             </div>
