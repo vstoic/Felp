@@ -23,7 +23,7 @@ class Business < ApplicationRecord
     validates :address, :city, :state, :zip_code, :cost, :open, :close, presence: true
 
     has_many :reviews,
-    foreign_key: :businesses_id,
+    foreign_key: :business_id,
     class_name: :Business
 
     has_many_attached :photos
