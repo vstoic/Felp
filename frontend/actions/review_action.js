@@ -1,32 +1,52 @@
-export const fetchReview = () => reviewId => (
-    $.ajax({
-        method: 'GET',
-        url: `/api/reviews/${reviewId}`
-    })
+import * as ReviewAPIUtil from '../util/review_util';
+
+export const RECEIVE_REVIEW = 'RECEIVE_REVIEW';
+export const RECEIVE_REVIEWS = 'RECEIVE_REVIEWS';
+export const REMOVE_REVIEW = 'REMOVE_REVIEW';
+export const RECEIVE_REVIEW_ERRORS = "RECEIVE_REVIEW_ERRORS";
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
+
+const receiveReview = review => ({
+    type: RECEIVE_REVIEW,
+    review
+});
+const receiveReviews = reviews => ({
+    type: RECEIVE_REVIEWS,
+    reviews
+});
+const removeReview = reviewId => ({
+    type: REMOVE_REVIEW,
+    reviewId
+});
+const receiveReviewErrors = errors => ({
+    type: RECEIVE_REVIEW_ERRORS,
+    errors
+});
+// const clearErrors = errors => ({
+//     type: CLEAR_ERRORS,
+//     errors
+// });
+
+export const fetchReview = reviewId => dispatch => (
+    ReviewAPIUtil.fetchReview(reviewId)
+    .then(review => dispatch(receiveReview(review)))
 );
-export const fetchReviews = () => (
-    $.ajax({
-        method: 'GET',
-        url: '/api/reviews'
-    })
+export const fetchReviews = (businessId, reviewId) => dispatch => (
+    ReviewAPIUtil.fetchReviews(businessId, reviewId)
+    .then(reviews => dispatch(receiveReviews(reviews)))
 );
-export const createReviews = () => review => (
-    $.ajax({
-        method: 'POST',
-        url: '/api/reviews',
-        data: { review }
-    })
+export const createReview = (review, businessId) => dispatch => (
+    ReviewAPIUtil.createReview(review, businessId)
+    .then(review => dispatch(receiveReview(review))),
+    error => dispatch(receiveReviewErrors(error.responseJSON))
 );
-export const updateReview = () => review => (
-    $.ajax({
-        method: 'PATCH',
-        url: `/api/reviews/${review.id}`,
-        data: { review }
-    })
+export const updateReview = (review, businessId) => dispatch => (
+    ReviewAPIUtil.updateReview(review, businessId)
+    .then(review => dispatch(receiveReview(review))),
+    error => dispatch(receiveReviewErrors(error.responseJSON))
 );
-export const deleteReview = () => reviewId => (
-    $.ajax({
-        method: 'DELETE',
-        url: `/api/reviews/${reviewId}`
-    })
+export const deleteReview = (reviewId, businessId) => dispatch => (
+    ReviewAPIUtil.deleteReview(reviewId, businessId)
+    .then(() => dispatch(removeReview(reviewId))),
+    error => dispatch(receiveReviewErrors(error.responseJSON))
 );

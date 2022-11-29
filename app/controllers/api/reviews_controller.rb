@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-  before_action :require_logged_in, except: [:index, :show]
+#   before_action :require_logged_in, except: [:index, :show]
 
   def index
     @reviews = Review.all.where(business_id: params[:business_id])
@@ -15,7 +15,7 @@ class Api::ReviewsController < ApplicationController
     if @review.save
       render :show
     else
-      render json: @review, status: :unprocessable_entity
+      render json: @review.errors.full_messages, status: 422
     end
   end
 
