@@ -27,26 +27,26 @@ const receiveReviewErrors = errors => ({
 //     errors
 // });
 
-export const fetchReview = reviewId => dispatch => (
+export const fetchReview = (reviewId) => dispatch => (
     ReviewAPIUtil.fetchReview(reviewId)
-    .then(review => dispatch(receiveReview(review)))
+        .then(review => dispatch(receiveReview(review)))
 );
-export const fetchReviews = (businessId, reviewId) => dispatch => (
-    ReviewAPIUtil.fetchReviews(businessId, reviewId)
-    .then(reviews => dispatch(receiveReviews(reviews)))
+export const fetchReviews = () => dispatch => (
+    ReviewAPIUtil.fetchReviews()
+        .then(reviews => dispatch(receiveReviews(reviews)))
 );
-export const createReview = (review, businessId) => dispatch => (
-    ReviewAPIUtil.createReview(review, businessId)
-    .then(review => dispatch(receiveReview(review))),
-    error => dispatch(receiveReviewErrors(error.responseJSON))
+export const createReview = (review) => dispatch => (
+    ReviewAPIUtil.createReview(review)
+        .then(review => dispatch(receiveReview(review))),
+        error => dispatch(receiveReviewErrors(error.responseJSON))
 );
-export const updateReview = (review, businessId) => dispatch => (
-    ReviewAPIUtil.updateReview(review, businessId)
-    .then(review => dispatch(receiveReview(review))),
-    error => dispatch(receiveReviewErrors(error.responseJSON))
+export const updateReview = (review) => dispatch => (
+    ReviewAPIUtil.updateReview(review)
+        .then(review => dispatch(receiveReview(review))),
+        error => dispatch(receiveReviewErrors(error.responseJSON))
 );
-export const deleteReview = (reviewId, businessId) => dispatch => (
-    ReviewAPIUtil.deleteReview(reviewId, businessId)
-    .then(() => dispatch(removeReview(reviewId))),
-    error => dispatch(receiveReviewErrors(error.responseJSON))
+export const deleteReview = (reviewId) => dispatch => (
+    ReviewAPIUtil.deleteReview(reviewId)
+        .then(() => dispatch(removeReview(review))),
+        error => dispatch(receiveReviewErrors(error.responseJSON))
 );
