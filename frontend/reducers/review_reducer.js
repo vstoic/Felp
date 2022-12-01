@@ -17,4 +17,4 @@ const ReviewReducer = (oldState = {}, action) => {
     }
 };
 
-export default ReviewReducer
+export default ReviewReducer;

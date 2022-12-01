@@ -1,19 +1,19 @@
 import { connect } from "react-redux";
 import Review from "./review_container";
-import { editReview, deleteReview } from "../../actions/review_actions";
+// import { } from "../../actions/review_action";
 
 const mSTP = (state) => {
     return {
         // console.log(state)
         // user: state.entities.users[ownProps.match.params.userId],
-        review: state.entities.reviews
+        // review: state.entities.reviews
         //
     };
 }
 const mDTP = dispatch => {
     return {
-        editReview: review => dispatch(editReview(review)),
-        deleteReview: reviewId => dispatch(deleteReview(reviewId))
+        // editReview: review => dispatch(editReview(review)),
+        // deleteReview: reviewId => dispatch(deleteReview(reviewId))
     };
 }
-export default connect(mSTP, mDTP)(Review);
+export default connect(mSTP, mDTP)(ReviewForm);

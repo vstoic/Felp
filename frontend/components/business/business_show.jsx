@@ -2,6 +2,7 @@ import React from "react";
 import Nav from '../nav/nav'
 import Carousel from "../carousel/carousel";
 import Map from "../map/map";
+import Review from "../reviews/review";
 
 class BusinessShow extends React.Component {
     constructor(props) {
@@ -14,6 +15,7 @@ class BusinessShow extends React.Component {
         // window.scrollTo(0, 0);
         // console.log(this.props)
         this.props.fetchBusiness(this.props.match.params.businessId)
+        // this.props.fetchReview(1)
         this.setState({Loading: false})
         // .then((data) => {
         //     this.setState({currentBusiness: data})
@@ -55,7 +57,9 @@ class BusinessShow extends React.Component {
                     </div>
                     <div className="sp-column-spliter">
                         <div className="sp-left">
-                            <div className="business-show-reviews">reviews</div>
+                            <div className="business-show-reviews">
+                                <Review business={this.props.business}/>
+                            </div>
                         </div>
                         <div className="sp-right">
                             <div className="sp-right-row">

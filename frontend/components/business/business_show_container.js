@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import { logout } from '../../actions/session_actions';
 import { fetchBusiness, fetchBusinesses} from "../../actions/business_actions";
+import { fetchReviews } from "../../actions/review_actions";
 import { withRouter } from 'react-router-dom';
 import BusinessShow from './business_show';
 
@@ -19,6 +20,8 @@ const mapStateToProps = (state, ownProps) => (
 const mapDispatchToProps = dispatch => ({
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
     fetchBusinesses: () => dispatch(fetchBusinesses()),
+    fetchReviews: () => dispatch(fetchReviews()),
+    fetchReview: reviewId => dispatch(fetchReview(reviewId)),
     logout: () => dispatch(logout())
 })
 

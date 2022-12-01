@@ -17,6 +17,11 @@ business1.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/chongching
 business1.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/chongching/hotpot-3.jpeg'), filename: 'CQLZ3.jpeg')
 # 2 & 3rd photo are the same atm. Need to find more photos.
 
+review1 = Review.create!(user_id: 11, business_id: business1.id, rating: 5, review_body: "This is the review for the business")
+review2 = Review.create!(user_id: 11, business_id: business1.id, rating: 4, review_body: "This is the review for the business2")
+review3 = Review.create!(user_id: 11, business_id: business1.id, rating: 3, review_body: "This is the review for the business3")
+review4 = Review.create!(user_id: 11, business_id: business1.id, rating: 2, review_body: "This is the review for the business4")
+
 business2 = Business.create!(name: "The Uncommons", address: "230 Thompson St", city: "New York", state: "NY", zip_code: "10012", phone_number: "(646) 543-9215", website: "http://uncommonsnyc.com", open: "11:00 AM", close: "11:00 PM", cost: "$", lat: 47.76062220846901, lng: -73.83302248137391)
 business2.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/uncommons/uncommons1.jpeg'), filename: 'uncommons1.jpeg')
 business2.photos.attach(io: open('https://felp-seeds.s3.amazonaws.com/uncommons/uncommons2.jpeg'), filename: 'uncommons2.jpeg')

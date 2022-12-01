@@ -9,7 +9,7 @@ class MarkerManager {
         this.updateMarker = this.updateMarker.bind(this);
     }
     handleMarkers(businesses) {
-        console.log("0" in businesses);
+        // console.log("0" in businesses);
         if ("0" in businesses) {
             this.updateMarkers(businesses);
         } else {
@@ -34,7 +34,7 @@ class MarkerManager {
     }
 
     updateMarker(business){
-        console.log(business);
+        // console.log(business);
         Object.keys(this.markers).forEach(key => {
             this.markers[key].setMap(null)
             delete this.markers[key]})
@@ -44,7 +44,7 @@ class MarkerManager {
 
     createMarkerFromBusiness(business, index) {
     const position = new google.maps.LatLng(business.lat, business.lng);
-    console.log(position)
+    // console.log(position)
     const marker = new google.maps.Marker({ 
         position, 
         label: {text: index.toString(), color: "white"},
