@@ -1,15 +1,13 @@
 # Welcome to Felp
 
-“Imitation is the sincerest form of flattery that mediocrity can pay to greatness.” (Oscar Wilde) :)
-
 ## Key Feature, Functionality & MVPs:
 - [x] Live Site Setup via Heroku
 <!-- ![Felp Splash Gif](app/assets/images/SplashPage.gif) -->
 - [x] User Auth / Account Creation & Demo User
-- [] Business Profile Page
+- [x] Business Profile Page
 - [] Rating and Reviews
 - [] Search Bar & Filters
-- [] Map Api
+- [x] Map Api
 - [] Users Images
 
 ## Technology
@@ -20,6 +18,9 @@
 
 ## Bonus Feature:
 
-
+## Dificulties
+-map
+-aws
+-reviews and ratings
 
 

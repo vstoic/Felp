@@ -23,8 +23,7 @@ class Business < ApplicationRecord
     validates :address, :city, :state, :zip_code, :cost, :open, :close, presence: true
 
     has_many :reviews,
-    foreign_key: :business_id,
-    class_name: :Business
+    foreign_key: :business_id
 
     has_many_attached :photos
     def self.in_bounds(bounds)
