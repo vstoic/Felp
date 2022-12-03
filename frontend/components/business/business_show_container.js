@@ -10,18 +10,18 @@ const mapStateToProps = (state, ownProps) => (
     // console.log(state),
     {
     // business: state.entities.businesses,
+    // reviews: Object.values(state.entities.reviews),
     business: state.entities.businesses[ownProps.match.params.businessId],
     // businessId: parseInt(match.params.businessId),
     // business: state.entities.businesses[ownProps.match.params.businessId],
     currentUser: state.entities.users[state.session.id],
-    formType: "other_pages"
+
 })
 
 const mapDispatchToProps = dispatch => ({
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
     fetchBusinesses: () => dispatch(fetchBusinesses()),
-    fetchReviews: () => dispatch(fetchReviews()),
-    fetchReview: reviewId => dispatch(fetchReview(reviewId)),
+    fetchReviews: businessId => dispatch(fetchReviews(businessId)),
     logout: () => dispatch(logout())
 })
 

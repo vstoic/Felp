@@ -1,20 +1,21 @@
 import { connect } from "react-redux";
-import Review from "./review_container";
+import { withRouter } from "react-router-dom";
+import Review from "./review";
 import { fetchReviews, editReview, deleteReview } from "../../actions/review_actions";
 
 const mSTP = (state) => {
     return {
         // user: state.entities.users[ownProps.match.params.userId],
         // business: state.entities.business,
-        review: state.entities.reviews
-        //
+        // reviews: Object.values(state.entities.reviews),
     };
 }
-const mDTP = (dispatch) => {
-    return {
-        fetchReviews: () => dispatch(fetchReviews()),
+const mDTP = dispatch => ({
+        fetchReviews: businessId => dispatch(fetchReviews(businessId)),
         editReview: review => dispatch(editReview(review)),
-        // deleteReview: reviewId => dispatch(deleteReview(reviewId))
-    };
-}
-export default connect(mSTP, mDTP)(Review);
+        deleteReview: reviewId => dispatch(deleteReview(reviewId))
+});
+export default withRouter(connect(mSTP, mDTP)(Review));
+
+// is it bad that im not fetching reviews for the business show page. 
+// its just fetching reviews using the views from business jbuilder

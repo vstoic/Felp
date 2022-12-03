@@ -5,7 +5,7 @@ import BusinessShowIndex from './business_show_index';
 
 const mapStateToProps = (state, ownProps) => ({
     business: state.entities.businesses[ownProps.business.id],
-    formType: "other_pages",
+    // formType: "other_pages",
     currentUser: state.entities.users[state.session.id]
 })
 const mapDispatchToProps = dispatch => ({

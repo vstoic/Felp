@@ -6,13 +6,13 @@ import Search_container from '../search/search_container';
 class Nav extends React.Component {
     constructor(props) {
         super(props)
-        if (this.props.formType === "splash") {
-            this.type = "splash"
-        } else if (this.props.formType === "other_pages") {
-            this.type = "other_pages"
-        } else if (this.props.formType === "review_pages") {
-            this.type = "review_pages"
-        }
+        // if (this.props.formType === "splash") {
+        //     this.type = "splash"
+        // } else if (this.props.formType === "other_pages") {
+        //     this.type = "other_pages"
+        // } else if (this.props.formType === "review_pages") {
+        //     this.type = "review_pages"
+        // }
     }
     handleClick() {
         document.getElementById("myDropdown").classList.toggle("show");

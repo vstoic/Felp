@@ -12,7 +12,7 @@ class Review extends React.Component {
     componentDidMount() {
         // console.log(this.props)
         // this.props.fetchReviews(this.props.business.id);
-    }
+    };
 
     render() {
         return (
