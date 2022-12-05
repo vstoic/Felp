@@ -13,7 +13,8 @@ const mSTP = (state) => {
 const mDTP = dispatch => ({
         fetchReviews: businessId => dispatch(fetchReviews(businessId)),
         editReview: review => dispatch(editReview(review)),
-        deleteReview: reviewId => dispatch(deleteReview(reviewId))
+        deleteReview: reviewId => dispatch(deleteReview(reviewId)),
+        
 });
 export default withRouter(connect(mSTP, mDTP)(Review));
 
