@@ -22,8 +22,7 @@ class BusinessIndex extends React.Component {
         return (
             <div className="index-main-container">
                 <div className='splash-nav'>
-                    <Nav formType={this.props.formType}
-                        currentUser={this.props.currentUser}
+                    <Nav currentUser={this.props.currentUser}
                         logout={this.props.logout}/>
                 </div>
                 {this.state.searchedBusinesses ?

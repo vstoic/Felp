@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import Review from "./review";
-import { fetchReviews, editReview, deleteReview } from "../../actions/review_actions";
+import { fetchReviews, updateReview, deleteReview } from "../../actions/review_actions";
 
 const mSTP = (state) => {
     return {
@@ -12,7 +12,7 @@ const mSTP = (state) => {
 }
 const mDTP = dispatch => ({
         fetchReviews: businessId => dispatch(fetchReviews(businessId)),
-        editReview: review => dispatch(editReview(review)),
+        // updateReview: review => dispatch(updateReview(review)),
         deleteReview: reviewId => dispatch(deleteReview(reviewId)),
         
 });

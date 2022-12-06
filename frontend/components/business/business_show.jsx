@@ -41,8 +41,7 @@ class BusinessShow extends React.Component {
         
             <div className="-main-show-page-container">
                 <div className='sp-nav'>
-                    <Nav formType={this.props.formType}
-                        currentUser={this.props.currentUser}
+                    <Nav currentUser={this.props.currentUser}
                         logout={this.props.logout}/>
                 </div>
                 <div className="business-show-container">
@@ -57,7 +56,7 @@ class BusinessShow extends React.Component {
                     <div className="sp-column-spliter">
                         <div className="sp-left">
                             <div className="business-show-reviews">
-                                <Review reviews={this.props.reviews} />
+                                <Review reviews={this.props.reviews} business={this.props.business} />
                             </div>
                         </div>
                         <div className="sp-right">

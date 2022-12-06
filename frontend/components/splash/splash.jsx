@@ -19,8 +19,7 @@ class Splash extends React.Component {
             <div className='whitespace'>
                 <div className='splash-main'> 
                     <div className='splash-nav'>
-                        <Nav formType={this.props.formType} 
-                        currentUser={this.props.currentUser} 
+                        <Nav currentUser={this.props.currentUser} 
                         logout={this.props.logout} />
                     </div>
                     <img className="splash-background" src="https://images5.alphacoders.com/100/1001016.jpg" alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />   

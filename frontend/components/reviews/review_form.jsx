@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import Nav from "../nav/nav";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -9,7 +10,7 @@ class ReviewForm extends React.Component {
             rating: 0,
             body: '',
             // currentUser: this.props.currentUser,
-            business_id: this.props.match.params.businessId
+            // business_id: this.props.match.params.businessId
         }
     };
 
@@ -25,8 +26,7 @@ class ReviewForm extends React.Component {
         return (
             <div className="review-form-container">
                 <div className='sp-nav'>
-                    <Nav formType={this.props.formType}
-                        currentUser={this.props.currentUser}
+                    <Nav currentUser={this.props.currentUser}
                         logout={this.props.logout} />
                 </div>
                 <div className="review-form-spliter">

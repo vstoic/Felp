@@ -6,12 +6,13 @@ import { AuthRoute, ProtectedRoute} from '../util/route_util'
 import SplashContainer from './splash/splash_container';
 import BusinessShowContainer from "./business/business_show_container";
 import BusinessIndexContainer from "./business/business_index_container";
+import ReviewFormContainer from './reviews/review_form_container';
 
 const App = () => (
     <div>
         <Switch> 
             {/* <ProtectedRoute path='' component={}/> */}
-            {/* <ProtectedRoute path='/businesses/businessId/reviews/create' component={ReviewFormContainer}/> */}
+            <ProtectedRoute path='/business/:businessId/reviews/new' component={ReviewFormContainer}/>
             <Route path='/business/:businessId' component={BusinessShowContainer} />
             <Route path='/business' component={BusinessIndexContainer} />   
             <AuthRoute path="/login" component={LoginFormContainer} />
