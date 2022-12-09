@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ReviewForm from "./review_container";
+import ReviewForm from "./review_form";
 import { fetchReviews, createReview } from "../../actions/review_actions";
 import { fetchBusiness } from "../../actions/business_actions";
 
@@ -11,8 +11,9 @@ const mSTP = (state) => {
 };
 
 const mDTP = dispatch => ({
-        // fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-        // fetchReviews: businessId => dispatch(fetchReviews(businessId)),
-        // createReview: review => dispatch(createReview(review))
+        fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
+        fetchReviews: businessId => dispatch(fetchReviews(businessId)),
+        createReview: review => dispatch(createReview(review))
 });
+
 export default connect(mSTP, mDTP)(ReviewForm);

@@ -26,18 +26,17 @@ class ReviewForm extends React.Component {
         return (
             <div className="review-form-container">
                 <div className='sp-nav'>
-                    {/* <Nav currentUser={this.props.currentUser}
-                        logout={this.props.logout} /> */}
-                        <p>This is the create review page</p>
+                    <Nav currentUser={this.props.currentUser}
+                        logout={this.props.logout} />
                 </div>
-                {/* <div className="review-form-spliter">
+                <div className="review-form-spliter">
                     <div className="review-form-left">
                         <p>this is for the form</p>
                     </div>
                     <div className="review-form-right">
                         <p>this is for previous reviews</p>
                     </div>
-                </div> */}
+                </div>
             </div>
         )
     }
