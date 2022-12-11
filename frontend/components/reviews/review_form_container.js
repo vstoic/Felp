@@ -4,10 +4,10 @@ import { fetchReviews, createReview } from "../../actions/review_actions";
 import { fetchBusiness } from "../../actions/business_actions";
 
 const mSTP = (state) => {
-    console.log(state.entities)
+    // console.log(state.entities)
     return {
-        // business: state.entities.businesses[ownProps.match.params.businessId],
-        // reviews: Object.values(state.entities.reviews),
+        business: state.entities.businesses,
+        reviews: state.entities.reviews
     };
 };
 

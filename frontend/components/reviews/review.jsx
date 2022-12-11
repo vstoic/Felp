@@ -13,7 +13,7 @@ class Review extends React.Component {
     };
 
     render() {
-        // console.log(this.props.business.id)
+        // console.log(this.props)
         return (
             <div className="review-container">
                 <Link to={`/business/${this.props.business.id}/review/new`}>

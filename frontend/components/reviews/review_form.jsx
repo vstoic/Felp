@@ -2,11 +2,13 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Nav from "../nav/nav";
-import Review from "./review";
+import ReviewItem from "./review_item";
+
 class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            Loading: true,
             rating: 0,
             body: '',
             // currentUser: this.props.currentUser,
@@ -19,9 +21,9 @@ class ReviewForm extends React.Component {
 
     componentDidMount() {
         this.props.fetchReviews(this.props.match.params.businessId);
-        this.props.fetchReviews(this.props.match.params.businessId);
-
-    }
+        this.props.fetchBusiness(this.props.match.params.businessId);
+        this.setState({ Loading: false });
+    };
 
     handleSubmit(e) {
         e.preventDefault();
@@ -40,23 +42,34 @@ class ReviewForm extends React.Component {
     
     render() {
         console.log(this.props)
+        if (!this.props.business) return null;
+        if (!this.props.reviews) return null;
+        if (this.state.Loading === true) {
+            return <p>Loading...</p>
+        }
         return (
             <div className="review-form-container">
                 <div className='sp-nav'>
                     <Nav currentUser={this.props.currentUser}
                         logout={this.props.logout} />
                 </div>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="review-form-spliter">
-                        <div className="review-form-left">
+                <div className="review-form-spliter">
+                    <div className="review-form-left">
+                        <h1>{this.props.business.name}</h1>
+                        <form onSubmit={this.handleSubmit}>
                             <h1>Write a Review</h1>
                             <textarea className="review-textbox" onChange={this.handleChanges('body')} placeholder='Insert Review Here'></textarea>
                             <button type="submit" onClick={this.clearErrors}>Submit Review</button>
-                        </div>
+                        </form>
                     </div>
-                </form>
-                <div className="review-form-right">
-                    {/* <Review business={this.props.business} reviews={this.props.reviews} /> */}
+                    <div className="review-form-right">
+                        <h2>Other Reviews:</h2>
+                        {Object.entries(this.props.reviews).forEach(([key, value]) => {
+                            <div>{value.body}</div>
+                        })
+                        }
+                        
+                    </div>
                 </div>
             </div>
         )

@@ -34,6 +34,7 @@ class BusinessShow extends React.Component {
     render() {
         // console.log(this.props)
         if (!this.props.business) return null;
+        if (!this.props.reviews) return null;
         if (this.state.Loading === true) {
             return  <p>Loading...</p> 
             }

@@ -17,6 +17,3 @@ const mDTP = dispatch => ({
         
 });
 export default withRouter(connect(mSTP, mDTP)(Review));
-
-// is it bad that im not fetching reviews for the business show page. 
-// its just fetching reviews using the views from business jbuilder
