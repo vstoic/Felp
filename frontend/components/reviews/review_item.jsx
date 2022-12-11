@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 class ReviewItem extends React.Component {
     constructor(props) {
+
         super(props)
         this.state = { review: this.props.review }
     }

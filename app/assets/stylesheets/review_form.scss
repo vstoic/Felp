@@ -14,3 +14,37 @@
     justify-content: space-evenly;
     padding-top: 25px;
 }
+
+.review-form-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    // background-color: grey;
+    border: 1px solid white;
+    height: 100%;
+    width: 60vw;
+    color: white;
+}
+    .review-form-left form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+.review-form-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: 100%;
+    padding: 10px;
+    // background-color: grey;
+    flex-direction: column;
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+}
+

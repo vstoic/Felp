@@ -3,11 +3,11 @@ import ReviewForm from "./review_form";
 import { fetchReviews, createReview } from "../../actions/review_actions";
 import { fetchBusiness } from "../../actions/business_actions";
 
-const mSTP = (state) => {
-    // console.log(state.entities)
+const mSTP = (state, ownProps) => {
     return {
-        business: state.entities.businesses,
-        reviews: state.entities.reviews
+        business: state.entities.businesses[ownProps.match.params.businessId],
+        reviews: state.entities.reviews,
+        currentUser: state.entities.users[state.session.id]
     };
 };
 

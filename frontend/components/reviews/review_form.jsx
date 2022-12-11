@@ -16,7 +16,7 @@ class ReviewForm extends React.Component {
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
-        this.clearErrors = this.clearErrors.bind(this);
+        // this.clearErrors = this.clearErrors.bind(this);
     };
 
     componentDidMount() {
@@ -32,16 +32,15 @@ class ReviewForm extends React.Component {
         .then(()=> this.props.history.push(`/business/${this.props.business.id}`))
     };
 
-    handleChanges(e) {
+    handleChanges(field) {
         return e => this.setState({ [field]: e.target.value })
     };
 
-    clearErrors() {
-        this.props.clearReviewErrors();
-    };
+    // clearErrors() {
+    //     this.props.clearReviewErrors();
+    // };
     
     render() {
-        console.log(this.props)
         if (!this.props.business) return null;
         if (!this.props.reviews) return null;
         if (this.state.Loading === true) {
@@ -55,20 +54,20 @@ class ReviewForm extends React.Component {
                 </div>
                 <div className="review-form-spliter">
                     <div className="review-form-left">
+                        <h1>Write a Review</h1>
                         <h1>{this.props.business.name}</h1>
                         <form onSubmit={this.handleSubmit}>
-                            <h1>Write a Review</h1>
                             <textarea className="review-textbox" onChange={this.handleChanges('body')} placeholder='Insert Review Here'></textarea>
-                            <button type="submit" onClick={this.clearErrors}>Submit Review</button>
+                            <button type="submit" >Submit Review</button>
                         </form>
                     </div>
                     <div className="review-form-right">
                         <h2>Other Reviews:</h2>
-                        {Object.entries(this.props.reviews).forEach(([key, value]) => {
-                            <div>{value.body}</div>
-                        })
-                        }
-                        
+                        {Object.entries(this.props.reviews).map(([key, review]) => {
+                            return (
+                            <ReviewItem key={key} review={review} />
+                            )
+                        })}
                     </div>
                 </div>
             </div>
