@@ -11,8 +11,8 @@ class ReviewForm extends React.Component {
             Loading: true,
             rating: 0,
             body: '',
-            // currentUser: this.props.currentUser,
-            // business_id: this.props.match.params.businessId
+            currentUser: this.props.currentUser,
+            business_id: this.props.match.params.businessId
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
@@ -26,10 +26,10 @@ class ReviewForm extends React.Component {
     };
 
     handleSubmit(e) {
+        console.log(this.props)
         e.preventDefault();
         const review = Object.assign({}, this.state);
-        this.props.createReview(review, this.props.business.id)
-        .then(()=> this.props.history.push(`/business/${this.props.business.id}`))
+        this.props.createReview(review).then(() => this.props.history.push(`/businesses/${this.props.business.id}`))
     };
 
     handleChanges(field) {
