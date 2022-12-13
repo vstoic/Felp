@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import ReviewItem from "./review_item";
+import Nav from "../nav/nav";
 
 class EditReview extends React.Component {
     constructor(props) {
@@ -11,14 +11,20 @@ class EditReview extends React.Component {
     };
 
     componentDidMount() {
+        console.log(this.props)
+        this.props.fetchReview(this.props.match.params.businessId, this.props.match.params.reviewId) 
 
     };
 
     render() {
         // console.log(this.props.business.id)
         return (
-            <div className="update-review-container">
-                
+            <div className="edit-review-container">
+                <div className='sp-nav'>
+                    <Nav currentUser={this.props.currentUser}
+                        logout={this.props.logout} />
+                </div>
+
             </div>
         )
     }

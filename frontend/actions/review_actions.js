@@ -26,8 +26,8 @@ export const clearReviewErrors = () => ({
     type: CLEAR_ERRORS
 });
 
-export const fetchReview = reviewId => dispatch => {
-    ReviewAPIUtil.fetchReview(reviewId)
+export const fetchReview = (businessId, reviewId) => dispatch => {
+    ReviewAPIUtil.fetchReview(businessId, reviewId)
         .then(review => dispatch(receiveReview(review)))
 };
 export const fetchReviews = businessId => dispatch => {

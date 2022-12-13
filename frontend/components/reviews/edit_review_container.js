@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import EditReview from "./edit_review";
-import { fetchReviews, editReview , clearReviewErrors } from "../../actions/review_actions";
+import { fetchReview, editReview , clearReviewErrors } from "../../actions/review_actions";
 import { fetchBusiness } from "../../actions/business_actions";
 
 const mSTP = (state, ownProps) => {
@@ -8,13 +8,13 @@ const mSTP = (state, ownProps) => {
     return {
         reviews: state.entities.reviews,
         currentUser: state.entities.users[state.session.id],
-        business: state.entities.businesses[ownProps.match.params.businessId],
+        // business: state.entities.businesses[ownProps.match.params.businessId],
     };
 };
 
 const mDTP = dispatch => ({
     fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
-    fetchReviews: businessId => dispatch(fetchReviews(businessId)),
+    fetchReview: (businessId, reviewId) => dispatch(fetchReview(businessId, reviewId)),
     editReview: (reviewId, businessId) => dispatch(editReview(reviewId, businessId)),
     clearReviewErrors: () => dispatch(clearReviewErrors())
 });
