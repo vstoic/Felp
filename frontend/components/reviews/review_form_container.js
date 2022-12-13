@@ -14,7 +14,7 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => ({
         fetchBusiness: businessId => dispatch(fetchBusiness(businessId)),
         fetchReviews: businessId => dispatch(fetchReviews(businessId)),
-        createReview: review => dispatch(createReview(review))
+        createReview: (review, businessId) => dispatch(createReview(review, businessId))
 });
 
 export default connect(mSTP, mDTP)(ReviewForm);

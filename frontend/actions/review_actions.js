@@ -31,18 +31,18 @@ export const fetchReviews = businessId => dispatch => {
     ReviewAPIUtil.fetchReviews(businessId)
         .then(reviews => dispatch(receiveReviews(reviews)))
 };
-export const createReview = (review) => dispatch => {
-    ReviewAPIUtil.createReview(review)
-        .then(review => dispatch(receiveReview(review))),
-        error => dispatch(receiveReviewErrors(error.responseJSON))
+export const createReview = (review, businessId) => dispatch => {
+    ReviewAPIUtil.createReview(review, businessId)
+        .then(review => {dispatch(receiveReview(review))})
+        // error => dispatch(receiveReviewErrors(error.responseJSON))
 };
 export const updateReview = (review) => dispatch => {
     ReviewAPIUtil.updateReview(review)
-        .then(review => dispatch(receiveReview(review))),
-        error => dispatch(receiveReviewErrors(error.responseJSON))
+        .then(review => {dispatch(receiveReview(review))})
+        // error => dispatch(receiveReviewErrors(error.responseJSON))
 };
 export const deleteReview = (reviewId) => dispatch => {
     ReviewAPIUtil.deleteReview(reviewId)
-        .then(() => dispatch(removeReview(review))),
-        error => dispatch(receiveReviewErrors(error.responseJSON))
+        .then(() => dispatch(removeReview(review)))
+        // error => dispatch(receiveReviewErrors(error.responseJSON))
 };

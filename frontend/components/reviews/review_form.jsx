@@ -8,28 +8,29 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            Loading: true,
             rating: 0,
-            body: '',
-            currentUser: this.props.currentUser,
+            review_body: '',
+            user_id: this.props.currentUser.id,
             business_id: this.props.match.params.businessId
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
         // this.clearErrors = this.clearErrors.bind(this);
     };
-
+    
     componentDidMount() {
         this.props.fetchReviews(this.props.match.params.businessId);
         this.props.fetchBusiness(this.props.match.params.businessId);
-        this.setState({ Loading: false });
+        console.log(this.props)
+        // this.setState({ Loading: false });
     };
 
     handleSubmit(e) {
-        console.log(this.props)
+        // console.log(this.props)
         e.preventDefault();
         const review = Object.assign({}, this.state);
-        this.props.createReview(review).then(() => this.props.history.push(`/businesses/${this.props.business.id}`))
+        this.props.createReview(review, this.state.business_id)
+        // .then(() => this.props.history.push(`/business/${this.props.business.id}`))
     };
 
     handleChanges(field) {
@@ -41,11 +42,11 @@ class ReviewForm extends React.Component {
     // };
     
     render() {
-        if (!this.props.business) return null;
-        if (!this.props.reviews) return null;
-        if (this.state.Loading === true) {
-            return <p>Loading...</p>
-        }
+        // if (!this.props.business) return null;
+        // if (!this.props.reviews) return null;
+        // if (this.state.Loading === true) {
+        //     return <p>Loading...</p>
+        // }
         return (
             <div className="review-form-container">
                 <div className='sp-nav'>
@@ -57,7 +58,7 @@ class ReviewForm extends React.Component {
                         <h1>Write a Review</h1>
                         <h1>{this.props.business.name}</h1>
                         <form onSubmit={this.handleSubmit}>
-                            <textarea className="review-textbox" onChange={this.handleChanges('body')} placeholder='Insert Review Here'></textarea>
+                            <textarea className="review-textbox" onChange={this.handleChanges('review_body')} placeholder='Insert Review Here'></textarea>
                             <button type="submit" >Submit Review</button>
                         </form>
                     </div>
