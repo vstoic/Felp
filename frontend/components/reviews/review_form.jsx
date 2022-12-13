@@ -14,10 +14,6 @@ class ReviewForm extends React.Component {
             business_id: parseInt(this.props.match.params.businessId)
         };
 
-        this.state2 = {
-            loading: true
-        };
-
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
         this.clearErrors = this.clearErrors.bind(this);

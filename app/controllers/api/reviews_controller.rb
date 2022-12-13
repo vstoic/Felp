@@ -1,5 +1,5 @@
 class Api::ReviewsController < ApplicationController
-#   before_action :require_logged_in, except: [:index, :show]
+  before_action :require_logged_in, except: [:index, :show]
 
   def index
     @reviews = Review.all.where(business_id: params[:business_id])
