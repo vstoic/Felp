@@ -8,27 +8,33 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 0,
+            rating: 1,
             review_body: '',
             user_id: this.props.currentUser.id,
-            business_id: this.props.match.params.businessId
-        }
+            business_id: parseInt(this.props.match.params.businessId)
+        };
+
+        this.state2 = {
+            loading: true
+        };
+
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
-        // this.clearErrors = this.clearErrors.bind(this);
+        this.clearErrors = this.clearErrors.bind(this);
     };
     
     componentDidMount() {
         this.props.fetchReviews(this.props.match.params.businessId);
         this.props.fetchBusiness(this.props.match.params.businessId);
-        console.log(this.props)
-        // this.setState({ Loading: false });
+
+        console.log(this.state)
     };
 
     handleSubmit(e) {
         // console.log(this.props)
         e.preventDefault();
         const review = Object.assign({}, this.state);
+        console.log(review)
         this.props.createReview(review, this.state.business_id)
         // .then(() => this.props.history.push(`/business/${this.props.business.id}`))
     };
@@ -37,16 +43,25 @@ class ReviewForm extends React.Component {
         return e => this.setState({ [field]: e.target.value })
     };
 
-    // clearErrors() {
-    //     this.props.clearReviewErrors();
-    // };
+    clearErrors() {
+        this.props.clearReviewErrors();
+    };
     
     render() {
-        // if (!this.props.business) return null;
-        // if (!this.props.reviews) return null;
-        // if (this.state.Loading === true) {
+        let errors;
+        if (this.props.errors) {
+            errors = this.props.errors.map((error, i) => {
+                return <li key={i}>{error}</li>
+            })
+        }
+
+
+        if (!this.props.business) return null;
+        if (!this.props.reviews) return null;
+        // if (this.props.loading === true) {
         //     return <p>Loading...</p>
         // }
+
         return (
             <div className="review-form-container">
                 <div className='sp-nav'>
@@ -59,8 +74,13 @@ class ReviewForm extends React.Component {
                         <h1>{this.props.business.name}</h1>
                         <form onSubmit={this.handleSubmit}>
                             <textarea className="review-textbox" onChange={this.handleChanges('review_body')} placeholder='Insert Review Here'></textarea>
-                            <button type="submit" >Submit Review</button>
+                            <button type="submit" onChange={this.clearErrors} >Submit Review</button>
                         </form>
+                        <div className="review-errors-container">
+                            <ul className="errors">
+                                {errors}
+                            </ul>
+                        </div>
                     </div>
                     <div className="review-form-right">
                         <h2>Other Reviews:</h2>

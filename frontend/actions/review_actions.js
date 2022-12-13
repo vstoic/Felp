@@ -22,6 +22,9 @@ const receiveReviewErrors = errors => ({
     type: RECEIVE_REVIEW_ERRORS,
     errors
 });
+export const clearReviewErrors = () => ({
+    type: CLEAR_ERRORS
+});
 
 export const fetchReview = reviewId => dispatch => {
     ReviewAPIUtil.fetchReview(reviewId)
@@ -33,16 +36,18 @@ export const fetchReviews = businessId => dispatch => {
 };
 export const createReview = (review, businessId) => dispatch => {
     ReviewAPIUtil.createReview(review, businessId)
-        .then(review => {dispatch(receiveReview(review))})
-        // error => dispatch(receiveReviewErrors(error.responseJSON))
+        .then(review => {dispatch(receiveReview(review))}, 
+        error => dispatch(receiveReviewErrors(error.responseJSON)))
 };
 export const updateReview = (review) => dispatch => {
     ReviewAPIUtil.updateReview(review)
-        .then(review => {dispatch(receiveReview(review))})
-        // error => dispatch(receiveReviewErrors(error.responseJSON))
+        .then(review => {dispatch(receiveReview(review))},
+        error => dispatch(receiveReviewErrors(error.responseJSON)))
 };
-export const deleteReview = (reviewId) => dispatch => {
-    ReviewAPIUtil.deleteReview(reviewId)
-        .then(() => dispatch(removeReview(review)))
-        // error => dispatch(receiveReviewErrors(error.responseJSON))
-};
+// export const deleteReview = (reviewId) => dispatch => {
+//     ReviewAPIUtil.deleteReview(reviewId)
+//         .then(() => dispatch(removeReview(reviewId)),
+//         error => dispatch(receiveReviewErrors(error.responseJSON)))
+// };
+
+
