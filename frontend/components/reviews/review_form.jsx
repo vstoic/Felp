@@ -82,7 +82,7 @@ class ReviewForm extends React.Component {
                         <h2>Other Reviews:</h2>
                         {Object.entries(this.props.reviews).map(([key, review]) => {
                             return (
-                            <ReviewItem key={key} review={review} />
+                            <ReviewItem key={key} review={review} currentUser={this.props.currentUser}/>
                             )
                         })}
                     </div>

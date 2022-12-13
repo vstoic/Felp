@@ -3,7 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import ReviewItem from "./review_item";
 
-class UpdateReview extends React.Component {
+class EditReview extends React.Component {
     constructor(props) {
         super(props);
         // console.log(this.props)
@@ -24,4 +24,4 @@ class UpdateReview extends React.Component {
     }
 };
 
-export default UpdateReview;
+export default EditReview;

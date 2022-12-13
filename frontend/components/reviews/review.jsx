@@ -22,7 +22,7 @@ class Review extends React.Component {
                 <div className="review-item">
                     {this.props.reviews.map((review, idx) => {
                         return (
-                            <ReviewItem key={idx} review={review}/>
+                            <ReviewItem key={idx} review={review} currentUser={this.props.currentUser} businessId={this.props.business.id}/>
                         )})
                     }
                 </div>

@@ -7,12 +7,12 @@ import SplashContainer from './splash/splash_container';
 import BusinessShowContainer from "./business/business_show_container";
 import BusinessIndexContainer from "./business/business_index_container";
 import ReviewFormContainer from './reviews/review_form_container';
-// import UpdateReviewContainer from './reviews/update_review_container';
+import EditReviewContainer from './reviews/edit_review_container';
 
 const App = () => (
     <div>
         <Switch> 
-            {/* <Route path="/business/:businessId/review/:reviewId" component={UpdateReviewContainer}/> */}
+            <ProtectedRoute path="/business/:businessId/review/:reviewId/edit" component={EditReviewContainer}/>
             <ProtectedRoute exact path="/business/:businessId/review/new" component={ReviewFormContainer} />
             <Route path="/business/:businessId" component={BusinessShowContainer} />
             <Route path="/businesses" component={BusinessIndexContainer} />   

@@ -57,7 +57,7 @@ class BusinessShow extends React.Component {
                     <div className="sp-column-spliter">
                         <div className="sp-left">
                             <div className="business-show-reviews">
-                                <Review reviews={this.props.reviews} business={this.props.business} />
+                                <Review reviews={this.props.reviews} business={this.props.business} currentUser={this.props.currentUser} />
                             </div>
                         </div>
                         <div className="sp-right">

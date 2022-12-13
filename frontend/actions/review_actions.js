@@ -39,8 +39,8 @@ export const createReview = (review, businessId) => dispatch => {
         .then(review => {dispatch(receiveReview(review))}, 
         error => dispatch(receiveReviewErrors(error.responseJSON)))
 };
-export const updateReview = (review) => dispatch => {
-    ReviewAPIUtil.updateReview(review)
+export const editReview = (reviewId, businessId) => dispatch => {
+    ReviewAPIUtil.editReview(reviewId, businessId)
         .then(review => {dispatch(receiveReview(review))},
         error => dispatch(receiveReviewErrors(error.responseJSON)))
 };
