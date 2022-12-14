@@ -17,10 +17,10 @@ export const createReview = (review, businessId) => (
         data: { review }
     })
 );
-export const editReview = (reviewId, businessId) => (
+export const editReview = (review, businessId) => (
     $.ajax({
         method: 'PATCH',
-        url: `/api/businesses/${businessId}/reviews/${reviewId}`,
+        url: `/api/businesses/${businessId}/reviews/${review.id}`,
         data: { review }
     })
 );

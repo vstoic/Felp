@@ -23,7 +23,7 @@ class ReviewForm extends React.Component {
         this.props.fetchReviews(this.props.match.params.businessId);
         this.props.fetchBusiness(this.props.match.params.businessId);
 
-        console.log(this.state)
+        // console.log(this.state)
     };
 
     handleSubmit(e) {
@@ -50,8 +50,6 @@ class ReviewForm extends React.Component {
                 return <li key={i}>{error}</li>
             })
         }
-
-
         if (!this.props.business) return null;
         if (!this.props.reviews) return null;
         // if (this.props.loading === true) {
