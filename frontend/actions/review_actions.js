@@ -44,10 +44,10 @@ export const editReview = (review, businessId) => dispatch => {
         .then(review => {dispatch(receiveReview(review))},
         error => dispatch(receiveReviewErrors(error.responseJSON)))
 };
-// export const deleteReview = (reviewId) => dispatch => {
-//     ReviewAPIUtil.deleteReview(reviewId)
-//         .then(() => dispatch(removeReview(reviewId)),
-//         error => dispatch(receiveReviewErrors(error.responseJSON)))
-// };
+export const deleteReview = (reviewId) => dispatch => {
+    ReviewAPIUtil.deleteReview(reviewId)
+        .then(() => dispatch(removeReview(reviewId)),
+        error => dispatch(receiveReviewErrors(error.responseJSON)))
+};
 
 

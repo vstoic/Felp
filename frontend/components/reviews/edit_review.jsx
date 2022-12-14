@@ -18,6 +18,7 @@ class EditReview extends React.Component {
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
+        this.deleteReview = this.deleteReview.bind(this);
         this.clearErrors = this.clearErrors.bind(this);
     };
 
@@ -38,6 +39,11 @@ class EditReview extends React.Component {
 
     handleChanges(field) {
         return e => this.setState({ [field]: e.target.value })
+    };
+
+    deleteReview() {
+        this.props.deleteReview(this.state.id, this.state.business_id);
+        this.props.history.push(`/business/${this.state.business_id}`)
     };
 
     clearErrors() {
@@ -64,6 +70,7 @@ class EditReview extends React.Component {
                 <div className="ereview-form-spliter">
                     <div className="ereview-form-left">
                         <h1>Write a Review</h1>
+                        <button className='delete-review' onClick={this.deleteReview}>Remove Review</button>
                         <form onSubmit={this.handleSubmit}>
                             <textarea className="ereview-textbox" onChange={this.handleChanges('review_body')} placeholder={this.props.review.review_body}></textarea>
                             <button type="submit" onChange={this.clearErrors} >Submit Review</button>

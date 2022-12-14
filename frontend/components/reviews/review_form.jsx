@@ -22,17 +22,13 @@ class ReviewForm extends React.Component {
     componentDidMount() {
         this.props.fetchReviews(this.props.match.params.businessId);
         this.props.fetchBusiness(this.props.match.params.businessId);
-
-        // console.log(this.state)
     };
 
     handleSubmit(e) {
-        // console.log(this.props)
         e.preventDefault();
         const review = Object.assign({}, this.state);
-        console.log(review)
-        this.props.createReview(review, this.state.business_id)
-        // .then(() => this.props.history.push(`/business/${this.props.business.id}`))
+        this.props.createReview(review, this.state.business_id);
+        this.props.history.push(`/business/${this.state.business_id}`)
     };
 
     handleChanges(field) {

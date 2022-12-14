@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import EditReview from "./edit_review";
-import { fetchReview, fetchReviews, editReview , clearReviewErrors } from "../../actions/review_actions";
+import { fetchReview, fetchReviews, editReview, deleteReview, clearReviewErrors } from "../../actions/review_actions";
 import { fetchBusiness } from "../../actions/business_actions";
 
 const mSTP = (state, ownProps) => {
@@ -18,6 +18,7 @@ const mDTP = dispatch => ({
     fetchReview: (businessId, reviewId) => dispatch(fetchReview(businessId, reviewId)),
     fetchReviews: businessId => dispatch(fetchReviews(businessId)),
     editReview: (reviewId, businessId) => dispatch(editReview(reviewId, businessId)),
+    deleteReview: (reviewId, businessId) => dispatch(deleteReview(reviewId, businessId)),
     clearReviewErrors: () => dispatch(clearReviewErrors())
 });
 
