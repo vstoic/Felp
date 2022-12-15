@@ -9,15 +9,17 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 3,
+            rating: null,
             review_body: '',
             user_id: this.props.currentUser.id,
-            business_id: parseInt(this.props.match.params.businessId)
+            business_id: parseInt(this.props.match.params.businessId),
+            hover: null
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleChanges = this.handleChanges.bind(this);
         this.clearErrors = this.clearErrors.bind(this);
+        this.starHover = this.starHover.bind(this);
     };
     
     componentDidMount() {
@@ -41,8 +43,8 @@ class ReviewForm extends React.Component {
         this.props.clearReviewErrors();
     };
     
-    starRating() {
-        
+    starHover(value) {
+        // return e => this.setState({ hover: e.value });
     };
 
     render() {
@@ -71,22 +73,21 @@ class ReviewForm extends React.Component {
                         <div>
                             {Array(5).fill().map((star, i) => {
                                 const ratingValue = i + 1;
+                                // let hover = null;
                                 return(
-                                    <label> 
+                                    <label key={i} > 
                                         <input
                                         type="radio"
                                         name="rating"
                                         className="rating" 
                                         value={ratingValue}
-                                        key={i} 
                                         onClick={this.handleChanges('rating')}
-                                        // onMouseEnter={this.starRating}
-                                        // onMouseLeave={this.starRating}
                                         />
                                             <AiOutlineStar 
-                                            color={ratingValue <= this.state.rating ? "#ffc107" : "#e4e5e9"} 
+                                            color={ratingValue <= (this.state.hover || this.state.rating) ? "#ffc107" : "#e4e5e9"} 
+                                            onMouseOver={() => this.setState({ hover: ratingValue })}
+                                            onMouseLeave={() => this.setState({ hover: null })}
                                             size={25}/>
-                                          
                                     </label>
                             )})}
                         </div>
