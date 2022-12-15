@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import Nav from "../nav/nav";
 import ReviewItem from "./review_item";
 
@@ -8,7 +9,7 @@ class ReviewForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            rating: 1,
+            rating: 3,
             review_body: '',
             user_id: this.props.currentUser.id,
             business_id: parseInt(this.props.match.params.businessId)
@@ -33,12 +34,17 @@ class ReviewForm extends React.Component {
 
     handleChanges(field) {
         return e => this.setState({ [field]: e.target.value })
+        // console.log(this.state)
     };
 
     clearErrors() {
         this.props.clearReviewErrors();
     };
     
+    starRating() {
+        
+    };
+
     render() {
         let errors;
         if (this.props.errors) {
@@ -62,6 +68,28 @@ class ReviewForm extends React.Component {
                     <div className="review-form-left">
                         <h1>Write a Review</h1>
                         <h1>{this.props.business.name}</h1>
+                        <div>
+                            {Array(5).fill().map((star, i) => {
+                                const ratingValue = i + 1;
+                                return(
+                                    <label> 
+                                        <input
+                                        type="radio"
+                                        name="rating"
+                                        className="rating" 
+                                        value={ratingValue}
+                                        key={i} 
+                                        onClick={this.handleChanges('rating')}
+                                        // onMouseEnter={this.starRating}
+                                        // onMouseLeave={this.starRating}
+                                        />
+                                            <AiOutlineStar 
+                                            color={ratingValue <= this.state.rating ? "#ffc107" : "#e4e5e9"} 
+                                            size={25}/>
+                                          
+                                    </label>
+                            )})}
+                        </div>
                         <form onSubmit={this.handleSubmit}>
                             <textarea className="review-textbox" onChange={this.handleChanges('review_body')} placeholder='Insert Review Here'></textarea>
                             <button type="submit" onChange={this.clearErrors} >Submit Review</button>

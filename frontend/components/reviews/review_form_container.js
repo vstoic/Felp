@@ -4,7 +4,7 @@ import { fetchReviews, createReview, clearReviewErrors } from "../../actions/rev
 import { fetchBusiness } from "../../actions/business_actions";
 
 const mSTP = (state, ownProps) => {
-    console.log(state.entities.businesses[ownProps.match.params.businessId])
+    // console.log(state.entities.businesses[ownProps.match.params.businessId])
     return {
         reviews: state.entities.reviews,
         currentUser: state.entities.users[state.session.id],
