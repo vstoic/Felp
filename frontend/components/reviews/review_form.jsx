@@ -70,10 +70,9 @@ class ReviewForm extends React.Component {
                     <div className="review-form-left">
                         <h1>Write a Review</h1>
                         <h1>{this.props.business.name}</h1>
-                        <div>
+                        <div className="star-review-container">
                             {Array(5).fill().map((star, i) => {
                                 const ratingValue = i + 1;
-                                // let hover = null;
                                 return(
                                     <label key={i} > 
                                         <input
@@ -83,7 +82,8 @@ class ReviewForm extends React.Component {
                                         value={ratingValue}
                                         onClick={this.handleChanges('rating')}
                                         />
-                                            <AiOutlineStar 
+                                            <AiFillStar 
+                                            className="stars"
                                             color={ratingValue <= (this.state.hover || this.state.rating) ? "#ffc107" : "#e4e5e9"} 
                                             onMouseOver={() => this.setState({ hover: ratingValue })}
                                             onMouseLeave={() => this.setState({ hover: null })}

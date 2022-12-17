@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Nav from "../nav/nav";
 import ReviewItem from "./review_item";
+import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 class EditReview extends React.Component {
     constructor(props) {
@@ -13,7 +14,8 @@ class EditReview extends React.Component {
             review_body: '',
             user_id: this.props.currentUser.id,
             business_id: parseInt(this.props.match.params.businessId),
-            id: parseInt(this.props.match.params.reviewId)
+            id: parseInt(this.props.match.params.reviewId),
+            hover: null
         };
 
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -71,8 +73,30 @@ class EditReview extends React.Component {
                     <div className="ereview-form-left">
                         <h1>Write a Review</h1>
                         <button className='delete-review' onClick={this.deleteReview}>Remove Review</button>
+                        <div className="star-review-container">
+                            {Array(5).fill().map((star, i) => {
+                                const ratingValue = i + 1;
+                                return (
+                                    <label key={i} >
+                                        <input
+                                            type="radio"
+                                            name="rating"
+                                            className="rating"
+                                            value={ratingValue}
+                                            onClick={this.handleChanges('rating')}
+                                        />
+                                        <AiFillStar
+                                            className="stars"
+                                            color={ratingValue <= (this.state.hover || this.state.rating) ? "#ffc107" : "#e4e5e9"}
+                                            onMouseOver={() => this.setState({ hover: ratingValue })}
+                                            onMouseLeave={() => this.setState({ hover: null })}
+                                            size={25} />
+                                    </label>
+                                )
+                            })}
+                        </div>
                         <form onSubmit={this.handleSubmit}>
-                            <textarea className="ereview-textbox" onChange={this.handleChanges('review_body')} placeholder={this.props.review.review_body}></textarea>
+                            <textarea className="ereview-textbox" onChange={this.handleChanges('review_body')} placeholder={this.props.review.review_body}>{this.props.review.review_body}</textarea>
                             <button type="submit" onChange={this.clearErrors} >Submit Review</button>
                         </form>
                         <div className="ereview-errors-container">
