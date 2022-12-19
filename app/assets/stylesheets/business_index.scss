@@ -45,6 +45,30 @@
         padding: 2vh;
 
     }
+    .business-index {
+        color: white;
+        font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-size: 12px;
+    }
+                .link-business-index:link {
+            text-decoration: none;
+            color: white;
+        }
+    
+                .link-business-index:visited {
+            text-decoration: none;
+            color: white;
+        }
+    
+                .link-business-index:hover {
+            text-decoration: none;
+            color: white;
+        }
+    
+                .link-business-index:active {
+            text-decoration: none;
+            color: white;
+        }
 
     .business-index-photo{
        display: flex;
