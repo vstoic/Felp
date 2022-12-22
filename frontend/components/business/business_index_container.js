@@ -1,6 +1,7 @@
 import { connect } from 'react-redux';
 import BusinessIndex from './business_index';
 import { fetchBusiness, fetchBusinesses } from "../../actions/business_actions";
+import { fetchReviews } from "../../actions/review_actions";
 import { clearErrors, logout } from '../../actions/session_actions';
 import { withRouter } from 'react-router-dom';
 

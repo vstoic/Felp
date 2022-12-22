@@ -3,7 +3,7 @@ import Nav from '../nav/nav'
 import Carousel from "../carousel/carousel";
 import Map from "../map/map";
 import Review from "../reviews/review";
-import Star from "../reviews/star";
+import Star from "../star/star";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 
 class BusinessShow extends React.Component {

@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import Star from "../reviews/star";
+import Star from "../star/star";
 
 class BusinessShowIndex extends React.Component {
     constructor(props) {
         super(props)
-        this.state = { business: this.props.business }
+        this.state = { 
+            business: this.props.business 
+            
+        }
     }
     render() {
         // console.log(this.state)
@@ -14,7 +17,7 @@ class BusinessShowIndex extends React.Component {
                 <Link to={`/business/${this.state.business.id}`} className='link-business-index'>
                     <img className="business-index-photo" src={this.state.business.photo_urls[0]} alt=""/>
                     <p className="business-index-name">{this.state.business.name}</p>
-                    {/* <Star reviews={this.props.reviews}/> */}
+                    <Star business={this.props.business}/>
                     <p className="business-index-city">{this.state.business.city}</p>
                     <p className="business-index-cost">Cost: {this.state.business.cost}</p>
                     {/* <p>{this.state.business.address}{this.state.business.city}{this.state.business.state}{this.state.business.zip_code}</p> */}
