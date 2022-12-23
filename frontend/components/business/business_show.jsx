@@ -97,7 +97,7 @@ class BusinessShow extends React.Component {
                         {/* <img className="business-index-photo" src={this.props.business.photo_urls[0]} alt="" /> */}
                         <h1 className="business-index-name">{this.props.business.name}</h1>
                         <div className="business-index-stars">
-                            <Star reviews={this.props.reviews}/> 
+                            <Star businessId={this.props.business.id}/> 
                         </div>
                         <h4 className="business-index-cost">{this.props.business.cost}</h4>
                         <h4 className="business-index-hours">Open: {this.props.business.open} - {this.props.business.close}</h4>

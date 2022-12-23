@@ -7,37 +7,20 @@ export default function Star(props) {
     const [rating, setRating] = useState(null);
     // const [reviews, setReview] = useState(props.reviews)
 
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
 
     useEffect(() => {
-        useDispatch(fetchReviews(props.business.id));
-        console.log(props)
+        fetchReviews(props.businessId);
+        console.log(props);
         // getAverageRating();
     });
 
     const getAverageRating = () => {
         let totalStars = 0;
-        reviews.forEach(review => {totalStars += review.rating});
+        props.reviews.forEach(review => {totalStars += review.rating});
         let averageStars = Math.ceil(totalStars / props.reviews.length);
         setRating(averageStars);
     }
-
-    // const distributeStars = () => {
-    //     Array(5).fill().map((_, i) => {
-    //         const ratingValue = i + 1;
-    //         // console.log(rating)
-    //         return (
-    //             <div>
-    //                 <p>hi</p>
-    //                 {/* <AiFillStar
-    //                     className='star'
-    //                     color={ratingValue <= rating ? "#ffc107" : "#e4e5e9"}
-    //                     size={25} /> */}
-    //             </div>
-    //         )
-    //     })
-    // }
-
     return (
         <div className='star-rating-container'>
             {Array(5).fill().map((_, i) => {
@@ -47,7 +30,7 @@ export default function Star(props) {
                         <AiFillStar
                                 className='star'
                                 color={ratingValue <= rating ? '#d32322' : '#e4e5e9'}
-                                size={25} />
+                                size={24} />
                     </div>
                 )
             })}

@@ -7,6 +7,7 @@ import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state) => ({
     businesses: Object.values(state.entities.businesses),
+    reviews: Object.values(state.entities.reviews),
     currentUser: state.entities.users[state.session.id],
     errors: Object.values(state.errors),
     formType: "other_pages"

@@ -8,23 +8,12 @@ import { fetchReviews } from "../../actions/review_actions";
 class BusinessIndex extends React.Component {
     constructor(props) {
         super(props)
-        this.state = {
-            searchedBusinesses: this.props.history.location.state
-        }
-        this.getReviews = this.getReviews.bind(this);
+        this.state = {searchedBusinesses: this.props.history.location.state}
     }
     componentDidMount() {
         window.scrollTo(0, 0);
         this.props.fetchBusinesses();
-
     }
-
-    getReviews(businessId) {
-        reviews = this.props.fetchReviews(businessId);
-        console.log(reviews);
-        return reviews;
-    }
-
     render() {
         // console.log(this.state.searchedBusinesses)
         // added if statement to render businesses either from search results show all businesses. 
@@ -44,9 +33,7 @@ class BusinessIndex extends React.Component {
                                         return (
                                             <BusinessShowIndex
                                             key={business.id}
-                                            business={business}
-                                            />
-                                            )
+                                            business={business}/>)
                                         })}
                                 </div>
                             </div>
@@ -67,10 +54,8 @@ class BusinessIndex extends React.Component {
                                         return (
                                             <BusinessShowIndex
                                                 key={business.id}
-                                                business={business}
-                                            />
-                                        )
-                                    })}
+                                                business={business}/>)
+                                    })};
                                 </div>
                             </div>
                         </div>
@@ -80,8 +65,7 @@ class BusinessIndex extends React.Component {
                             </div>
                         </div>
                     </div>
-                }
-                
+                };
             </div>
         )
     }
