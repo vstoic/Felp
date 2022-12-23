@@ -9,8 +9,10 @@ const mSTP = state => {
     };
 }
 
-const mDTP = dispatch => ({
-    fetchReviews: businessId => dispatch(fetchReviews(businessId))
-});
+const mDTP = dispatch => {
+    return {
+        fetchReviews: businessId => dispatch(fetchReviews(businessId))
+    };
+};
 
-export default withRouter(connect(mSTP, mDTP)(Star));
+export default connect(mSTP, mDTP)(Star);

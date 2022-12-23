@@ -8,7 +8,8 @@ const mapStateToProps = (state) => ({
     formType: "splash",
     currentUser: state.entities.users[state.session.id],
     errors: state.errors
-})
+});
+
 const mapDispatchToProps = dispatch => ({
     logout: () => dispatch(logout()),
     receiveCurrentUser: (user) => dispatch(receiveCurrentUser(user)),
