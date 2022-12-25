@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { AiFillStar } from "react-icons/ai";
-import { fetchReviews } from "../../actions/review_actions";
+
 
 function Star(props) {
   const [rating, setRating] = useState(null);
@@ -15,17 +15,19 @@ function Star(props) {
         url: `/api/businesses/${businessId}/reviews`,
       });
 
-      fetchReviews(props.businessId).then((reviews) => getAverageRating(reviews));
-
-  }), [];
+    fetchReviews(props.businessId).then((reviews) => getAverageRating(reviews));
+  }),
+    [];
 
   const getAverageRating = (reviews) => {
-      let totalStars = 0;
-      Object.values(reviews).forEach(review => {totalStars += review.rating});
-      let averageStars = Math.ceil(totalStars / Object.keys(reviews).length);
-      setRating(averageStars);
-  }
-    console.log(rating);
+    let totalStars = 0;
+    Object.values(reviews).forEach((review) => {
+      totalStars += review.rating;
+    });
+    let averageStars = Math.ceil(totalStars / Object.keys(reviews).length);
+    setRating(averageStars);
+  };
+  console.log(rating);
 
   return (
     <div className="star-rating-container">
@@ -46,5 +48,4 @@ function Star(props) {
     </div>
   );
 }
-
 export default Star;

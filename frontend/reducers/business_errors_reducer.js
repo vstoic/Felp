@@ -1,4 +1,4 @@
-import { RECEIVE_BUSINESS_ERRORS, CLEAR_ERRORS } from "../actions/business_actions";
+import { RECEIVE_BUSINESS_ERRORS, CLEAR_ERRORS } from "../Actions/BusinessActions";
 
 const BusinessErrorsReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-import business_index_container from '../business/business_index_container';
+
 
 class Search extends React.Component {
     constructor(props) {

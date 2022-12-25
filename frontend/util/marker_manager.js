@@ -1,4 +1,3 @@
-
 class MarkerManager {
     constructor(map, handleClick) {
         this.map = map;

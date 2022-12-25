@@ -1,6 +1,6 @@
 /* When the user clicks on the button,
   toggle between hiding and showing the dropdown content */
- function dropdown() {
+ function Dropdown() {
     document.getElementById("myDropdown").classList.toggle("show");
 }
   // Close the dropdown if the user clicks outside of it
@@ -17,4 +17,4 @@
   }
 }
 
-export default dropdown;
+export default Dropdown;

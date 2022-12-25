@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
-import { fetchBusinesses } from "../../util/business_util";
-import Search from "./search";
+import { fetchBusinesses } from "../../Util/business_util";
+import Search from "./Search";
 
 const mapStateToProps = (state, ownProps) => {
     return {

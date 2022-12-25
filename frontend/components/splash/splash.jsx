@@ -1,83 +1,89 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import Nav from '../nav/nav'
+import React from "react";
+import { Link } from "react-router-dom";
+import Nav from "../Nav/Nav";
+import Star from "../Star/Star";
 
 class Splash extends React.Component {
-    constructor(props) {
-        super(props)
-        this.clearErrors = this.clearErrors.bind(this)
+  constructor(props) {
+    super(props);
+    this.clearErrors = this.clearErrors.bind(this);
+  }
+  clearErrors(e) {
+    this.props.clearErrors();
+  }
+  componentDidMount() {
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+    this.props.fetchBusinesses();
+  }
+  sortBusinessesReviewScore() {
+    let reviewCountObject = {};
+    for (let i = 0; i < this.props.businesses.length; i++) {
+      let business = this.props.businesses[i];
+      let reviewCount = business.reviewIds.length;
+      reviewCountObject[business.id] = reviewCount;
     }
-    clearErrors(e) {
-        this.props.clearErrors()
-    }
-    componentDidMount() {
-        this.props.fetchBusinesses()
-    }
-    render() {
-        // console.log(this.props)
-        return (
-            <div className='whitespace'>
-                <div className='splash-main'> 
-                    <div className='splash-nav'>
-                        <Nav currentUser={this.props.currentUser} 
-                        logout={this.props.logout} />
+  }
+  render() {
+    console.log(this.props);
+    return (
+      <div className="whitespace">
+        <div className="splash-main">
+          <div className="splash-nav">
+            <Nav
+              currentUser={this.props.currentUser}
+              logout={this.props.logout}
+            />
+          </div>
+          <img
+            className="splash-background"
+            src="https://images5.alphacoders.com/100/1001016.jpg"
+            alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg"
+          />
+          <div className="bg-text">
+            <h1 className="bg-text-1">Fake People. Fake Reviews.</h1>
+            <h2 className="bg-text-2">
+              {" "}
+              Seek the best places to eat, shop, drink and do, well, whatever.
+            </h2>
+          </div>
+        </div>
+        <h1 className="business-index-link">
+          <Link to="/businesses">All Businesses</Link>
+        </h1>
+        <h1 className="business-splash-container-title">Most Reviews</h1>
+        <div className="business-filler">
+          <div className="business-container">
+            {this.props.businesses.map((business) => {
+              return (
+                <Link
+                  to={`/business/${business.id}`}
+                  className="splash-business-container"
+                >
+                  <img
+                    className="business-splash-photo"
+                    src={business.photo_urls[0]}
+                    alt=""
+                  />
+                  <div className="business-splash-info">
+                    <p className="business-splash-title">{business.name}</p>
+                    <div className="hot-new-info-rating-container-2">
+                      <Star businessId={business.id} />
+                      <p className="splash-review-count">342 Reviews</p>
                     </div>
-                    <img className="splash-background" src="https://images5.alphacoders.com/100/1001016.jpg" alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg" />   
-                    <div className='bg-text'>
-                        <h1 className='bg-text-1'>Fake People. Fake Reviews.</h1>
-                        <h2 className='bg-text-2'> Seek the best places to eat, shop, drink and do, well, whatever.</h2>
-                    </div>
-                </div> 
-                <h1 className='business-index-link'><Link to='/businesses'>All Businesses</Link></h1>
-                <h1 className='business-splash-container-title'>Staff Favorites</h1>
-                <div className='business-filler'>    
-                    <div className='business-container'>
-                        <Link to='/business/88' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://s3-media0.fl.yelpcdn.com/bphoto/97rTZhO_KH51AMDZ50Gpqg/o.jpg'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>Very Fresh Noodles</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>342 Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to='/business/89' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/SsGSSGy3/rubys.jpg'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>Rubirosa</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>92 Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to='/business/88' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/hj8LKNQn/sd-c.jpg'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>Southdown Coffee</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'> 42 Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to='/business/88' className='splash-business-container'>
-                            <img className='business-splash-photo' src='https://i.postimg.cc/zv0TgWkP/our-collection.jpg'></img>
-                            <div className='business-splash-info'>
-                                <p className='business-splash-title'>The Uncommons</p>
-                                <div className='hot-new-info-rating-container-2'>
-                                    <p className='splash-review'></p>
-                                    <p className='splash-review-count'>82 Reviews</p>
-                                </div>
-                            </div>
-                        </Link>
-                    </div>                    
-                    <footer className='splash-footer'></footer>
-                </div>
-            </div>
-        )
-    }
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+          <footer className="splash-footer"></footer>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Splash;

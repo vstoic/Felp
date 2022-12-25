@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { login, clearErrors } from '../../actions/session_actions';
-import Login from './login_form';
+import { login, clearErrors } from '../../Actions/SessionActions';
+import Login from './LoginForm';
 
 // const mapStateToProps = (state) => {
 //     return {
