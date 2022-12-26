@@ -27,7 +27,6 @@ function Star(props) {
     let averageStars = Math.ceil(totalStars / Object.keys(reviews).length);
     setRating(averageStars);
   };
-  console.log(rating);
 
   return (
     <div className="star-rating-container">

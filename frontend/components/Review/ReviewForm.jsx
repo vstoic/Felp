@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import Nav from "../Nav/Nav";
 import ReviewItem from "./ReviewItem";
+import Footer from "../Footer/Footer";
 
 class ReviewForm extends React.Component {
     constructor(props) {
@@ -109,6 +110,9 @@ class ReviewForm extends React.Component {
                             )
                         })}
                     </div>
+                </div>
+                <div className="review-form-footer">
+                    <Footer />
                 </div>
             </div>
         )

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import Star from "../Star/Star";
+import Footer from "../Footer/Footer";
 
 class Splash extends React.Component {
   constructor(props) {
@@ -28,7 +29,6 @@ class Splash extends React.Component {
     }
   }
   render() {
-    console.log(this.props);
     return (
       <div className="whitespace">
         <div className="splash-main">
@@ -61,6 +61,7 @@ class Splash extends React.Component {
               return (
                 <Link
                   to={`/business/${business.id}`}
+                  key={business.id}
                   className="splash-business-container"
                 >
                   <img
@@ -79,8 +80,10 @@ class Splash extends React.Component {
               );
             })}
           </div>
-          <footer className="splash-footer"></footer>
         </div>
+          <div className="splash-footer">
+            <Footer/>
+          </div>
       </div>
     );
   }
