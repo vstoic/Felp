@@ -4,12 +4,6 @@ function Footer(props) {
 
     return (
       <div className="footer-container">
-          <div className="footer-bottom">
-            <p>
-              Copyleft © 2022 Felp Inc. Felp and related marks are registered
-              trademarks of Felp.
-            </p>
-          </div>
         <div className="footer-splitter">
           <div className="footer-left">
             <h1>About</h1>
@@ -29,6 +23,12 @@ function Footer(props) {
             <p>Ruby on Rails</p>
             <p>PostgreSQL</p>
           </div>
+        </div>
+        <div className="footer-bottom">
+          <p>
+            Copyleft © 2022 Felp Inc. Felp and related marks are registered
+            trademarks of Felp.
+          </p>
         </div>
       </div>
     );

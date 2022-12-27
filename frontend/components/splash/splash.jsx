@@ -30,26 +30,26 @@ class Splash extends React.Component {
   }
   render() {
     return (
-      <div className="whitespace">
-        <div className="splash-main">
-          <div className="splash-nav">
-            <Nav
-              currentUser={this.props.currentUser}
-              logout={this.props.logout}
-            />
-          </div>
-          <img
-            className="splash-background"
+      <div className="splash-main">
+        <div className="sp-nav">
+          <Nav
+            currentUser={this.props.currentUser}
+            logout={this.props.logout}
+          />
+        </div>
+        <div className="img-with-text">
+            <img
+            className="splash-background-image"
             src="https://images5.alphacoders.com/100/1001016.jpg"
             alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg"
-          />
-          <div className="bg-text">
-            <h1 className="bg-text-1">Fake People. Fake Reviews.</h1>
-            <h2 className="bg-text-2">
-              {" "}
-              Seek the best places to eat, shop, drink and do, well, whatever.
-            </h2>
-          </div>
+            />
+            <div className="bg-text">
+                <h1 className="bg-text-1">Fake People. Fake Reviews.</h1>
+                <h2 className="bg-text-2">
+                    Seek the best places to eat, shop, drink and do, well, whatever.
+                </h2>
+            </div>
+
         </div>
         <h1 className="business-index-link">
           <Link to="/businesses">All Businesses</Link>
@@ -73,7 +73,6 @@ class Splash extends React.Component {
                     <p className="business-splash-title">{business.name}</p>
                     <div className="hot-new-info-rating-container-2">
                       <Star businessId={business.id} />
-                      <p className="splash-review-count">342 Reviews</p>
                     </div>
                   </div>
                 </Link>
@@ -81,10 +80,10 @@ class Splash extends React.Component {
             })}
           </div>
         </div>
-          <div className="splash-footer">
-            <Footer/>
-          </div>
-      </div>
+        <div className="splash-footer">
+          <Footer/>
+        </div>
+    </div>
     );
   }
 }
