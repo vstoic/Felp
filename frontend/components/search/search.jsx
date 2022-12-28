@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from 'react-router-dom';
-
+import {FiSearch} from 'react-icons/fi';
 
 class Search extends React.Component {
     constructor(props) {
@@ -37,23 +37,28 @@ class Search extends React.Component {
     render() {
         // console.log(this.state.results)
         return (
-            <div className="search-main-container">
-                <input type="text" placeholder="Search Felp" 
-                value={this.state.searchInput} 
-                onChange={this.handleUpdate} 
-                className="search-input"/>
-                <Link className="search-button" to={{pathname:"/business", state: this.state.results}}>🔍</Link>
-                <div className="search-results">
-                    {this.state.results.map(searchedResults => {
-                        return <Link to={`/business/${searchedResults.id}`} key={searchedResults.id}>
-                            <p className="result-name">
-                                {searchedResults.name}
-                            </p>
-                        </Link> 
-                    })}
-                </div>
+          <div className="search-main-container">
+            <input
+              type="text"
+              placeholder="Search Felp"
+              value={this.state.searchInput}
+              onChange={this.handleUpdate}
+              className="search-input"
+            />
+            <div className="search-results">
+              {this.state.results.map((searchedResults) => {
+                return (
+                  <Link
+                    to={`/business/${searchedResults.id}`}
+                    key={searchedResults.id}
+                  >
+                    <p className="result-name">{searchedResults.name}</p>
+                  </Link>
+                );
+              })}
             </div>
-        )
+          </div>
+        );
     };
 };
 export default Search;

@@ -38,22 +38,18 @@ class Splash extends React.Component {
           />
         </div>
         <div className="img-with-text">
-            <img
+          <img
             className="splash-background-image"
             src="https://images5.alphacoders.com/100/1001016.jpg"
             alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg"
-            />
-            <div className="bg-text">
-                <h1 className="bg-text-1">Fake People. Fake Reviews.</h1>
-                <h2 className="bg-text-2">
-                    Seek the best places to eat, shop, drink and do, well, whatever.
-                </h2>
-            </div>
-
+          />
+          <div className="bg-text">
+            <h1 className="bg-text-1">Fake People. Fake Reviews.</h1>
+            <h2 className="bg-text-2">
+              Seek the best places to eat, shop, drink and do, well, whatever.
+            </h2>
+          </div>
         </div>
-        <h1 className="business-index-link">
-          <Link to="/businesses">All Businesses</Link>
-        </h1>
         <h1 className="business-splash-container-title">Most Reviews</h1>
         <div className="business-filler">
           <div className="business-container">
@@ -79,11 +75,14 @@ class Splash extends React.Component {
               );
             })}
           </div>
+          <h1 className="business-index-link">
+            <Link to="/businesses">See More</Link>
+          </h1>
         </div>
         <div className="splash-footer">
-          <Footer/>
+          <Footer />
         </div>
-    </div>
+      </div>
     );
   }
 }

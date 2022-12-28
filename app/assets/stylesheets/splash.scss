@@ -5,12 +5,17 @@
 }
 
 .splash-main .sp-nav {
+    // box-sizing: border-box;
+    // z-index: 1;
+    // position: absolute
 }
 
 .img-with-text {
+    // box-sizing: border-box;
     display: grid;
     grid-template: 1fr / 1fr;
     place-items: center;
+    // z-index: 0;
 }
     .img-with-text > * {
         grid-column: 1 / 1;
@@ -54,38 +59,19 @@
     font-size: 18px;
     font-weight: 350;
     letter-spacing: -0.4px;
+    padding-bottom: 8vh;
     filter: drop-shadow(0 0 0.05rem rgb(226, 226, 226));
-    /* margin-left: 200px; */
-    /* margin-top: 10px;
-    margin-left: 295px; */
 }
     .bg-text-2:hover {
         text-shadow: 0 0 50px rgba(255, 255, 255, 0.538), 0 0 3px #fff2d28f;
     } 
 /* --------business css -----------*/
-.business-index-link {
-    width: 100%;
-    height: 50px;
-    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 36px;
-    font-weight: 800;
-    color: rgb(30, 30, 30);
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    :visited {
-        color: rgb(30, 30, 30);
-        text-decoration: none;
-    }
-}
-
 .business-splash-container-title {
     width: 100%;
     height: 50px;
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     // font-family: Lato;
+    padding-top: 2vh;
     font-size: 36px;
     font-weight: 800;
     background-color: rgb(255, 255, 255);
@@ -110,7 +96,7 @@
         display: grid;
         grid-template-columns: repeat(4, auto);
         justify-content: center;
-        gap: 30px;     
+        gap: 30px;
     }
         .business-container:hover .business-splash-photo:hover{
                 transform: scale(1.005);
@@ -128,7 +114,7 @@
         display: block;
         height: 174px;
         width: 229px;
-        height: 350px;
+        height: 365px;
         box-sizing: border-box;
         color: rgb(30, 30, 30);
         border: 1px solid #ebebeb;
@@ -163,6 +149,27 @@
         border-bottom: 1px solid #ebebeb;
         /* background-position: -20px; */
     }
+.business-index-link {
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    color: #a0a0a0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    padding-top: .5vh;
+    padding-bottom: 3.5vh;     
+    :visited {
+        color: #a0a0a0;
+        text-decoration: none;
+    }
+    :hover {
+        color: #515151;
+        text-decoration: none;
+    }
+
+}
 
 .splash-footer {
 }

@@ -5,13 +5,13 @@
     flex-direction: column;
     // height: 20%;
     width: 100%;
-    color: rgb(30, 30, 30);
+    color: rgb(85, 85, 85);
     font-family: Helvetica, sans-serif;
     font-weight: 150;
     font-size: 12px;
-    padding-top: 4vh;
-    padding-bottom: 3vh;
-
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    background-color: #ebebeb;
 }
 
 .footer-splitter {
@@ -23,14 +23,14 @@
     height: 100%;
     width: 100%;
     font-family: Helvetica, sans-serif;
-    padding-bottom: 1vh;
+    padding-bottom: 2vh;
   }
   .footer-splitter h1 {
     font-size: 12px;
     font-weight: 550;
-    padding-bottom: 3px;
     display: flex;
     justify-content: center;
+    padding-bottom: 3px;
   }
   .footer-splitter p {
     font-weight: 150;
