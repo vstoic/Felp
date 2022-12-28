@@ -34,6 +34,27 @@ class Search extends React.Component {
             })
         };   
     };
+
+    // dropDown() {
+    //     document.getElementById("searched-results").classList.toggle("show");
+    //     window.onclick = function(e) {
+    //     if (!e.target.matches(".search-input")) {
+    //       var dropdowns = document.getElementsByClassName("search-results");
+    //       var i;
+    //       for (i = 0; i < dropdowns.length; i++) {
+    //         var openDropdown = dropdowns[i];
+    //         if (openDropdown.classList.contains("show")) {
+    //           openDropdown.classList.remove("show");
+    //         }
+    //       }
+    //     }
+    //     }
+    // }
+
+    toggleDropDown() {
+        document.getElementById("searched-results").classList.toggle("show");
+    }
+
     render() {
         // console.log(this.state.results)
         return (
@@ -43,9 +64,10 @@ class Search extends React.Component {
               placeholder="Search Felp"
               value={this.state.searchInput}
               onChange={this.handleUpdate}
+              onClick={() => this.toggleDropDown()}
               className="search-input"
             />
-            <div className="search-results">
+            <div className="search-results" id="searched-results">
               {this.state.results.map((searchedResults) => {
                 return (
                   <Link
