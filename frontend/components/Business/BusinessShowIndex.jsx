@@ -5,8 +5,8 @@ import Star from "../Star/Star";
 class BusinessShowIndex extends React.Component {
   constructor(props) {
     super(props);
+    console.log(this.props);
     this.state = {
-      // fetchedReviews: this.props.reviews,
       loading: true,
     };
   }
@@ -18,29 +18,34 @@ class BusinessShowIndex extends React.Component {
   }
 
   render() {
-    const { business, reviews } = this.props;
+    const { business, reviews, key } = this.props;
     if (!this.props.reviews) return null;
     if (this.state.loading === true) {
       return <p>Loading...</p>;
     }
     // console.log(this.props)
     return (
-      <div className="business-show">
+      <section className="business-show">
         <Link to={`/business/${business.id}`} className="link-business-index">
           <img
             className="business-index-photo"
             src={business.photo_urls[0]}
             alt=""
           />
-          <p className="business-index-name">{business.name}</p>
-          <Star businessId={business.id} />
-          <p className="business-index-city">{business.city}</p>
-          <p className="business-index-cost">Cost: {business.cost}</p>
-          <p className="business-index-hours">
-            Hours: {business.open}-{business.close}
-          </p>
+          <div className="business-index-text-star">
+            <Star businessId={business.id} />
+            <p className="business-index-name">{this.props.number}. {business.name}</p>
+            <p>
+              <span className="business-hours">Open </span>
+              <span className="business-index-hours">until: {business.close}</span>
+            </p>
+            <p className="business-index-city">
+              {business.city}, {business.state}
+            </p>
+            <p className="business-index-cost">Cost: {business.cost}</p>
+          </div>
         </Link>
-      </div>
+      </section>
     );
   }
 }

@@ -8,6 +8,7 @@ const mapStateToProps = (state, ownProps) => ({
   currentUser: state.entities.users[state.session.id],
   reviews: Object.values(state.entities.reviews),
 });
+
 const mapDispatchToProps = (dispatch) => ({
   fetchReviews: (businessId) => dispatch(fetchReviews(businessId)),
 });

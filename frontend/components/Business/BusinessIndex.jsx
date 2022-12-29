@@ -8,14 +8,18 @@ import { fetchReviews } from "../../Actions/ReviewActions";
 class BusinessIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { searchedBusinesses: this.props.history.location.state };
+    this.state = { 
+      searchedBusinesses: this.props.history.location.state
+    };
   }
+
+
   componentDidMount() {
     window.scrollTo(0, 0);
     this.props.fetchBusinesses();
   }
   render() {
-    // console.log(this.state.searchedBusinesses)
+    // console.log(this.props)
     // added if statement to render businesses either from search results show all businesses.
     return (
       <div className="index-main-container">
@@ -28,14 +32,16 @@ class BusinessIndex extends React.Component {
         {this.state.searchedBusinesses ? (
           <div className="index-columns">
             <div className="index-left">
-              <h1>Results</h1>
+              <h1>Results:</h1>
               <div className="businesses-index-container">
                 <div className="businesses-index">
-                  {this.state.searchedBusinesses.map((business) => {
+                  {this.state.searchedBusinesses.map((business, index) => {
+                    const number = index + 1;
                     return (
                       <BusinessShowIndex
-                        key={business.id}
+                        key={number}
                         business={business}
+                        number={number}
                       />
                     );
                   })}
@@ -51,14 +57,16 @@ class BusinessIndex extends React.Component {
         ) : (
           <div className="index-columns">
             <div className="index-left">
-              <h1>All Results</h1>
+              <h1>All Results:</h1>
               <div className="businesses-index-container">
                 <div className="businesses-index">
-                  {this.props.businesses.map((business) => {
+                  {this.props.businesses.map((business, index) => {
+                    const number = index + 1;
                     return (
                       <BusinessShowIndex
                         key={business.id}
                         business={business}
+                        number={number}
                       />
                     );
                   })}
@@ -74,6 +82,7 @@ class BusinessIndex extends React.Component {
           </div>
         )}
         ;
+        <div className="bottom-white-cover"></div>
       </div>
     );
   }

@@ -18,7 +18,7 @@ class Nav extends React.Component {
     }
     render() {
         return (
-          <div className="navs">
+          <div className="navs" style={this.props.style}>
             {this.props.currentUser ? (
               <div className="in-session-nav">
                 <Link to="/">

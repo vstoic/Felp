@@ -34,12 +34,21 @@ function Star(props) {
         .fill()
         .map((_, i) => {
           const ratingValue = i + 1;
+          const style = {
+            backgroundColor: ratingValue <= rating ? "#d32322" : "#e4e5e9",
+            color: "#ffffff",
+            height: "1.5vw",
+            width: "1.5vw",
+            borderRadius: "6px",
+            marginLeft: ".1vh",
+            marginRight: ".1vh",
+          };
           return (
             <div className="each-star" key={ratingValue}>
               <AiFillStar
                 className="star"
-                color={ratingValue <= rating ? "#d32322" : "#e4e5e9"}
-                size={24}
+                style={style}
+                // backgroundColor="#e4e5e9"
               />
             </div>
           );
