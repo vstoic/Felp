@@ -32,7 +32,7 @@ class BusinessIndex extends React.Component {
         {this.state.searchedBusinesses ? (
           <div className="index-columns">
             <div className="index-left">
-              <h1>Results:</h1>
+              <h1 >Results:</h1>
               <div className="businesses-index-container">
                 <div className="businesses-index">
                   {this.state.searchedBusinesses.map((business, index) => {
@@ -81,7 +81,6 @@ class BusinessIndex extends React.Component {
             </div>
           </div>
         )}
-        ;
         <div className="bottom-white-cover"></div>
       </div>
     );

@@ -86,12 +86,11 @@ class BusinessShow extends React.Component {
     }
     return (
       <div className="-main-show-page-container">
-        <div className="sp-nav">
-          <Nav
-            currentUser={this.props.currentUser}
-            logout={this.props.logout}
-          />
-        </div>
+        <Nav
+          currentUser={this.props.currentUser}
+          logout={this.props.logout}
+        />
+
         <div className="business-show-container">
           <div className="sp-middle">
             <Carousel photos={this.props.business.photo_urls} />

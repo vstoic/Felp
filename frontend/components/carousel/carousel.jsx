@@ -1,4 +1,5 @@
 import React from "react";
+import {FiChevronRight, FiChevronLeft} from "react-icons/fi";
 
 class Carousel extends React.Component {
     constructor(props) {
@@ -6,7 +7,15 @@ class Carousel extends React.Component {
         this.state = {
             currentPhotoIndex: 0,
             photos: this.props.photos,
-            arrLength: this.props.photos.length - 1
+            arrLength: this.props.photos.length - 1,
+            iconStyle: {
+                color: "white",
+                fontSize: "40px",
+                fontWeight: "bold",
+                // position: "absolute",
+                // top: "50%",
+                // left: "50%",
+            }
         }
         this.nextPhoto = this.nextPhoto.bind(this);
         this.previousPhoto = this.previousPhoto.bind(this);
@@ -29,17 +38,22 @@ class Carousel extends React.Component {
             currentPhotoIndex: index
         });
     }
+    
     render() {
         return (
             <div className="carousel-container">
                 <div className="carousel">
-                    <button className="prev-img" onClick={() => this.previousPhoto()}>❮</button>
+                    <button className="prev-img" onClick={() => this.previousPhoto()}>
+                        <FiChevronLeft style={this.state.iconStyle}/>
+                    </button>
                         <div className="carousel-image-container">
                             {/* <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex]} alt="" /> */}
-                            <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex + 1]} alt="" />
+                            <img className="carousel-image" src={this.state.photos[this.state.currentPhotoIndex + 1]} alt="" />
                             {/* <img className="business-index-photo" src={this.state.photos[this.state.currentPhotoIndex + 2]} alt="" /> */}
                         </div>
-                    <button className="next-img" onClick={() => this.nextPhoto()}>❯</button>
+                    <button className="next-img" onClick={() => this.nextPhoto()}>
+                        <FiChevronRight />
+                    </button>
                 </div>
             </div>
         );

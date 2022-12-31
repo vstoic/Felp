@@ -39,7 +39,7 @@ function Star(props) {
             color: "#ffffff",
             height: "1.5vw",
             width: "1.5vw",
-            borderRadius: "6px",
+            borderRadius: "4px",
             marginLeft: ".1vh",
             marginRight: ".1vh",
           };
