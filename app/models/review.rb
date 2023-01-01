@@ -19,4 +19,8 @@ class Review < ApplicationRecord
 
     has_one :buisness,
     class_name: :Business
+
+    def created_at
+    attributes['created_at'].strftime("%m/%d/%Y")
+    end
 end

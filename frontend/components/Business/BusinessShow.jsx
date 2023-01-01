@@ -1,10 +1,14 @@
 import React from "react";
 import Nav from "../Nav/Nav";
+import { Link } from "react-router-dom";
 import Carousel from "../Carousel/Carousel";
 import Map from "../Map/Map";
 import Review from "../Review/Review";
 import Star from "../Star/Star";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import { FiPhoneCall } from "react-icons/fi";
+import { CgWebsite } from "react-icons/cg";
+import { BsPinMap } from "react-icons/bs";
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -78,7 +82,7 @@ class BusinessShow extends React.Component {
   // is why is this.props updating 3 times?
 
   render() {
-    // console.log(this.props)
+    console.log(this.props);
     if (!this.props.business) return null;
     if (!this.props.reviews) return null;
     if (this.state.Loading === true) {
@@ -86,23 +90,20 @@ class BusinessShow extends React.Component {
     }
     return (
       <div className="-main-show-page-container">
-        <Nav
-          currentUser={this.props.currentUser}
-          logout={this.props.logout}
-        />
+        <Nav currentUser={this.props.currentUser} logout={this.props.logout} />
 
         <div className="business-show-container">
+          <Carousel photos={this.props.business.photo_urls} />
           <div className="sp-middle">
-            <Carousel photos={this.props.business.photo_urls} />
-            {/* <img className="business-index-photo" src={this.props.business.photo_urls[0]} alt="" /> */}
-            <h1 className="business-index-name">{this.props.business.name}</h1>
-            <div className="business-index-stars">
+            <h1 className="sp-name">{this.props.business.name}</h1>
+            <div className="sp-stars">
               <Star businessId={this.props.business.id} />
+              <p>{this.props.reviews.length} Reviews</p>
+              <p className="sp-cost">{this.props.business.cost}</p>
             </div>
-            <h4 className="business-index-cost">{this.props.business.cost}</h4>
-            <h4 className="business-index-hours">
+            <p className="sp-hours">
               Open: {this.props.business.open} - {this.props.business.close}
-            </h4>
+            </p>
           </div>
           <div className="sp-column-spliter">
             <div className="sp-left">
@@ -115,17 +116,29 @@ class BusinessShow extends React.Component {
               </div>
             </div>
             <div className="sp-right">
-              <div className="sp-right-row">
-                <p>Phone Number: {this.props.business.phone_number}</p>
-              </div>
-              <div className="sp-right-row">
-                <p>Website: {this.props.business.website}</p>
-              </div>
-              <div className="sp-right-row">
-                <p>
-                  {this.props.business.address}, {this.props.business.city},{" "}
-                  {this.props.business.zip_code}
-                </p>
+              <div className="sp-contact-container">
+                <div className="sp-website">
+                <p>{this.props.business.website}</p>
+                <CgWebsite/>
+                </div>
+                <div className="sp-call">
+                  <p>Phone Number: {this.props.business.phone_number} </p>
+                  <FiPhoneCall/> 
+                </div>
+                <div className="sp-address-directions">
+                  <div className="address-directions">
+                    <a
+                      href={`www.google.com/maps/dir//${this.props.business.lat},${this.props.business.lng}`}
+                      >
+                      Get Directions
+                    </a>
+                    <p>
+                      {this.props.business.address}, {this.props.business.city},{" "}
+                      {this.props.business.zip_code}
+                    </p>
+                  </div>
+                  <BsPinMap/>
+                </div>
               </div>
               <div className="bs-google-map">
                 <Map businesses={this.props.business} />

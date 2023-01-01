@@ -9,14 +9,15 @@ class Review extends React.Component {
         // console.log(this.props)
     };
 
-    componentDidMount() {
-    };
+    findReviewer(reviewerId) {
+
+    }
 
     render() {
         return (
             <div className="review-container">
                 <Link to={`/business/${this.props.business.id}/review/new`}>
-                    <p>Create Review</p>
+                    <p>Write Review</p>
                 </Link>
                 <div className="review-item">
                     {this.props.reviews.map((review, idx) => {

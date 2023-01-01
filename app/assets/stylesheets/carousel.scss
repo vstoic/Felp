@@ -1,26 +1,49 @@
 .carousel-container {
-margin-top: 6vh;
+  margin-top: 12vh;
+  display: flex;
+  max-width: 98vw;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
 }
 
 .carousel {
-
 }
 
 .prev-img {
-
+  display: flex;
+  position: absolute;
+  top: 225px;
+  left: 25px;
+  cursor: pointer;
+  background-color: rgb(95, 95, 95);
 }
 
 .next-img {
-
+  display: flex;
+  position: absolute;
+  top: 225px;
+  right: 25px;
+  cursor: pointer;
+  background-color: rgb(95, 95, 95);
 }
 
-.carousel-image-container{
-
+.carousel-image-container {
+  display: flex;
+  align-items: center;
+  // height: 40vh;
+  min-height: 45px;
+  max-width: 98vw;
+  overflow: hidden;
 }
 
 .carousel-image {
-  width: 92vw;
-  height: 80vh;
-  object-fit: cover; 
+  width: auto;
+  height: 55vh;
+  object-fit: cover;
   object-position: 50% 50%;
+  margin: 0px 12px 0px 12px;
+  overflow: hidden;
+  box-shadow: 0 0 11px rgba(33,33,33,.35); 
+
 }
