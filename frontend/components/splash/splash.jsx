@@ -20,15 +20,8 @@ class Splash extends React.Component {
     });
     this.props.fetchBusinesses();
   }
-  sortBusinessesReviewScore() {
-    let reviewCountObject = {};
-    for (let i = 0; i < this.props.businesses.length; i++) {
-      let business = this.props.businesses[i];
-      let reviewCount = business.reviewIds.length;
-      reviewCountObject[business.id] = reviewCount;
-    }
-  }
   render() {
+    console.log(this.props)
     return (
       <div className="splash-main">
         <div className="sp-nav">
@@ -67,8 +60,9 @@ class Splash extends React.Component {
                   />
                   <div className="business-splash-info">
                     <p className="business-splash-title">{business.name}</p>
-                    <div className="hot-new-info-rating-container-2">
+                    <div className="splash-star-container">
                       <Star businessId={business.id} />
+                      {/* <p>{this.props.reviews.length} Reviews</p> */}
                     </div>
                   </div>
                 </Link>
@@ -87,4 +81,5 @@ class Splash extends React.Component {
   }
 }
 
+//to do: sort by rating number count. 
 export default Splash;

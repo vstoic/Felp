@@ -8,7 +8,7 @@ import Star from "../Star/Star";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
-import { BsPinMap } from "react-icons/bs";
+import { BsPinMap, BsFillBookmarkStarFill } from "react-icons/bs";
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -116,20 +116,31 @@ class BusinessShow extends React.Component {
               </div>
             </div>
             <div className="sp-right">
+              <div className="sp-right-buttons">
+                <Link
+                  className="review-buttons"
+                  to={`/business/${this.props.business.id}/review/new`}
+                >
+                  Write Review
+                </Link>
+                <div className="bookmark-business">
+                  <BsFillBookmarkStarFill size="3vw" />
+                </div>
+              </div>
               <div className="sp-contact-container">
                 <div className="sp-website">
-                <p>{this.props.business.website}</p>
-                <CgWebsite/>
+                  <p>{this.props.business.website}</p>
+                  <CgWebsite />
                 </div>
                 <div className="sp-call">
                   <p>Phone Number: {this.props.business.phone_number} </p>
-                  <FiPhoneCall/> 
+                  <FiPhoneCall />
                 </div>
                 <div className="sp-address-directions">
                   <div className="address-directions">
                     <a
-                      href={`www.google.com/maps/dir//${this.props.business.lat},${this.props.business.lng}`}
-                      >
+                      href={`https://www.google.com/maps/dir//${this.props.business.lat},${this.props.business.lng}`}
+                    >
                       Get Directions
                     </a>
                     <p>
@@ -137,7 +148,7 @@ class BusinessShow extends React.Component {
                       {this.props.business.zip_code}
                     </p>
                   </div>
-                  <BsPinMap/>
+                  <BsPinMap />
                 </div>
               </div>
               <div className="bs-google-map">

@@ -16,9 +16,9 @@ class Review extends React.Component {
     render() {
         return (
             <div className="review-container">
-                <Link to={`/business/${this.props.business.id}/review/new`}>
+                {/* <Link to={`/business/${this.props.business.id}/review/new`}>
                     <p>Write Review</p>
-                </Link>
+                </Link> */}
                 <div className="review-item">
                     {this.props.reviews.map((review, idx) => {
                         return (
