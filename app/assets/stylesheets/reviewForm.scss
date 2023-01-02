@@ -1,10 +1,10 @@
 .review-form-container {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    margin-top: 12vh;
+
     /* box-sizing: border-box; */
-    background-color: rgb(30, 30, 30);
+    // background-color: rgb(30, 30, 30);
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -12,20 +12,28 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 25px;
+    margin-top: 25px;
+}
+
+.form-title {
+    padding: 2vh;
+    font-weight: 500;
+    font-size: 5vh;
 }
 
 .review-form-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     // background-color: grey;
     border: 1px solid white;
     height: 100%;
     width: 60vw;
-    color: white;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    top: 15vh;
 }
     .review-form-left form {
         display: flex;
@@ -34,6 +42,24 @@
         justify-content: center;
     }
 
+    .review-textbox {
+        width: 50vw;
+        height: 37vh;
+    }
+    .form-button {
+        font-size: 1.5vw;
+        background-color: #d32322;
+        color: white;
+        // border: 1px solid black;
+        padding: 1vh;
+        border-radius: 8px;
+        margin: 1.5vw;
+        cursor: pointer;
+        
+    }
+    .star-review-container {
+        margin-bottom: 1.5vh;
+    }
     .star-review-container label {
         visibility: hidden;
     }
@@ -51,6 +77,11 @@
     // background-color: grey;
     flex-direction: column;
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: white;
+    // color: white;
 }
 
+.form-other-title {
+    font-size: 3vh;
+    font-weight: 500;
+    margin: 1vh 0 3vh 0;
+}

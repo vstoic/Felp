@@ -37,11 +37,11 @@ function Star(props) {
           const style = {
             backgroundColor: ratingValue <= rating ? "#d32322" : "#e4e5e9",
             color: "#ffffff",
-            height: "1.5vw",
-            width: "1.5vw",
-            borderRadius: "4px",
-            marginLeft: ".1vh",
-            marginRight: ".1vh",
+            height: "1.2vw",
+            width: "1.2vw",
+            borderRadius: "6px",
+            marginLeft: "2.5px",
+            padding: "4px",
           };
           return (
             <div className="each-star" key={ratingValue}>
