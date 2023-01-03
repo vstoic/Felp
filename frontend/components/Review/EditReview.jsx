@@ -3,7 +3,8 @@ import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import ReviewItem from "./ReviewItem";
-import { AiOutlineStar, AiFillStar } from "react-icons/ai";
+import Footer from "../Footer/Footer";
+import { AiOutlineStar, AiFillStar, AiFillDelete } from "react-icons/ai";
 
 class EditReview extends React.Component {
     constructor(props) {
@@ -64,58 +65,112 @@ class EditReview extends React.Component {
         if (!this.props.review) return null;
 
         return (
-            <div className="edit-review-container">
-                <div className='sp-nav'>
-                    <Nav currentUser={this.props.currentUser}
-                        logout={this.props.logout} />
-                </div>
-                <div className="ereview-form-spliter">
-                    <div className="ereview-form-left">
-                        <h1>Write a Review</h1>
-                        <button className='delete-review' onClick={this.deleteReview}>Remove Review</button>
-                        <div className="star-review-container">
-                            {Array(5).fill().map((star, i) => {
-                                const ratingValue = i + 1;
-                                return (
-                                    <label key={i} >
-                                        <input
-                                            type="radio"
-                                            name="rating"
-                                            className="rating"
-                                            value={ratingValue}
-                                            onClick={this.handleChanges('rating')}
-                                        />
-                                        <AiFillStar
-                                            className="stars"
-                                            color={ratingValue <= (this.state.hover || this.state.rating) ? "#ffc107" : "#e4e5e9"}
-                                            onMouseOver={() => this.setState({ hover: ratingValue })}
-                                            onMouseLeave={() => this.setState({ hover: null })}
-                                            size={25} />
-                                    </label>
-                                )
-                            })}
-                        </div>
-                        <form onSubmit={this.handleSubmit}>
-                            <textarea className="ereview-textbox" onChange={this.handleChanges('review_body')} placeholder={this.props.review.review_body}>{this.props.review.review_body}</textarea>
-                            <button type="submit" onChange={this.clearErrors} >Submit Review</button>
-                        </form>
-                        <div className="ereview-errors-container">
-                            <ul className="errors">
-                                {errors}
-                            </ul>
-                        </div>
-                    </div>
-                    <div className="ereview-form-right">
-                        <h2>Other Reviews:</h2>
-                        {Object.entries(this.props.reviews).map(([key, review]) => {
-                            return (
-                                <ReviewItem key={key} review={review} currentUser={this.props.currentUser} />
-                            )
-                        })}
-                    </div>
-                </div>
+          <div className="edit-review-container">
+            <div className="sp-nav">
+              <Nav
+                currentUser={this.props.currentUser}
+                logout={this.props.logout}
+              />
             </div>
-        )
+            <div className="ereview-form-spliter">
+              <div className="ereview-form-left">
+                <h1 className="form-title">Edit Review</h1>
+                <div className="star-review-container">
+                  {Array(5)
+                    .fill()
+                    .map((star, i) => {
+                      const ratingValue = i + 1;
+                      const style = {
+                        backgroundColor:
+                          ratingValue <= (this.state.hover || this.state.rating)
+                            ? "#d32322"
+                            : "#e4e5e9",
+                        color: "#ffffff",
+                        height: "2.5vw",
+                        width: "2.5vw",
+                        borderRadius: "10px",
+                        marginLeft: "2.5px",
+                        padding: "4px",
+                      };
+                      return (
+                        <label key={i}>
+                          <input
+                            type="radio"
+                            name="rating"
+                            className="rating"
+                            value={ratingValue}
+                            onClick={this.handleChanges("rating")}
+                          />
+                          <AiFillStar
+                            className="stars"
+                            style={style}
+                            onMouseOver={() =>
+                              this.setState({ hover: ratingValue })
+                            }
+                            onMouseLeave={() => this.setState({ hover: null })}
+                            size={25}
+                          />
+                        </label>
+                      );
+                    })}
+                </div>
+                <form onSubmit={this.handleSubmit}>
+                  <textarea
+                    className="ereview-textbox"
+                    onChange={this.handleChanges("review_body")}
+                    placeholder={this.props.review.review_body}
+                  >
+                    {this.props.review.review_body}
+                  </textarea>
+                  <button
+                    type="submit"
+                    className="form-button"
+                    onChange={this.clearErrors}
+                  >
+                    Edit Review
+                  </button>
+                </form>
+                <div className="delete-review" onClick={this.deleteReview}>
+                  <AiFillDelete
+                    style={{
+                      height: "2vw",
+                      width: "2vw",
+                      color: "rgb(88 85 85)",
+                      backgroundColor: "#ffffff",
+                      //   border: "1.8px solid rgb(88 85 85)",
+                      cursor: "pointer",
+                      borderRadius: "5px",
+                    }}
+                    onMouseOver={({ target }) =>
+                      (target.style.color = "d32322")
+                    }
+                    onMouseOut={({ target }) =>
+                      (target.style.color = "rgb(88 85 85)")
+                    }
+                  />
+                </div>
+                <div className="ereview-errors-container">
+                  <ul className="errors">{errors}</ul>
+                </div>
+              </div>
+              <div className="ereview-form-right">
+                <h2>Other Reviews:</h2>
+                {Object.entries(this.props.reviews).map(([key, review]) => {
+                  return (
+                    <ReviewItem
+                      key={key}
+                      review={review}
+                      currentUser={this.props.currentUser}
+                    />
+                  );
+                })}
+              </div>
+            </div>
+            <div className="review-form-footer">
+              <Footer />
+            </div>
+          </div>
+        );
     }
 };
 

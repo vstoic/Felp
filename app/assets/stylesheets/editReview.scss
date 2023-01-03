@@ -1,10 +1,10 @@
 .edit-review-container {
     display: flex;
     flex-direction: column;
-    width: 100vw;
-    height: 100vh;
+    margin-top: 12vh;
+
     /* box-sizing: border-box; */
-    background-color: rgb(30, 30, 30);
+    // background-color: rgb(30, 30, 30);
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -12,20 +12,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding-top: 25px;
+    margin-top: 25px;
 }
 
 .ereview-form-left {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     // background-color: grey;
-    border: 1px solid white;
+    // border: 1px solid rgb(117, 117, 117);
     height: 100%;
     width: 60vw;
-    color: white;
+    color: rgb(0, 0, 0);
+    position: sticky;
+    top: 15vh;
 }
 
 .ereview-form-left form {
@@ -34,6 +36,18 @@
     align-items: center;
     justify-content: center;
 
+}
+
+.ereview-textbox {
+    width: 50vw;
+    height: 37vh;
+}
+
+.delete-review {
+    position: absolute;
+    padding: 0.5vw;
+    top: 10.2vh;
+    left: 52vw;
 }
 
 .ereview-form-right {
@@ -46,5 +60,5 @@
     // background-color: grey;
     flex-direction: column;
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    color: white;
+    // color: white;
 }
