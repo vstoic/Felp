@@ -29,6 +29,7 @@ class Review extends React.Component {
                     review={review}
                     currentUser={this.props.currentUser}
                     businessId={this.props.business.id}
+                    page={"businessShow"}
                   />
                 );
               })}

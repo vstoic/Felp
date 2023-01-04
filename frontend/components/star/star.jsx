@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { AiFillStar } from "react-icons/ai";
-
+import { fetchReviews } from "../../Actions/ReviewActions";
 
 function Star(props) {
   const [rating, setRating] = useState(null);
-
+  const [review, setReview] = useState(null);
   // const dispatch = useDispatch();
 
   useEffect(() => {
@@ -18,6 +18,26 @@ function Star(props) {
     fetchReviews(props.businessId).then((reviews) => getAverageRating(reviews));
   }),
     [];
+
+
+  //try 1
+  useEffect(() => {
+    const fetchedReviews = fetchReviews(props.businessId);
+    setReview(fetchedReviews);
+  }, []);
+
+  //try 2
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     const data = await dispatch(fetchReviews(props.businessId));
+  //     setReview(data);
+  //   };
+  //   fetchData();
+  //   console.log(review)
+    // console.log(props);
+    // getAverageRating();
+  // }),
+  //   [];
 
   const getAverageRating = (reviews) => {
     let totalStars = 0;

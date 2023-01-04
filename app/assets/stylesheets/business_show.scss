@@ -37,6 +37,8 @@
             font-weight: 700;
             margin: 2vh;
             margin-left: 18vw;
+                margin-bottom: 1vh;
+
             font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
             width: 60%;
 
@@ -50,14 +52,9 @@
             margin-left: 18.5vw;
             font-size: 18px;
             font-weight: 400;
-        }
-        .sp-hours {
-            margin-left: 18.5vw;
-            font-size: 18px;
-            font-weight: 400;
-            margin-top: 1.5vh;
             margin-bottom: 7vh;
         }
+       
     
     .sp-column-spliter {
         display: flex;
@@ -70,11 +67,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        // justify-content: center;
         // background-color: grey;
         // border: 1px solid rgb(47, 47, 47);
         height: 100%;
-        // width: 60vw;
+        width: 77%;
 
     }
         .business-show-reviews {
@@ -91,9 +88,9 @@
         top: 31vh;
         right: 10vw;
         height: 83vh;
-        width: 30%;
+        width: 23%;
         margin-top: 3vh;
-        transform: translateY(-24vh);
+        transform: translateY(-21vh);
 
 
         // padding: 10px;
@@ -104,13 +101,14 @@
     }
         .sp-right-buttons {
             display: flex;
-            justify-content: flex-start;
             align-items: center;
+            justify-content: center;
             flex-direction: row;
-            margin-right: 2vw;
-            margin: 1vh 2vw 1vh 0;
             width: 100%;
-            font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
+            border: 1px solid #cacaca;
+            border-radius: 3px;
+            padding: 0.65vw;
+            margin-bottom: 2vh;
         }
         .review-buttons, .review-buttons:link, .review-buttons:active, .review-buttons:visited{
             display: flex;
@@ -121,26 +119,29 @@
             color: white;
             font-size: 18px;
             border-radius: 5px;
-            width: 10vw;
+            width: 60%;
             height: 4vh;
             text-decoration: none;
-            margin-bottom: 2vh;
-            margin-left: 2vw;
-            margin-right: 2vw;
+            margin: .4vh;
+            // margin-bottom: 2vh;
+            // margin-left: 2vw;
+            // margin-right: 2vw;
         }
         
         .bookmark-business {
             display: flex;
-            justify-content: center;
+            justify-content: space-evenly;
             align-items: center;
-            background-color: white;
-            color: #cacaca;
+            background-color: #cacaca;
+            color: white;
             font-size: 18px;
             border-radius: 5px;
-            width: 3vw;
+            width: 37%;
             height: 4vh;
             text-decoration: none;
-            margin-bottom: 2vh;
+            margin: .4vh;
+            padding: 5px;
+
         }
 
         .sp-contact-container {
@@ -193,9 +194,22 @@
             padding: .5vw 0 .5vw 0;
             font-size: 14px;
             font-weight: 400;
+                        border-bottom: 1px solid #cacaca;
+
             // border-bottom: 1px solid rgb(47, 47, 47);
         }
 
+        
+        .sp-hours {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 90%;
+            padding: .5vw 0 .5vw 0;
+            font-size: 14px;
+            font-weight: 400;
+        }
 
         
 

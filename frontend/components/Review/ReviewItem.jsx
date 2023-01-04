@@ -8,6 +8,7 @@ class ReviewItem extends React.Component {
     super(props);
     this.state = {
       review: this.props.review,
+      page: this.props.page
     };
   }
   render() {
@@ -60,7 +61,7 @@ class ReviewItem extends React.Component {
           </div>
           <div className="review-bottom">
             <div className="edit-review">
-              {this.props.currentUser ? (
+              {this.props.currentUser && (this.state.page === "businessShow") ? (
                 this.state.review.user_id === this.props.currentUser.id ? (
                   <Link
                     to={`/business/${this.props.businessId}/review/${this.state.review.id}/edit`}

@@ -5,10 +5,9 @@ import Carousel from "../Carousel/Carousel";
 import Map from "../Map/Map";
 import Review from "../Review/Review";
 import Star from "../Star/Star";
-import { AiOutlineStar, AiFillStar } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
-import { BsPinMap, BsFillBookmarkStarFill } from "react-icons/bs";
+import { BsPinMap, BsFillBookmarkStarFill, BsStar } from "react-icons/bs";
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -91,7 +90,6 @@ class BusinessShow extends React.Component {
     return (
       <div className="-main-show-page-container">
         <Nav currentUser={this.props.currentUser} logout={this.props.logout} />
-
         <div className="business-show-container">
           <Carousel photos={this.props.business.photo_urls} />
           <div className="sp-middle">
@@ -101,9 +99,6 @@ class BusinessShow extends React.Component {
               <p>{this.props.reviews.length} Reviews</p>
               <p className="sp-cost">{this.props.business.cost}</p>
             </div>
-            <p className="sp-hours">
-              Open: {this.props.business.open} - {this.props.business.close}
-            </p>
           </div>
           <div className="sp-column-spliter">
             <div className="sp-left">
@@ -121,19 +116,23 @@ class BusinessShow extends React.Component {
                   className="review-buttons"
                   to={`/business/${this.props.business.id}/review/new`}
                 >
+                  <BsStar size="1.8vw" />
                   Write Review
                 </Link>
                 <div className="bookmark-business">
-                  <BsFillBookmarkStarFill size="3vw" />
+                  <BsFillBookmarkStarFill size="1.8vw" /> Save
                 </div>
               </div>
               <div className="sp-contact-container">
                 <div className="sp-website">
-                  <p>{this.props.business.website}</p>
+                  <a href={this.props.business.website}>
+                    {this.props.business.website}
+                  </a>
+                  {/* <p>{this.props.business.website}</p> */}
                   <CgWebsite />
                 </div>
                 <div className="sp-call">
-                  <p>Phone Number: {this.props.business.phone_number} </p>
+                  <p>{this.props.business.phone_number} </p>
                   <FiPhoneCall />
                 </div>
                 <div className="sp-address-directions">
@@ -150,6 +149,9 @@ class BusinessShow extends React.Component {
                   </div>
                   <BsPinMap />
                 </div>
+                <p className="sp-hours">
+                  Open: {this.props.business.open} - {this.props.business.close}
+                </p>
               </div>
               <div className="bs-google-map">
                 <Map businesses={this.props.business} />
