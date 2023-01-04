@@ -21,10 +21,10 @@ function Star(props) {
 
 
   //try 1
-  useEffect(() => {
-    const fetchedReviews = fetchReviews(props.businessId);
-    setReview(fetchedReviews);
-  }, []);
+  // useEffect(() => {
+  //   const fetchedReviews = fetchReviews(props.businessId);
+  //   setReview(fetchedReviews);
+  // }, []);
 
   //try 2
   // useEffect(() => {
