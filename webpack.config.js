@@ -2,10 +2,12 @@ const path = require('path');
 
 module.exports = {
     context: __dirname,
-    entry: './frontend/felp.jsx',
+    entry: "./frontend/felp.jsx",
+    // mode: "development",
+    mode: 'production',
     output: {
-        path: path.resolve(__dirname, 'app', 'assets', 'javascripts'),
-        filename: 'bundle.js'
+        path: path.resolve(__dirname, "app", "assets", "javascripts"),
+        filename: "bundle.js",
     },
     module: {
         rules: [
@@ -13,18 +15,18 @@ module.exports = {
                 test: /\.jsx?$/,
                 exclude: /(node_modules)/,
                 use: {
-                    loader: 'babel-loader',
+                    loader: "babel-loader",
                     options: {
-                        presets: ['@babel/env', '@babel/react']
-                    }
+                        presets: ["@babel/env", "@babel/react"],
+                    },
                 },
-            }
-        ]
+            },
+        ],
     },
-    devtool: 'inline-source-map',
+    devtool: "inline-source-map",
     resolve: {
-        extensions: [".js", ".jsx", "*"]
-    }
+        extensions: [".js", ".jsx", "*"],
+    },
 };
 
 // changed line 17 from query to options
