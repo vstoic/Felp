@@ -1,7 +1,7 @@
 {
   "name": "felp",
   "private": true,
-  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "description": "Felp is a Yelp clone that allows users to search for restaurants and leave reviews.",
   "version": "1.0.0",
   "main": "index.js",
   "directories": {
@@ -14,7 +14,6 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "webpack": "webpack --mode=development --watch",
     "start": "webpack --watch --mode=development",
     "postinstall": "webpack",
     "build": "webpack"
@@ -44,7 +43,7 @@
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
-    "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack": "^5.74.0"
   }
 }
