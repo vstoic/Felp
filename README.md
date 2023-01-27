@@ -5,8 +5,9 @@
 <!-- ![Felp Splash Gif](app/assets/images/SplashPage.gif) -->
 - [x] User Auth / Account Creation & Demo User
 - [x] Business Profile Page
-- [] Rating and Reviews
-- [] Search Bar & Filters
+- [x] Rating and Reviews
+- [] Search Bar & 
+- [x] Filters
 - [x] Map Api
 - [] Users Images
 
@@ -14,7 +15,7 @@
 * Ruby on Rails
 * React/Redux
 * PostgreSQL
-* HTML and CSS
+* HTML and SCSS
 
 ## Bonus Feature:
 
