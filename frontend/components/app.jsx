@@ -6,8 +6,8 @@ import { AuthRoute, ProtectedRoute} from '../util/route_util'
 import SplashContainer from './splash/splashContainer';
 import BusinessShowContainer from "./Business/BusinessShowContainer";
 import BusinessIndexContainer from "./Business/BusinessIndexContainer";
-import ReviewFormContainer from './Review/ReviewFormContainer';
-import EditReviewContainer from './Review/EditReviewContainer';
+import ReviewFormContainer from './review/ReviewFormContainer';
+import EditReviewContainer from './review/EditReviewContainer';
 
 const App = () => (
     <div>
