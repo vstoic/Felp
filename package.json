@@ -1,9 +1,9 @@
 {
-  "name": "felp",
+  "name": "Felp",
   "private": true,
   "description": "Felp is a Yelp clone that allows users to search for restaurants and leave reviews.",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "felp.jsx",
   "directories": {
     "lib": "lib",
     "test": "test"
