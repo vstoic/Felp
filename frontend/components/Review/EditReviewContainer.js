@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import EditReview from "./editReview";
-import { fetchReview, fetchReviews, editReview, deleteReview, clearReviewErrors } from "../../Actions/ReviewActions";
-import { fetchBusiness } from "../../Actions/BusinessActions";
+import { fetchReview, fetchReviews, editReview, deleteReview, clearReviewErrors } from "../../actions/reviewActions";
+import { fetchBusiness } from "../../actions/businessActions";
 
 const mSTP = (state, ownProps) => {
     // console.log(state.entities.reviews[ownProps.match.params.reviewId])
