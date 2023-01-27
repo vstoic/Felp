@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import { fetchReviews } from "../../actions/reviewActions";
+import { fetchReviews } from "../../Actions/reviewActions";
 import { withRouter } from "react-router-dom";
 import BusinessShowIndex from "./businessShowIndex";
 

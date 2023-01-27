@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../nav/nav";
+import Nav from "../Nav/nav";
 function Profile(props) {
   return (
     <div className="profile-container">

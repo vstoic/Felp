@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { AiFillStar } from "react-icons/ai";
-import { fetchReviews } from "../../actions/reviewActions";
+import { fetchReviews } from "../../Actions/reviewActions";
 
 function Star(props) {
   const [rating, setRating] = useState(null);

@@ -1,13 +1,13 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import LoginFormContainer from "./sessionForm/loginFormContainer";
-import SignupFormContainer from "./sessionForm/signupFormContainer";
-import { AuthRoute, ProtectedRoute} from '../util/route_util'
-import SplashContainer from './splash/splashContainer';
-import BusinessShowContainer from "./business/businessShowContainer";
-import BusinessIndexContainer from "./business/businessIndexContainer";
-import ReviewFormContainer from './review/reviewFormContainer';
-import EditReviewContainer from './review/editReviewContainer';
+import LoginFormContainer from "./SessionForm/loginFormContainer";
+import SignupFormContainer from "./SessionForm/signupFormContainer";
+import { AuthRoute, ProtectedRoute} from '../Util/route_util'
+import SplashContainer from './Splash/splashContainer';
+import BusinessShowContainer from "./Business/businessShowContainer";
+import BusinessIndexContainer from "./Business/businessIndexContainer";
+import ReviewFormContainer from './Review/reviewFormContainer';
+import EditReviewContainer from './Review/editReviewContainer';
 
 const App = () => (
     <div>

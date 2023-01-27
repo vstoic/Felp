@@ -1,4 +1,4 @@
-import * as BusinessUtil from '../util/business_util'
+import * as BusinessUtil from '../Util/business_util'
 
 export const RECEIVE_BUSINESS = 'RECEIVE_BUSINESS';
 export const RECEIVE_BUSINESSES = 'RECEIVE_BUSINESSES'

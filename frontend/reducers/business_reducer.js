@@ -1,4 +1,4 @@
-import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from "../actions/businessActions";
+import { RECEIVE_BUSINESS, RECEIVE_BUSINESSES } from "../Actions/businessActions";
 
 const BusinessesReducer = (oldState = {}, action) => {
     Object.freeze(oldState);

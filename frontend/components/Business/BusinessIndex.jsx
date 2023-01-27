@@ -1,9 +1,9 @@
 import React from "react";
-import Nav from "../nav/nav";
+import Nav from "../Nav/nav";
 import { Link } from "react-router-dom";
 import BusinessShowIndex from "./businessShowIndexContainer";
-import Map from "../map/map";
-import { fetchReviews } from "../../actions/reviewActions";
+import Map from "../Map/map";
+import { fetchReviews } from "../../Actions/reviewActions";
 
 class BusinessIndex extends React.Component {
   constructor(props) {

@@ -5,8 +5,8 @@ import {
   logout,
   receiveCurrentUser,
   clearErrors,
-} from "../../actions/sessionActions";
-import { fetchBusinesses, fetchBusiness } from "../../actions/businessActions";
+} from "../../Actions/sessionActions";
+import { fetchBusinesses, fetchBusiness } from "../../Actions/businessActions";
 
 const mapStateToProps = (state) => ({
   formType: "splash",

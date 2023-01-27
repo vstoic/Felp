@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import { AiOutlineStar, AiFillStar } from "react-icons/ai";
-import Nav from "../nav/nav";
+import Nav from "../Nav/nav";
 import ReviewItem from "./reviewItem";
-import Footer from "../footer/footer";
+import Footer from "../Footer/footer";
 
 class ReviewForm extends React.Component {
   constructor(props) {

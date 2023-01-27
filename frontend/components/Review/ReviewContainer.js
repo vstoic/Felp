@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
 import Review from "./review";
-import { fetchReviews, updateReview, deleteReview } from "../../actions/reviewActions";
+import { fetchReviews, updateReview, deleteReview } from "../../Actions/reviewActions";
 
 const mSTP = (state) => {
     return {

@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Nav from "../nav/nav";
-import Star from "../star/star";
-import Footer from "../footer/footer";
+import Nav from "../Nav/nav";
+import Star from "../Star/star";
+import Footer from "../Footer/footer";
 
 class Splash extends React.Component {
   constructor(props) {

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Star from "../star/star";
+import Star from "../Star/star";
 
 class BusinessShowIndex extends React.Component {
   constructor(props) {
