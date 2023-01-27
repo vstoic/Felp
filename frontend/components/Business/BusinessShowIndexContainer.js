@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import { fetchReviews } from "../../Actions/ReviewActions";
+import { fetchReviews } from "../../actions/eeviewActions";
 import { withRouter } from "react-router-dom";
-import BusinessShowIndex from "./BusinessShowIndex";
+import BusinessShowIndex from "./businessShowIndex";
 
 const mapStateToProps = (state, ownProps) => ({
   business: state.entities.businesses[ownProps.business.id],

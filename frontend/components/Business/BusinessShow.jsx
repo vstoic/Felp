@@ -3,7 +3,7 @@ import Nav from "../nav/nav";
 import { Link } from "react-router-dom";
 import Carousel from "../carousel/carousel";
 import Map from "../map/map";
-import Review from "/frontend/Components/review/review.jsx";
+import Review from "/frontend/components/review/review.jsx";
 import Star from "../star/star";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";

@@ -4,8 +4,8 @@ import LoginFormContainer from "./SessionForm/LoginFormContainer";
 import SignupFormContainer from "./SessionForm/SignupFormContainer";
 import { AuthRoute, ProtectedRoute} from '../util/route_util'
 import SplashContainer from './splash/splashContainer';
-import BusinessShowContainer from "./Business/BusinessShowContainer";
-import BusinessIndexContainer from "./Business/BusinessIndexContainer";
+import BusinessShowContainer from "./business/businessShowContainer";
+import BusinessIndexContainer from "./business/businessIndexContainer";
 import ReviewFormContainer from './review/ReviewFormContainer';
 import EditReviewContainer from './review/EditReviewContainer';
 

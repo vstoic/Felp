@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
-import { logout } from '../../Actions/SessionActions';
-import { fetchBusiness, fetchBusinesses} from "../../Actions/BusinessActions";
-import { fetchReviews } from "../../Actions/ReviewActions";
+import { logout } from '../../actions/sessionActions';
+import { fetchBusiness, fetchBusinesses} from "../../actions/businessActions";
+import { fetchReviews } from "../../actions/reviewActions";
 import { withRouter } from 'react-router-dom';
-import BusinessShow from './BusinessShow';
+import BusinessShow from './businessShow';
 
 
 const mapStateToProps = (state, ownProps) => (
