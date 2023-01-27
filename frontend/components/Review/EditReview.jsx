@@ -2,7 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Nav from "../nav/nav";
-import ReviewItem from "./ReviewItem";
+import ReviewItem from "./reviewItem";
 import Footer from "../footer/footer";
 import { AiOutlineStar, AiFillStar, AiFillDelete } from "react-icons/ai";
 

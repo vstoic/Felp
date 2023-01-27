@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import { withRouter } from "react-router-dom";
-import Star from "./Star";
+import Star from "./star";
 import { fetchReviews } from "../../Actions/ReviewActions";
 
 const mSTP = state => {

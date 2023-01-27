@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import ReviewForm from "./ReviewForm";
+import ReviewForm from "./reviewForm";
 import { fetchReviews, createReview, clearReviewErrors } from "../../Actions/ReviewActions";
 import { fetchBusiness } from "../../Actions/BusinessActions";
 

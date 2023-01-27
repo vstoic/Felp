@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import EditReview from "./EditReview";
+import EditReview from "./editReview";
 import { fetchReview, fetchReviews, editReview, deleteReview, clearReviewErrors } from "../../Actions/ReviewActions";
 import { fetchBusiness } from "../../Actions/BusinessActions";
 

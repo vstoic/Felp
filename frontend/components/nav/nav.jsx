@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Search_container from '../Search/SearchContainer';
+import Search_container from '../search/searchContainer';
 
 class Nav extends React.Component {
     constructor(props) {

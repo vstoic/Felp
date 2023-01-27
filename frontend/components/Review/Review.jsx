@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import ReviewItem from "./ReviewItem";
+import ReviewItem from "./reviewItem";
 
 class Review extends React.Component {
     constructor(props) {
