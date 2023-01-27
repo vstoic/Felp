@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import Nav from "../Nav/Nav";
+import Nav from "../nav/nav";
 import ReviewItem from "./ReviewItem";
-import Footer from "../Footer/Footer";
+import Footer from "../footer/footer";
 import { AiOutlineStar, AiFillStar, AiFillDelete } from "react-icons/ai";
 
 class EditReview extends React.Component {

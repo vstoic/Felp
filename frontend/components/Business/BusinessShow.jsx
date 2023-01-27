@@ -1,10 +1,10 @@
 import React from "react";
-import Nav from "../Nav/Nav";
+import Nav from "../nav/nav";
 import { Link } from "react-router-dom";
-import Carousel from "../Carousel/Carousel";
-import Map from "../Map/Map";
-import Review from "../Review/Review";
-import Star from "../Star/Star";
+import Carousel from "../carousel/carousel";
+import Map from "../map/map";
+import Review from "../review/review";
+import Star from "../star/star";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
 import { BsPinMap, BsFillBookmarkStarFill, BsStar } from "react-icons/bs";

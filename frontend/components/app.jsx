@@ -2,8 +2,8 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 import LoginFormContainer from "./SessionForm/LoginFormContainer";
 import SignupFormContainer from "./SessionForm/SignupFormContainer";
-import { AuthRoute, ProtectedRoute} from '../Util/route_util'
-import SplashContainer from './Splash/SplashContainer';
+import { AuthRoute, ProtectedRoute} from '../util/route_util'
+import SplashContainer from './splash/splashContainer';
 import BusinessShowContainer from "./Business/BusinessShowContainer";
 import BusinessIndexContainer from "./Business/BusinessIndexContainer";
 import ReviewFormContainer from './Review/ReviewFormContainer';
