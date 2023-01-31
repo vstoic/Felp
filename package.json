@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack -w --mode=development",
+    "start": "webpack",
     "postinstall": "webpack",
     "build": "webpack"
   },
