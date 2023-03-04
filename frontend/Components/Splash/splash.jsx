@@ -36,12 +36,12 @@ class Splash extends React.Component {
             src="https://images5.alphacoders.com/100/1001016.jpg"
             alt="https://i.postimg.cc/WpyWxXGK/1001016.jpg"
           />
-          <div className="bg-text">
+          <Link to="/businesses" className="bg-text">
             <h1 className="bg-text-1">Fake People. Fake Reviews.</h1>
             <h2 className="bg-text-2">
               Seek the best places to eat, shop, drink and do, well, whatever.
             </h2>
-          </div>
+          </Link>
         </div>
         <h1 className="business-splash-container-title">Businesses:</h1>
         <div className="business-filler">
@@ -70,7 +70,7 @@ class Splash extends React.Component {
             })}
           </div>
           <h1 className="business-index-link">
-            <Link to="/businesses">See More</Link>
+            <Link to="/businesses">See All Businesses</Link>
           </h1>
         </div>
         <div className="splash-footer">

@@ -29,13 +29,9 @@
 
 
 .bg-text {
-    cursor: default;
-    // display: flex;
+    text-decoration: none;
+    cursor: pointer;
     flex-direction: column;
-    // justify-content: center;
-    // vertical-align: center;
-    // padding: 12px 0;
-    // margin-top: 40px;
 }
 
 .bg-text-1 {
@@ -45,8 +41,6 @@
     font-size: 48px;
     font-weight: bold;
     letter-spacing: -0.4px;
-    /* margin-left: 200px; */
-    // margin-top: 200px;
     filter: drop-shadow(0 0 0.05rem rgb(226, 226, 226));
 }
     .bg-text-1:hover {
@@ -105,31 +99,27 @@
                 box-shadow: 0 5px 15px 5px rgba(255, 255, 255, 0.125);
         }
         .business-container:hover .business-splash-photo {
-            filter: blur(.8px);
-            // transform: scale(.98);
+            // filter: blur(.8px);
             box-shadow: none;
             transition: all .25s ease-in
         }
     .splash-business-container {
         display: block;
-        height: 174px;
-        width: 229px;
-        height: 365px;
         box-sizing: border-box;
         color: rgb(30, 30, 30);
-        border: 1px solid #ebebeb;
-        border-radius: 3px;
+        background-color: rgba(240, 240, 240, 0.35);
+        border: 1px solid #ebebeba2;
+        border-radius: 7px;
         margin: 10px;
         margin-top: 20px;
         z-index: 2;
         text-align: center;
-        padding-top: 5px;
+        padding: 6px;
         text-decoration: none;
         font-family: Helvetica, sans-serif;
         font-weight: 150;
     }
     .business-splash-title {   
-        margin: 5px;
         width: 100%;
         box-sizing: border-box;
         height: 20px;
@@ -146,13 +136,9 @@
         justify-content: center;
     }
     .business-splash-photo {
-        margin-top: -4px;
-        width: 225px;
-        height: 290px;
-        background-position: 75px;
-        border-radius: 2px;
+        width: 205px;
+        height: 270px;
         border-bottom: 1px solid #ebebeb;
-        /* background-position: -20px; */
     }
 .business-index-link {
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
