@@ -20,27 +20,24 @@
     font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
     .sp-middle{
-        /* background-color: grey; */
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
-        width: 100vw;
-        height: 110vh;
-        /* box-sizing: border-box; */
+        width: 100%;
+        height: fit-content;
+        // height: 110vh;
         // background-color: rgb(30, 30, 30);
+        padding: 5px;
         color: rgb(57, 57, 57);
         font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        border-bottom: 1px solid #cacaca;
 
     }
         .sp-middle h1 {
             font-size: 42px;
             font-weight: 700;
-            margin: 2vh;
-            margin-left: 18vw;
-                margin-bottom: 1vh;
-
             font-family: 'Poppins','Helvetica Neue',Helvetica,Arial,sans-serif;
-            width: 60%;
+            // width: 60%;
 
         }
         .sp-stars {
@@ -49,48 +46,45 @@
             justify-content: flex-start;
             align-items: center;
             gap: 10px;
-            margin-left: 18.5vw;
+            // margin-left: 18.5vw;
             font-size: 18px;
             font-weight: 400;
-            margin-bottom: 7vh;
+            // margin-bottom: 7vh;
         }
        
     
     .sp-column-spliter {
         display: flex;
         // flex-direction: row;
-        // justify-content: space-evenly;
+        justify-content: center;
         // height: 100%;
+        gap: 12vw;
     }
 
     .sp-left{
         display: flex;
         flex-direction: column;
         align-items: center;
-        // justify-content: center;
-        // background-color: grey;
-        // border: 1px solid rgb(47, 47, 47);
         height: 100%;
-        width: 77%;
-
+        width: 30%;
     }
         .business-show-reviews {
             color: rgb(53, 53, 53);
             font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-            width: 70%;
+            width: 100%;
         }
 
     .sp-right {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        position: sticky;
-        top: 31vh;
-        right: 10vw;
+        // position: sticky;
+        // top: 21vh;
+        // right: 30vw;
         height: 83vh;
         width: 23%;
-        margin-top: 3vh;
-        transform: translateY(-21vh);
+        // margin-top: 3vh;
+        // transform: translateY(-10vh);
 
 
         // padding: 10px;

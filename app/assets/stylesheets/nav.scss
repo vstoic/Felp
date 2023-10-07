@@ -176,7 +176,7 @@
 .splash-button-login {
     font-family: Helvetica, sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     // text-shadow: .5px .5px 0px #262626;    
     display: flex;
     justify-content: center;
@@ -200,15 +200,16 @@
 .splash-button-signup {
     font-family: Helvetica, sans-serif;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     // text-shadow: .5px .5px 0px #262626;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: rgb(165, 165, 165);
+    // color: rgb(165, 165, 165);
+    color: white;
     background-image: none;
-    background-color: transparent;
+    background-color: #c41200;
     border-radius: 4px;
     box-shadow: none;
     cursor: pointer;
@@ -218,7 +219,7 @@
     padding-left: 25px;
     padding-right: 25px;
     padding-top: 5px;
-    border: 1px solid rgb(165, 165, 165);
+    // border: 1px solid rgb(165, 165, 165);
 }
 
 

@@ -92,16 +92,16 @@ class BusinessShow extends React.Component {
         <Nav currentUser={this.props.currentUser} logout={this.props.logout} />
         <div className="business-show-container">
           <Carousel photos={this.props.business.photo_urls} />
-          <div className="sp-middle">
-            <h1 className="sp-name">{this.props.business.name}</h1>
-            <div className="sp-stars">
-              <Star businessId={this.props.business.id} />
-              <p>{this.props.reviews.length} Reviews</p>
-              <p className="sp-cost">{this.props.business.cost}</p>
-            </div>
-          </div>
           <div className="sp-column-spliter">
             <div className="sp-left">
+              <div className="sp-middle">
+                <h1 className="sp-name">{this.props.business.name}</h1>
+                <div className="sp-stars">
+                  <Star businessId={this.props.business.id} />
+                  <p>{this.props.reviews.length} Reviews</p>
+                  <p className="sp-cost">{this.props.business.cost}</p>
+                </div>
+              </div>
               <div className="business-show-reviews">
                 <Review
                   reviews={this.props.reviews}
