@@ -8,6 +8,7 @@ import Star from "../Star/star";
 import { FiPhoneCall } from "react-icons/fi";
 import { CgWebsite } from "react-icons/cg";
 import { BsPinMap, BsFillBookmarkStarFill, BsStar } from "react-icons/bs";
+import Footer from "../Footer/footer";
 
 class BusinessShow extends React.Component {
   constructor(props) {
@@ -89,8 +90,8 @@ class BusinessShow extends React.Component {
     }
     return (
       <div className="-main-show-page-container">
-        <Nav currentUser={this.props.currentUser} logout={this.props.logout} />
         <div className="business-show-container">
+          <Nav currentUser={this.props.currentUser} logout={this.props.logout} />
           <Carousel photos={this.props.business.photo_urls} />
           <div className="sp-column-spliter">
             <div className="sp-left">
@@ -158,6 +159,7 @@ class BusinessShow extends React.Component {
               </div>
             </div>
           </div>
+          <Footer />
         </div>
       </div>
     );

@@ -13,7 +13,7 @@
 .prev-img {
   display: flex;
   position: absolute;
-  top: 35vh;
+  top: 30vh;
   left: 30px;
   cursor: pointer;
   background-color: rgba(95, 95, 95, 0.65);
@@ -24,7 +24,7 @@
 .next-img {
   display: flex;
   position: absolute;
-  top: 35vh;
+  top: 30vh;
   right: 30px;
   cursor: pointer;
   background-color: rgba(95, 95, 95, 0.65);
@@ -43,7 +43,7 @@
 
 .carousel-image {
   width: auto;
-  height: 55vh;
+  height: 58vh;
   object-fit: cover;
   object-position: 50% 50%;
   margin: 0px 0px 0px 1vw;
