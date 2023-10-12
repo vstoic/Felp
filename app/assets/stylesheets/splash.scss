@@ -90,7 +90,6 @@
         display: grid;
         grid-template-columns: repeat(4, auto);
         justify-content: center;
-        gap: 30px;
     }
         .business-container:hover .business-splash-photo:hover{
                 transform: scale(1.005);
@@ -138,6 +137,7 @@
     .business-splash-photo {
         width: 205px;
         height: 270px;
+        object-fit: cover;
         border-bottom: 1px solid #ebebeb;
     }
 .business-index-link {

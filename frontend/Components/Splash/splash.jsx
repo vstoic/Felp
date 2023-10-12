@@ -46,7 +46,7 @@ class Splash extends React.Component {
         <h1 className="business-splash-container-title">Businesses:</h1>
         <div className="business-filler">
           <div className="business-container">
-            {this.props.businesses.slice(0, 4).map((business) => {
+            {this.props.businesses.slice(0, 8).map((business) => {
               return (
                 <Link
                   to={`/business/${business.id}`}
