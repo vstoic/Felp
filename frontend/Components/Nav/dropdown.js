@@ -18,8 +18,8 @@ function AccountDropdown(props) {
       </div>
       {isOpen && (
         <ul className="account-dropdown__menu">
-          <li className="account-dropdown__menu-item">Profile</li>
-          <li className="account-dropdown__menu-item" onClick={props.logout}>Logout</li>
+          <ul className="account-dropdown__menu-item">Profile</ul>
+          <ul className="account-dropdown__menu-item" onClick={props.logout}>Logout</ul>
         </ul>
       )}
     </div>
