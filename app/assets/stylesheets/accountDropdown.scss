@@ -1,0 +1,56 @@
+.account-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.account-dropdown__menu {
+  position: absolute;
+  top: 100%; /* Position the menu below the icon */
+  left: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #fff; /* Background color of the menu */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  border: 1px solid #ccc; /* Add a border for separation */
+  display: none; /* Initially, hide the menu */
+}
+
+.account-dropdown:hover .account-dropdown__menu {
+  display: block; /* Show the menu when the icon is hovered */
+}
+
+.account-dropdown__menu li {
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ccc; /* Add a horizontal line between menu items */
+}
+
+.account-dropdown__menu li:last-child {
+  border-bottom: none; /* Remove the border from the last item */
+}
+
+.account-dropdown__menu-item {
+  cursor: pointer;
+  text-decoration: none;
+  color: #333; /* Text color of the menu items */
+  display: block;
+}
+
+.account-dropdown__menu-item:hover {
+  background-color: #f0f0f0; /* Background color on hover */
+}

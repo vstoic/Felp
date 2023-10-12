@@ -1,20 +1,33 @@
-/* When the user clicks on the button,
-  toggle between hiding and showing the dropdown content */
- function Dropdown() {
-    document.getElementById("myDropdown").classList.toggle("show");
-}
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(e) {
-  if (!e.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-  var i;
-  for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-  if (openDropdown.classList.contains('show')) {
-    openDropdown.classList.remove('show');
-      }
-    }
-  }
+import React, { useState } from 'react';
+
+function AccountDropdown(props) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  return (
+    <div className="account-dropdown">
+      <div className="dropdown">
+        <img
+          className="dropbtn"
+          onClick={toggleDropdown}
+          src="https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2015/3/31/1427823466140/1fe69f2c-59d6-4e07-ab3a-8b60dbe35db2-1020x1020.jpeg?width=700&quality=85&auto=format&fit=max&s=488d904c14758c38d8010de62c742e4b"
+        ></img>
+      </div>
+      {/* <button className="account-dropdown__toggle" onClick={toggleDropdown}>
+        Account
+      </button> */}
+      {isOpen && (
+        <ul className="account-dropdown__menu">
+          <li className="account-dropdown__menu-item">Profile</li>
+          {/* <li className="account-dropdown__menu-item">Reviews</li> */}
+          <li className="account-dropdown__menu-item" onClick={props.logout}>Logout</li>
+        </ul>
+      )}
+    </div>
+  );
 }
 
-export default Dropdown;
+export default AccountDropdown;
