@@ -8,19 +8,26 @@
 }
 
 .dropbtn {
-    cursor: pointer;
-    border: none;
-    outline: none;
-    padding: 5px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+
 }
+.dropbtn:hover {
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  transition: all .4s ease-in
+  }
 
 .account-dropdown__menu {
   position: absolute;
   top: 100%; /* Position the menu below the icon */
-  left: 0;
+  right: 0;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -28,6 +35,7 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
   border: 1px solid #ccc; /* Add a border for separation */
   display: none; /* Initially, hide the menu */
+  border-radius: 5px;
 }
 
 .account-dropdown:hover .account-dropdown__menu {
@@ -37,19 +45,26 @@
 .account-dropdown__menu li {
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #ccc; /* Add a horizontal line between menu items */
+  font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  cursor: pointer;
+
+  // border-bottom: 1px solid #ccc; /* Add a horizontal line between menu items */
 }
 
 .account-dropdown__menu li:last-child {
   border-bottom: none; /* Remove the border from the last item */
 }
 
-.account-dropdown__menu-item {
-  cursor: pointer;
-  text-decoration: none;
-  color: #333; /* Text color of the menu items */
-  display: block;
-}
+// .account-dropdown__menu-item {
+//   cursor: pointer;
+  
+//   text-decoration: none;
+//   color: #333; /* Text color of the menu items */
+//   display: block;
+// }
 
 .account-dropdown__menu-item:hover {
   background-color: #f0f0f0; /* Background color on hover */
