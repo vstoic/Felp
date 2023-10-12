@@ -59,7 +59,7 @@ class Signup extends React.Component {
                                 <div className="signup-input">
                                     <label>
                                         <input type="text"
-                                        placeholder='  Username'
+                                            placeholder='  Username'
                                             value={this.state.username}
                                             onChange={this.update('username')}
                                             className="signup-username"
@@ -68,7 +68,7 @@ class Signup extends React.Component {
                                     <br />
                                     <label>
                                         <input type="email"
-                                        placeholder='  Email'
+                                            placeholder='  Email'
                                             value={this.state.email}
                                             onChange={this.update('email')}
                                             className="signup-email"
@@ -77,7 +77,7 @@ class Signup extends React.Component {
                                     <br />
                                     <label>
                                         <input type="password"
-                                        placeholder='  Password'
+                                            placeholder='  Password'
                                             value={this.state.password}
                                             onChange={this.update('password')}
                                             className="signup-password"
