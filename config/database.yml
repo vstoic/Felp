@@ -23,9 +23,9 @@ default: &default
 development:
   <<: *default
   database: Felp_development
-  # username: Felp # Specify your PostgreSQL username if needed
-  # password: # Specify your PostgreSQL password if needed
-  # port: 5432 # Specify the database port if it's not the default (5432)
+  username: Felp # Specify your PostgreSQL username if needed
+  password: <%= ENV['FELP_DATABASE_PASSWORD'] %>
+  port: 3000 # Specify the database port if it's not the default (5432)
 
 test:
   <<: *default
