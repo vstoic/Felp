@@ -81,6 +81,7 @@ def attach_photos(business, photo_urls)
     rescue StandardError => e
       puts "Error attaching photo for #{business.name}: #{e.message}"
       puts "URL: #{url}"
+    end
   end
 end
 
