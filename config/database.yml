@@ -18,14 +18,14 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  host: localhost # Specify the database host (localhost for local development)
+  # host: localhost # Specify the database host (localhost for local development)
 
 development:
   <<: *default
   database: Felp_development
-  username: Felp # Specify your PostgreSQL username if needed
-  password: <%= ENV['FELP_DATABASE_PASSWORD'] %>
-  port: 3000 # Specify the database port if it's not the default (5432)
+  # username: Felp # Specify your PostgreSQL username if needed
+  # password: <%= ENV['FELP_DATABASE_PASSWORD'] %>
+  # port: 3000 # Specify the database port if it's not the default (5432)
 
 test:
   <<: *default
