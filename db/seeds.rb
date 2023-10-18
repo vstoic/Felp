@@ -80,9 +80,10 @@ def attach_photos(business, photo_urls)
       business.photos.attach(io: io, filename: filename)
     rescue StandardError => e
       puts "Error attaching photo for #{business.name}: #{e.message}"
-    end
+      puts "URL: #{url}"
   end
 end
+
 
 business1 = Business.create!(
   name: "ChongQing Lao Zao",
