@@ -1,0 +1,144 @@
+.profile-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: rgb(85, 85, 85);
+    font-family: 'Poppins', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 150;
+    font-size: 12px;
+    padding-top: 3vh;
+    padding-bottom: 2vh;
+    margin-top: 10vh;
+}
+
+.profile-page {
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  gap: 5vw;
+  font-family: Arial, sans-serif;
+  margin-bottom: 25px;
+
+  .profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // background-color: #ebebeb;
+    padding: 20px;
+    border: 1px solid rgb(235, 235, 235);
+    border-radius: 8px;
+    margin-bottom: 20px;
+
+    .avatar-container {
+      width: 100px;
+      height: 100px;
+      margin-bottom: 20px;
+
+      .avatar {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .username {
+      font-size: 28px;
+      margin-bottom: 5px;
+      font-weight: 400;
+      color: #333;
+    }
+
+    .location {
+      font-size: 20px;
+      font-weight: 300;
+      margin-bottom: 5px;
+      color: #666;
+    }
+
+    .profile-actions {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+      gap: 20px;
+
+      .action {
+        background: #eee;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+          background-color: #ddd;
+        }
+      }
+    }
+  }
+
+  .profile-navigation {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 20px;
+
+    .nav-item {
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #0073bb;
+      }
+    }
+  }
+
+  .additional-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50vw;
+    h3 {
+      font-size: 18px;
+      font-weight: 800;
+      color: #a0a0a0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      padding-top: .5vh;
+      padding-bottom: 3.5vh;     
+      :visited {
+          color: #343434;
+          text-decoration: none;
+      }
+      :hover {
+          color: #515151;
+          text-decoration: none;
+      }
+    }
+    
+    .info-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      // height: 50vh;
+      background: #fff;
+      padding: 20px;
+      border: 1px solid rgb(235, 235, 235);
+      border-radius: 8px;
+      width: 100%;
+      gap: 20px;
+      h3 {
+        margin: 0 0 10px 0;
+      }
+      p {
+        color: #666;
+        margin: 5px 0;
+      }
+    }
+  }
+}

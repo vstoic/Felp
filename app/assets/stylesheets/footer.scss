@@ -32,6 +32,18 @@
     justify-content: center;
     padding-bottom: 3px;
   }
+  .footer-splitter a {
+    font-weight: 150;
+    font-size: 11px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2px;
+    text-decoration: none;
+    color: rgb(85, 85, 85);
+    &:hover {
+      color: rgb(137, 137, 137);
+    }
+  }
   .footer-splitter p {
     font-weight: 150;
     font-size: 11px;
@@ -50,4 +62,18 @@
     font-weight: 150;
     font-size: 11px;
 }
+.footer-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 50%;
+    font-family: Helvetica, sans-serif;
+    font-weight: 150;
+    font-size: 11px;
+}
 
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}

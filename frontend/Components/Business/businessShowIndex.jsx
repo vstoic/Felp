@@ -1,13 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Star from "../Star/star";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Star from '../Star/star';
 
 class BusinessShowIndex extends React.Component {
   constructor(props) {
     super(props);
     console.log(this.props);
     this.state = {
-      loading: true,
+      loading: true
     };
   }
 
@@ -34,10 +34,14 @@ class BusinessShowIndex extends React.Component {
           />
           <div className="business-index-text-star">
             <Star businessId={business.id} />
-            <p className="business-index-name">{this.props.number}. {business.name}</p>
+            <p className="business-index-name">
+              {this.props.number}. {business.name}
+            </p>
             <p>
               <span className="business-hours">Open </span>
-              <span className="business-index-hours">until: {business.close}</span>
+              <span className="business-index-hours">
+                until: {business.close}
+              </span>
             </p>
             <p className="business-index-city">
               {business.city}, {business.state}
