@@ -1,7 +1,7 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { AiFillStar, AiOutlineEdit } from 'react-icons/ai';
-import { FaRegEdit } from 'react-icons/fa';
+import React from "react";
+import { Link } from "react-router-dom";
+import { AiFillStar, AiOutlineEdit } from "react-icons/ai";
+import { FaRegEdit } from "react-icons/fa";
 
 class ReviewItem extends React.Component {
   constructor(props) {
@@ -35,17 +35,17 @@ class ReviewItem extends React.Component {
                   const style = {
                     backgroundColor:
                       ratingValue <= this.state.review.rating
-                        ? '#d32322'
-                        : '#e4e5e9',
-                    color: '#ffffff',
-                    height: '1vw',
-                    width: '1vw',
-                    borderRadius: '10px',
-                    marginLeft: '2.5px',
-                    padding: '4px',
+                        ? "#d32322"
+                        : "#e4e5e9",
+                    color: "#ffffff",
+                    height: "1vw",
+                    width: "1vw",
+                    borderRadius: "10px",
+                    marginLeft: "2.5px",
+                    padding: "4px",
                   };
                   return (
-                    <div className="each-star">
+                    <div className="each-star" key={i}>
                       <AiFillStar
                         className="star"
                         style={style}
@@ -61,16 +61,16 @@ class ReviewItem extends React.Component {
           </div>
           <div className="review-bottom">
             <div className="edit-review">
-              {this.props.currentUser && this.state.page === 'businessShow' ? (
+              {this.props.currentUser && this.state.page === "businessShow" ? (
                 this.state.review.user_id === this.props.currentUser.id ? (
                   <Link
                     to={`/business/${this.props.businessId}/review/${this.state.review.id}/edit`}
                   >
                     <FaRegEdit
                       style={{
-                        color: 'black',
+                        color: "black",
                         //   size: "1.5vh",
-                        backgroundColor: 'white',
+                        backgroundColor: "white",
                       }}
                     />
                   </Link>

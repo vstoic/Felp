@@ -19,5 +19,5 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 export default withRouter(
-  connect(mapStateToProps, mapDispatchToProps)(BusinessIndex)
+  connect(mapStateToProps, mapDispatchToProps)(BusinessIndex),
 );

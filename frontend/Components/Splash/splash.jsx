@@ -21,7 +21,7 @@ class Splash extends React.Component {
     this.props.fetchBusinesses();
   }
   render() {
-    console.log(this.props)
+    console.log(this.props);
     return (
       <div className="splash-main">
         <div className="sp-nav">
@@ -81,5 +81,5 @@ class Splash extends React.Component {
   }
 }
 
-//to do: sort by rating number count. 
+//to do: sort by rating number count.
 export default Splash;
