@@ -1,20 +1,20 @@
-import React from "react";
-import Nav from "../Nav/nav";
-import { Link } from "react-router-dom";
-import Carousel from "../Carousel/carousel";
-import Map from "../Map/map";
-import Review from "/frontend/Components/Review/review.jsx";
-import Star from "../Star/star";
-import { FiPhoneCall } from "react-icons/fi";
-import { CgWebsite } from "react-icons/cg";
-import { BsPinMap, BsFillBookmarkStarFill, BsStar } from "react-icons/bs";
-import Footer from "../Footer/footer";
+import React from 'react';
+import Nav from '../Nav/nav';
+import { Link } from 'react-router-dom';
+import Carousel from '../Carousel/carousel';
+import Map from '../Map/map';
+import Review from '/frontend/Components/Review/review.jsx';
+import Star from '../Star/star';
+import { FiPhoneCall } from 'react-icons/fi';
+import { CgWebsite } from 'react-icons/cg';
+import { BsPinMap, BsFillBookmarkStarFill, BsStar } from 'react-icons/bs';
+import Footer from '../Footer/footer';
 
 class BusinessShow extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Loading: true,
+      Loading: true
     };
     // this.handleStars = this.handleStars.bind(this);
     // this.distributeStars = this.distributeStars.bind(this);
@@ -28,48 +28,6 @@ class BusinessShow extends React.Component {
     //     this.setState({currentBusiness: data})
     // })
   }
-
-  // distributeStars(avgRating) {
-  //     return (
-  //         <div className="stars">
-  //             <div>
-  //                 <AiFillStar/>
-  //             </div>
-  //             {/* {Array(avgRating).fill().map((star, i) => {
-  //                 const ratingValue = i + 1;
-  //                 return (
-  //                         <AiFillStar
-  //                             className="stars"
-  //                             color={ratingValue <= (avgRating) ? "#ffc107" : "#e4e5e9"}
-  //                             size={25} />
-  //                 )
-  //             })} */}
-  //         </div>
-  //     )
-  // }
-
-  // handleStars() {
-  //     let totalStars = 0;
-  //     this.props.reviews.forEach(review => {
-  //         totalStars += review.rating;
-  //     })
-  //     let averageStars = Math.ceil(totalStars / this.props.reviews.length);
-  //     console.log(averageStars)
-  //     switch (averageStars) {
-  //         case averageStars >= 4 && averageStars <= 5:
-  //             return this.distributeStars(5);
-  //         case averageStars >= 3 && averageStars < 4:
-  //             return this.distributeStars(4);
-  //         case averageStars >= 2 && averageStars < 3:
-  //             return this.distributeStars(3);
-  //         case averageStars >= 1 && averageStars < 2:
-  //             return this.distributeStars(2);
-  //         case averageStars >= 0 && averageStars < 1:
-  //             return this.distributeStars(1);
-  //         default:
-  //             return this.distributeStars(0);
-  //         }
-  // }
 
   // componentDidUpdate(prevProps) {
   //     if (prevProps.match.params.businessId !== this.props.match.params.businessId) {
@@ -147,7 +105,7 @@ class BusinessShow extends React.Component {
                       Get Directions
                     </a>
                     <p>
-                      {this.props.business.address}, {this.props.business.city},{" "}
+                      {this.props.business.address}, {this.props.business.city},{' '}
                       {this.props.business.zip_code}
                     </p>
                   </div>

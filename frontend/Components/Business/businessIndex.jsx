@@ -1,15 +1,15 @@
-import React from "react";
-import Nav from "../Nav/nav";
-import { Link } from "react-router-dom";
-import BusinessShowIndex from "./businessShowIndexContainer";
-import Map from "../Map/map";
-import { fetchReviews } from "../../Actions/reviewActions";
+import React from 'react';
+import Nav from '../Nav/nav';
+import { Link } from 'react-router-dom';
+import BusinessShowIndex from './businessShowIndexContainer';
+import Map from '../Map/map';
+import { fetchReviews } from '../../Actions/reviewActions';
 
 class BusinessIndex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      searchedBusinesses: this.props.history.location.state,
+      searchedBusinesses: this.props.history.location.state
     };
   }
 

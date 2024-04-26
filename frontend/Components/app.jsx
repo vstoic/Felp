@@ -1,14 +1,14 @@
-import React from "react";
-import { Route, Switch } from "react-router-dom";
-import LoginFormContainer from "./SessionForm/loginFormContainer";
-import SignupFormContainer from "./SessionForm/signupFormContainer";
-import { AuthRoute, ProtectedRoute } from "../Util/route_util";
-import SplashContainer from "./Splash/splashContainer";
-import BusinessShowContainer from "./Business/businessShowContainer";
-import BusinessIndexContainer from "./Business/businessIndexContainer";
-import ReviewFormContainer from "./Review/reviewFormContainer";
-import EditReviewContainer from "./Review/editReviewContainer";
-
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
+import LoginFormContainer from './SessionForm/loginFormContainer';
+import SignupFormContainer from './SessionForm/signupFormContainer';
+import { AuthRoute, ProtectedRoute } from '../Util/route_util';
+import SplashContainer from './Splash/splashContainer';
+import BusinessShowContainer from './Business/businessShowContainer';
+import BusinessIndexContainer from './Business/businessIndexContainer';
+import ReviewFormContainer from './Review/reviewFormContainer';
+import EditReviewContainer from './Review/editReviewContainer';
+import Profile from './profile/profile';
 const App = () => (
   <div>
     <Switch>
@@ -21,6 +21,7 @@ const App = () => (
         path="/business/:businessId/review/new"
         component={ReviewFormContainer}
       />
+      <Route path="/:userId" component={Profile} />
       <Route path="/business/:businessId" component={BusinessShowContainer} />
       <Route path="/businesses" component={BusinessIndexContainer} />
       <AuthRoute path="/login" component={LoginFormContainer} />
