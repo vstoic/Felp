@@ -8,11 +8,10 @@ import { fetchReviews } from "../../Actions/reviewActions";
 class BusinessIndex extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { 
-      searchedBusinesses: this.props.history.location.state
+    this.state = {
+      searchedBusinesses: this.props.history.location.state,
     };
   }
-
 
   componentDidMount() {
     window.scrollTo(0, 0);
@@ -32,7 +31,7 @@ class BusinessIndex extends React.Component {
         {this.state.searchedBusinesses ? (
           <div className="index-columns">
             <div className="index-left">
-              <h1 >Results:</h1>
+              <h1>Results:</h1>
               <div className="businesses-index-container">
                 <div className="businesses-index">
                   {this.state.searchedBusinesses.map((business, index) => {
