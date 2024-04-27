@@ -1,11 +1,15 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function AccountDropdown(props) {
   const [isOpen, setIsOpen] = useState(false);
+  console.log('props:', props);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  const userId = props.currentUser.id;
 
   return (
     <div className="account-dropdown">
@@ -18,8 +22,12 @@ function AccountDropdown(props) {
       </div>
       {isOpen && (
         <ul className="account-dropdown__menu">
-          <ul className="account-dropdown__menu-item">Profile</ul>
-          <ul className="account-dropdown__menu-item" onClick={props.logout}>Logout</ul>
+          <ul className="account-dropdown__menu-item">
+            <Link to={`/profile/${userId}`}>Profile</Link>
+          </ul>
+          <ul className="account-dropdown__menu-item" onClick={props.logout}>
+            Logout
+          </ul>
         </ul>
       )}
     </div>

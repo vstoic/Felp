@@ -1,6 +1,4 @@
 import React, { useEffect } from 'react';
-import Nav from '../Nav/nav';
-import Footer from '../Footer/footer';
 function Profile(props) {
   console.log(props);
   useEffect(() => {
@@ -9,7 +7,7 @@ function Profile(props) {
   }, []);
   return (
     <div className="profile-container">
-      <Nav currentUser={props.currentUser} logout={props.logout} />
+      {/* <Nav currentUser={props.currentUser} logout={props.logout} /> */}
       <div className="profile-page">
         <div className="profile-column">
           <section className="profile-card">
@@ -43,7 +41,7 @@ function Profile(props) {
           </div>
         </section>
       </div>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
