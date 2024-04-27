@@ -9,24 +9,36 @@ import BusinessIndexContainer from './Business/businessIndexContainer';
 import ReviewFormContainer from './Review/reviewFormContainer';
 import EditReviewContainer from './Review/editReviewContainer';
 import Profile from './profile/profile';
+import Layout from './Layout/Layout';
 const App = () => (
   <div>
     <Switch>
-      <ProtectedRoute
-        path="/business/:businessId/review/:reviewId/edit"
-        component={EditReviewContainer}
-      />
-      <ProtectedRoute
-        exact
-        path="/business/:businessId/review/new"
-        component={ReviewFormContainer}
-      />
-      <Route path="/:userId" component={Profile} />
-      <Route path="/business/:businessId" component={BusinessShowContainer} />
-      <Route path="/businesses" component={BusinessIndexContainer} />
+      {/* specific routes */}
       <AuthRoute path="/login" component={LoginFormContainer} />
       <AuthRoute path="/signup" component={SignupFormContainer} />
-      <Route path="/" component={SplashContainer} />
+      {/* Business and review-related routes */}
+      <Layout>
+        <Switch>
+          <ProtectedRoute
+            path="/business/:businessId/review/:reviewId/edit"
+            component={EditReviewContainer}
+          />
+          <ProtectedRoute
+            exact
+            path="/business/:businessId/review/new"
+            component={ReviewFormContainer}
+          />
+          <Route
+            path="/business/:businessId"
+            component={BusinessShowContainer}
+          />
+          <Route path="/businesses" component={BusinessIndexContainer} />
+          {/* profile route */}
+          <Route path="/profile/:userId" component={Profile} />
+          {/* most general route */}
+          <Route exact path="/" component={SplashContainer} />
+        </Switch>
+      </Layout>
     </Switch>
   </div>
 );

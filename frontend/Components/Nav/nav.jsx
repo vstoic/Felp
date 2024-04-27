@@ -1,7 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Search_container from "../Search/searchContainer";
-import AccountDropdown from "./dropdown";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Search_container from '../Search/searchContainer';
+import AccountDropdown from './dropdown';
 
 class Nav extends React.Component {
   constructor(props) {
@@ -13,9 +13,10 @@ class Nav extends React.Component {
     // } else if (this.props.formType === "review_pages") {
     //     this.type = "review_pages"
     // }
+    console.log('navProps:', props);
   }
   handleClick() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById('myDropdown').classList.toggle('show');
   }
   render() {
     return (
@@ -53,7 +54,10 @@ class Nav extends React.Component {
                 />
               </a>
 
-              <AccountDropdown logout={this.props.logout} />
+              <AccountDropdown
+                logout={this.props.logout}
+                currentUser={this.props.currentUser}
+              />
             </div>
           </div>
         ) : (
