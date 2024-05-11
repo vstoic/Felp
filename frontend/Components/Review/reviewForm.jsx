@@ -68,12 +68,6 @@ class ReviewForm extends React.Component {
 
     return (
       <div className="review-form-container">
-        <div className="sp-nav">
-          <Nav
-            currentUser={this.props.currentUser}
-            logout={this.props.logout}
-          />
-        </div>
         <div className="review-form-spliter">
           <div className="review-form-left">
             {/* <h1>Write a Review</h1> */}
@@ -147,9 +141,6 @@ class ReviewForm extends React.Component {
               );
             })}
           </div>
-        </div>
-        <div className="review-form-footer">
-          <Footer />
         </div>
       </div>
     );

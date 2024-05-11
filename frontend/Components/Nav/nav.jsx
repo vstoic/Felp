@@ -6,19 +6,12 @@ import AccountDropdown from './dropdown';
 class Nav extends React.Component {
   constructor(props) {
     super(props);
-    // if (this.props.formType === "splash") {
-    //     this.type = "splash"
-    // } else if (this.props.formType === "other_pages") {
-    //     this.type = "other_pages"
-    // } else if (this.props.formType === "review_pages") {
-    //     this.type = "review_pages"
-    // }
-    console.log('navProps:', props);
   }
   handleClick() {
     document.getElementById('myDropdown').classList.toggle('show');
   }
   render() {
+    console.log('navProps:', this.props);
     return (
       <div className="navs" style={this.props.style}>
         {this.props.currentUser ? (

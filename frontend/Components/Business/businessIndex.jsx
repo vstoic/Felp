@@ -22,12 +22,6 @@ class BusinessIndex extends React.Component {
     // added if statement to render businesses either from search results show all businesses.
     return (
       <div className="index-main-container">
-        <div className="splash-nav">
-          <Nav
-            currentUser={this.props.currentUser}
-            logout={this.props.logout}
-          />
-        </div>
         {this.state.searchedBusinesses ? (
           <div className="index-columns">
             <div className="index-left">

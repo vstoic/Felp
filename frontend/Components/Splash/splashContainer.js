@@ -1,4 +1,3 @@
-import React from 'react';
 import { connect } from 'react-redux';
 import Splash from './splash';
 import {
@@ -9,7 +8,7 @@ import {
 import { fetchBusinesses, fetchBusiness } from '../../Actions/businessActions';
 
 const mapStateToProps = state => ({
-  formType: 'splash',
+  // formType: 'splash',
   currentUser: state.entities.users[state.session.id],
   businesses: Object.values(state.entities.businesses),
   errors: state.errors

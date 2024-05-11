@@ -68,12 +68,6 @@ class EditReview extends React.Component {
 
     return (
       <div className="edit-review-container">
-        <div className="sp-nav">
-          <Nav
-            currentUser={this.props.currentUser}
-            logout={this.props.logout}
-          />
-        </div>
         <div className="ereview-form-spliter">
           <div className="ereview-form-left">
             <h1 className="form-title">Edit Review</h1>
@@ -166,9 +160,9 @@ class EditReview extends React.Component {
             })}
           </div>
         </div>
-        <div className="review-form-footer">
+        {/* <div className="review-form-footer">
           <Footer />
-        </div>
+        </div> */}
       </div>
     );
   }
