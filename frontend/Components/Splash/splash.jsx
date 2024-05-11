@@ -7,6 +7,7 @@ import Footer from '../Footer/footer';
 class Splash extends React.Component {
   constructor(props) {
     super(props);
+    console.log('splashProps:', props);
     this.clearErrors = this.clearErrors.bind(this);
   }
 
@@ -19,6 +20,7 @@ class Splash extends React.Component {
     this.props.fetchBusinesses();
   }
 
+  // modulize this please
   renderBusinesses() {
     return this.props.businesses.slice(0, 8).map(business => (
       <Link
@@ -44,8 +46,6 @@ class Splash extends React.Component {
   render() {
     return (
       <div className="splash-main">
-        <Nav currentUser={this.props.currentUser} logout={this.props.logout} />
-
         <div className="img-with-text">
           <img
             className="splash-background-image"
@@ -67,7 +67,6 @@ class Splash extends React.Component {
             See All Businesses
           </Link>
         </h1>
-        <Footer />
       </div>
     );
   }
